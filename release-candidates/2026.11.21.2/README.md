@@ -1,22 +1,25 @@
-# Ứng viên OTA QuangNV Word 2026.11.21.2
+# QuangNV Word OTA 2026.11.21.2 – đã chuẩn bị phát hành thử
 
-**Trạng thái:** CHƯA PHÁT HÀNH / CHƯA KÍCH HOẠT.
+**Trạng thái:** ĐÃ KÝ THÔNG TIN PHÁT HÀNH, CHỜ TẢI TỆP LÊN GITHUB RELEASES. Chưa kích hoạt OTA diện rộng.
 
-Đây là một **bản cập nhật Add-in Word thật**, giữ nguyên `word/vbaProject.bin` và `customUI/customUI14.xml` so với phiên bản nền `2026.11.21.1`. Chỉ thay đổi `docProps/core.xml` để đánh dấu phiên bản.
+## Kết quả kiểm tra
 
-- Tên tệp dự kiến: `ChuanHoa_VanBanDang_2026.11.21.2.dotm`
-- SHA-256: `c7a0a9d21c09ffd7184c334619b9502849505e49a6a32f4571e5a32431a93196`
-- Kiểm tra cấu trúc ZIP, so sánh tệp nhị phân VBA và Ribbon: **đạt**
-- Quét chống mã độc độc lập: **chưa có**
-- Kiểm thử cài cập nhật Word thực tế trên Windows: **chưa thực hiện**
+- Đã kiểm tra gói `.dotm` và đối chiếu chính xác nội dung VBA/Ribbon so với bản nền 2026.11.21.1; chỉ thay đổi metadata `docProps/core.xml`.
+- Người dùng đã gửi ảnh quét bằng Kaspersky Plus trên Windows: **57 đối tượng, không phát hiện mối đe dọa**. Đây không phải bằng chứng bảo đảm an toàn tuyệt đối.
+- SHA-256 tệp: `c7a0a9d21c09ffd7184c334619b9502849505e49a6a32f4571e5a32431a93196`.
+- Chữ ký RSA-SHA256 thông tin `version + "\n" + sha256 + "\n" + payload_url` đã được tạo và xác minh bằng khóa công khai của bộ OTA nền.
+- Bảng Google Sheets `OTA_AnToan` đã lưu URL phát hành dự kiến, mã SHA-256, chữ ký; **enabled=no** cho đến khi GitHub Release thực sự tồn tại, tải về thành công và được kiểm tra.
 
-## Cần hoàn tất trước khi phát hành
+## Bước duy nhất còn cần thực hiện trên GitHub
 
-1. Quét tệp `.dotm` trên máy có Kaspersky Plus hoặc dịch vụ kiểm định độc lập. Không tắt bảo vệ hoặc bỏ qua cảnh báo.
-2. Xử lý nguyên nhân nếu tệp bị nhận diện nguy hiểm.
-3. Khi tệp được chấp nhận, phát hành lên GitHub Releases tại kho này với đường dẫn HTTPS tải trực tiếp.
-4. Dùng khóa ký OTA **giữ riêng**, ký thông tin `version + "\n" + sha256 + "\n" + payload_url`; kiểm thử xác minh chữ ký và SHA-256 trên máy thử.
-5. Thêm URL, SHA-256 và chữ ký vào `OTA_AnToan` của Google Sheets. Để `enabled=no` cho tới khi thử tải và cài khôi phục thành công.
-6. Chỉ bật OTA cho một máy thử trước khi phát hành rộng.
+Tạo GitHub Release tại [trang phát hành mới](../../releases/new):
 
-**Không đưa khóa riêng hoặc API Key lên GitHub.** Hệ thống đang chạy trên máy người dùng vẫn sử dụng phiên bản nền; không có nâng cấp nào được kích hoạt từ tài liệu này.
+- Tag: `v2026.11.21.2`
+- Title: `QuangNV 2026.11.21.2 – OTA kiểm thử Word`
+- Đính kèm tệp nhị phân đúng tên: `ChuanHoa_VanBanDang_2026.11.21.2.dotm`
+- Chọn **Pre-release** để kiểm thử, sau đó Publish release.
+- Link dự kiến: `https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v2026.11.21.2/ChuanHoa_VanBanDang_2026.11.21.2.dotm`
+
+**Không đưa khóa ký riêng, API Key hoặc dữ liệu nhạy cảm lên kho.** Không tắt Kaspersky/Defender để cài thử.
+
+Bản phát hành chưa tác động tới Word Add-in trên các máy đã cài, trừ khi `enabled=yes` được kích hoạt sau khi xác minh.
