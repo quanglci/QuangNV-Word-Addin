@@ -1,0 +1,18 @@
+{
+  "product": "QuangNV Word Add-in",
+  "version": "2026.11.21.8",
+  "tag": "v2026.11.21.8",
+  "filename": "ChuanHoa_VanBanDang_2026.11.21.8.dotm",
+  "file_size_bytes": 1115482,
+  "sha256": "d0d485707462ddbc33af6fb42dc39ba698127b73ea20483d7067ffdf60216af4",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v2026.11.21.8/ChuanHoa_VanBanDang_2026.11.21.8.dotm",
+  "signature_algorithm": "RSASSA-PKCS1-v1_5 with SHA-256",
+  "source_tag": "v2026.11.21.7 (installed Windows Word Add-in)",
+  "original_Windows_saved_dotm_sha256": "8474e8c8ae97536dc65b729150f5588079526d865f924f8c3571ba0322b0bbe4",
+  "original_Windows_saved_dotm_zip_entries_identical": true,
+  "source_vba_project_sha256": null,
+  "notes": "Test update from QuangNV 2026.11.21.7. VBA/Ribbon behavior preserved; QNV_CURRENT_VERSION changed to 2026.11.21.8. No Word startup PowerShell and no change to Kaspersky settings.",
+  "status": "SIGNED_READY_TO_PUBLISH_AFTER_ASSET_CHECK",
+  "vba_project_sha256": "1d715c75c521631b3fd1f58e7e0527cbec87432da5b3785c2b7a842ca286660f",
+  "signature": "O5nnnVSTqrPxP/MMM85y2Aelb55esIKG3smVvh8NRYWSYgCis347QFKrwD/QxI6KkJE3PK5vZmIILCnHrMq4kl/f1kLEe4/69K069BYQaOtTU1LwP1wDVnZVW0Tqko9KW5OWXt6xY/5r8Y2VhPtBeNlLh42MvI1EjzaGqdYqoDlJcYLmw9iUMKRhbyRY1w8enjVQlP3U0oMKS7vB87i4DTAw0c/u06LRw6Tq8Ep9e9KwoEfN4q7hSxOHzxpt08Ug5tYdiXNQJ6KiCUdhQnfbLTJSJtOCqaUtnLzyuXArOlYCjQoQFrVcuc80L+Jcdyn1YVZjR5bnkUKeSPoX1Fmavq7wEBgPD8K8blTIwVMuxS/Ny6AoaI8x6kGuCMOJYT7nTwy52rZRLm0gheUN0Vy8aktZlaA/SZKY5g69xosVjIatljkIZorKnKl3e3IdsbehnNnv1eoaNvDqSVsIks7NaD5o8e9DHQxb+5OKAXxsK7z3LS/u2wmtemVYISd9wg2r"
+}
