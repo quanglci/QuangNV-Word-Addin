@@ -1,0 +1,6 @@
+QUANGNV GITHUB OTA TEST ONLY
+This is a SAFE, NON-EXECUTABLE TEST PAYLOAD.
+It does not contain a Word macro, executable, or password.
+version=2026.11.21.2
+purpose=check download, release signature, SHA256, backup, replace, rollback in a sandbox
+Do not use this file as a Microsoft Word Add-in.
