@@ -1,0 +1,91 @@
+name: Publish QuangNV signed Word OTA v2026.11.21.6
+
+on:
+  push:
+    paths:
+      - 'ota-releases/v2026.11.21.6/READY_TO_PUBLISH.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout committed release tooling
+        uses: actions/checkout@v4
+
+      - name: Download published stable v.5 Word Add-in
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release download v2026.11.21.5 \
+            --pattern 'ChuanHoa_VanBanDang_2026.11.21.5.dotm' --clobber
+
+      - name: Rebuild exact, offline-signed v.6 Word Add-in
+        shell: bash
+        run: |
+          cat ota-releases/v2026.11.21.6/patch_part{01..09}.txt \
+            > ota-releases/v2026.11.21.6/payload_b64.txt
+          python3 tools/assemble_ota_2026_11_21_6.py
+
+      - name: Verify signed release manifest and RSA signature
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, json, pathlib, subprocess
+          root=pathlib.Path('ota-releases/v2026.11.21.6')
+          manifest=json.loads((root/'manifest_OTA_DA_KY.json').read_text(encoding='utf-8'))
+          file=pathlib.Path('ChuanHoa_VanBanDang_2026.11.21.6.dotm')
+          sha=hashlib.sha256(file.read_bytes()).hexdigest()
+          version='2026.11.21.6'
+          url='https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v2026.11.21.6/'+file.name
+          required={'version':version,'tag':'v'+version,'filename':file.name,'url':url,'sha256':sha,'file_size_bytes':file.stat().st_size}
+          if any(manifest.get(k)!=v for k,v in required.items()):
+              raise SystemExit('Manifest does not match signed binary')
+          (root/'signature.bin').write_bytes(base64.b64decode(manifest['signature'],validate=True))
+          (root/'signature_message.txt').write_bytes((version+'\n'+sha+'\n'+url).encode('utf-8'))
+          subprocess.run(['openssl','dgst','-sha256','-verify',str(root/'ota_public.pem'),'-signature',str(root/'signature.bin'),str(root/'signature_message.txt')],check=True)
+          print('PASS: SHA256, size, URL, version, and RSA signature')
+          PY
+
+      - name: Refuse overwrite of an existing published release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if gh release view v2026.11.21.6 >/dev/null 2>&1; then
+            echo 'Release v2026.11.21.6 already exists; refusing to overwrite.' >&2
+            exit 1
+          fi
+
+      - name: Publish signed pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create v2026.11.21.6 \
+            ChuanHoa_VanBanDang_2026.11.21.6.dotm \
+            ota-releases/v2026.11.21.6/manifest_OTA_DA_KY.json \
+            --title 'QuangNV 2026.11.21.6 - So phien ban trong hop thoai cap nhat' \
+            --notes 'Based on stable v2026.11.21.5. Exactly two VBA source lines changed: QNV_CURRENT_VERSION 2026.11.21.6 and show the version in the Check Update message. Version label was removed from the Ribbon. Existing AI, Word formatting, AutoExec and OTA 2-hour mechanism remain unchanged. The unsafe v2026.11.21.4 startup patch is excluded. Test on one machine with Kaspersky enabled.' \
+            --prerelease
+
+      - name: Verify actual published asset SHA-256
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          name='ChuanHoa_VanBanDang_2026.11.21.6.dotm'
+          sha=hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()
+          release=json.loads(subprocess.check_output(['gh','api','repos/quanglci/QuangNV-Word-Addin/releases/tags/v2026.11.21.6'],text=True))
+          asset=next((x for x in release.get('assets',[]) if x.get('name')==name),None)
+          if not asset or asset.get('digest')!='sha256:'+sha:
+              raise SystemExit('Published GitHub asset hash mismatch. Do NOT enable OTA.')
+          print('VERIFIED GITHUB RELEASE SHA256:',sha)
+          PY
