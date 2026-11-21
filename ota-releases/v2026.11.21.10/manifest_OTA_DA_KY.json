@@ -1,0 +1,17 @@
+{
+  "product": "QuangNV Word Add-in",
+  "version": "2026.11.21.10",
+  "tag": "v2026.11.21.10",
+  "filename": "ChuanHoa_VanBanDang_2026.11.21.10.dotm",
+  "file_size_bytes": 1116629,
+  "sha256": "f18305f7348b4578dcf83948b3b685e327c5b3e2fbd0f301363d61897ef60cdd",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v2026.11.21.10/ChuanHoa_VanBanDang_2026.11.21.10.dotm",
+  "signature_algorithm": "RSASSA-PKCS1-v1_5 with SHA-256",
+  "source_tag": "v2026.11.21.9 (published GitHub OTA baseline)",
+  "original_Windows_saved_dotm_sha256": "7c48ded8d515066f37351ca7a37ae8aaaf2c25568ed18c129da3644510d8e1a3",
+  "original_Windows_saved_dotm_zip_entries_identical": true,
+  "vba_project_sha256": "eaf2769bc958b0c8eb6fa31acfa97bfb84dacb2b78464ccba0b9e2ffba3ffb1e",
+  "notes": "Add-in v10: preserve all v9 document, AI and OTA Ribbon callbacks; update version to .10 and add one AutoExec local file-existence guard so the old once-daily Word reminder yields to the optional separately installed Windows OTA notifier. Does not launch a hidden process from Word. The notification companion EXE must be installed separately on each PC for five-minute checks and two-hour re-notification. Windows+Office+Kaspersky testing required.",
+  "status": "SIGNED_RELEASE_CANDIDATE_NOT_YET_PUBLISHED",
+  "signature": "Ad/Ps6CJn8PQ4zDLu6ei9TX25PZ4IldU5QrX+w5me+y0Te1hR/9vdA7ZsYw3P8J5Py1Mm8SAtDpbt8u6w8jCNQINOJu5vwKucbi67S45MobOq5vIE38JiMAUVAZyQcu5nkHzuk/GQUekT6tGZttC4vA0z6xjMvfr94H/E8ZN10jNpVhTi1LCGSoIrhAr+/YJMj4XLoPML/DSpnKtNgKsQB0B85Emye62RwTHCl9jO8CgFaNJ7MVDNhRh7VLzy9DZK04tqIahYfy6KZl+oVfTNXRQsQIaoMY0dDCb6Kbp61JyeDNyQIzTu/BXXw/bcu1rW5Vav3zlVFe2OD6vtET7QiyVqffsGy/w/KmBFyU8ZNp/0maoXcKhXfuLXcH3Usbp1qabMojU97o18/RxaDzCmtRM2H6G8qECWKx1B90+C+F6l78Quu1FQL01fY1rG6Qjp5AD7osShQEHVjVkEHxN/QE+iHDa7vVroiw2KWtzPn/1kIp+DeYvL4waqbF8bIA1"
+}
