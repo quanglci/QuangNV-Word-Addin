@@ -1,0 +1,2 @@
+Release v2026.11.21.4 from signed delta, rebuilding exact SHA-256 3abbf839e6acb63ce4d473450f75bee36cdb6c43c5611580ef855b4b1a4d6469.
+No private signing keys are stored on GitHub. Do not enable OTA feed until asset verified.
