@@ -1,0 +1,1 @@
+READY: release v2026.11.21.6 signed by QuangNV administrator. All four original VBA modules and Ribbon checked offline; rebuilt exact SHA256 e9036d7ede1b7e213e38dd2e77a9d45a4a5e07815372bca7ad587d2ea3e34166. No private signing key is in this repository.
