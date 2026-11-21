@@ -1,0 +1,4 @@
+QuangNV 2026.11.21.8 RSA-SHA256 signed release candidate.
+Expected target sha256: d0d485707462ddbc33af6fb42dc39ba698127b73ea20483d7067ffdf60216af4
+Original user Word saved DOTM SHA: 8474e8c8ae97536dc65b729150f5588079526d865f924f8c3571ba0322b0bbe4
+Publish only if full verifier and GitHub digest check pass. Test on one v.7 PC first.
