@@ -1,0 +1,4 @@
+QuangNV 2026.11.21.9 — SIGNED TEST OTA
+Expected published SHA256: 7ed8e459c6facda667bd3bbc89f304f6df9f044103fc8494ff4975463f2f44cc
+Previous public baseline: 2026.11.21.8 SHA256 d0d485707462ddbc33af6fb42dc39ba698127b73ea20483d7067ffdf60216af4
+Published Word package must match RSA-signed manifest and validator; test on one machine first.
