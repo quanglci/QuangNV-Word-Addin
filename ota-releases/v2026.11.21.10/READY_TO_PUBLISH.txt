@@ -1,0 +1,5 @@
+QuangNV v2026.11.21.10 -- signed controlled Word OTA candidate
+Baseline: v2026.11.21.9 SHA-256 7ed8e459c6facda667bd3bbc89f304f6df9f044103fc8494ff4975463f2f44cc
+Expected published Word payload SHA-256 f18305f7348b4578dcf83948b3b685e327c5b3e2fbd0f301363d61897ef60cdd
+Only publish if the exact zipped VBA, Ribbon, RSA public signature and GitHub SHA checks pass.
+Separate companion notifier EXE installation required per Windows PC for periodic notifications.
