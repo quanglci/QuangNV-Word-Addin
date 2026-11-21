@@ -1,0 +1,84 @@
+name: QuangNV publish signed UI-only OTA v2026.11.21.5
+
+on:
+  push:
+    paths:
+      - 'ota-releases/v2026.11.21.5/READY_TO_PUBLISH.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download immutable published v.3 baseline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release download v2026.11.21.3 --pattern 'ChuanHoa_VanBanDang_2026.11.21.3.dotm' --clobber
+
+      - name: Reconstruct signed Word Add-in via exact binary delta
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64,hashlib
+          src=Path('ota-releases/v2026.11.21.5/delta_b64.txt')
+          blob=base64.b64decode(src.read_text().strip(),validate=True)
+          expected='9ea32225b3ed3703fc501ab1b57ba6b0032bac01ec0bdfc192acda31a5b8a396'
+          if hashlib.sha256(blob).hexdigest()!=expected:
+              raise SystemExit('Delta SHA-256 does not match')
+          Path('delta.zst').write_bytes(blob)
+          PY
+          command -v zstd >/dev/null 2>&1 || { echo 'zstd is unavailable, refusing to publish'; exit 1; }
+          zstd --patch-from=ChuanHoa_VanBanDang_2026.11.21.3.dotm -d delta.zst -o ChuanHoa_VanBanDang_2026.11.21.5.dotm -q -f
+
+      - name: Verify signed target, preserved VBA, valid XML
+        shell: bash
+        run: python3 tools/verify_ota_2026_11_21_5.py
+
+      - name: Do not overwrite a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if gh release view v2026.11.21.5 >/dev/null 2>&1; then
+            echo 'v2026.11.21.5 already exists: refusal to overwrite' >&2
+            exit 1
+          fi
+
+      - name: Publish verified pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create v2026.11.21.5 \
+            ChuanHoa_VanBanDang_2026.11.21.5.dotm \
+            ota-releases/v2026.11.21.5/manifest_OTA_DA_KY.json \
+            --title 'QuangNV 2026.11.21.5 - Hien thi phien ban tren Ribbon' \
+            --notes 'Based on stable 2026.11.21.3. Only displays the current version number in the Word Ribbon Update group. VBA, AutoExec, AI and the existing 2-hour OTA task are unchanged. The original VBA message box is unchanged. The blocked 2026.11.21.4 start-up patch is NOT included.' \
+            --prerelease
+
+      - name: Verify asset digest after publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,subprocess,hashlib
+          from pathlib import Path
+          expected=hashlib.sha256(Path('ChuanHoa_VanBanDang_2026.11.21.5.dotm').read_bytes()).hexdigest()
+          data=json.loads(subprocess.check_output(['gh','api','repos/quanglci/QuangNV-Word-Addin/releases/tags/v2026.11.21.5'],text=True))
+          assets=data.get('assets',[])
+          item=next((x for x in assets if x.get('name')=='ChuanHoa_VanBanDang_2026.11.21.5.dotm'),None)
+          if not item or item.get('digest')!='sha256:'+expected:
+              raise SystemExit('Published file digest mismatch; DO NOT enable OTA')
+          print('Published asset SHA-256 verified:',expected)
+          PY
