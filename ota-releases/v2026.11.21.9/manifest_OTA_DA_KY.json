@@ -1,0 +1,17 @@
+{
+  "product": "QuangNV Word Add-in",
+  "version": "2026.11.21.9",
+  "tag": "v2026.11.21.9",
+  "filename": "ChuanHoa_VanBanDang_2026.11.21.9.dotm",
+  "file_size_bytes": 1116010,
+  "sha256": "7ed8e459c6facda667bd3bbc89f304f6df9f044103fc8494ff4975463f2f44cc",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v2026.11.21.9/ChuanHoa_VanBanDang_2026.11.21.9.dotm",
+  "signature_algorithm": "RSASSA-PKCS1-v1_5 with SHA-256",
+  "source_tag": "v2026.11.21.8 (published GitHub OTA baseline)",
+  "original_Windows_saved_dotm_sha256": "dd09c3c56230ae8094cede42ec1a9f834e5f364d0d85239f140ef66e2b841968",
+  "original_Windows_saved_dotm_zip_entries_identical": true,
+  "vba_project_sha256": "d55c674c2115e723691ed0776a328482c0805c0c0b759ced4a00d2ac92560415",
+  "notes": "UI-only update from QuangNV 2026.11.21.8: Word Home document-type label above dropdown; software-update group shows version in middle and new notification-checkbox wording. VBA QNV_CURRENT_VERSION changed from .8 to .9, preserving AI, formatting, OTA and backup callbacks. No Word startup hidden PowerShell.",
+  "status": "SIGNED_READY_TO_PUBLISH_AFTER_ASSET_CHECK",
+  "signature": "gOzKke0Ul03h8MnWje95HSpn5XJNY5lBH8/iPJrW8vxzQhZnpXv8EkWZ+wRZIJv1P2mXgL/R1ATUq9P3tJAR2AwYOCp1JiqrXOc/ekQLQ32mBdn7lq+ArA96HUF5EIToFhGn8Eov5YzUq2/J2NgIF6m3MBNv6lOg/5yZTE4eXaFF3LiIJi96WGlDVzoawp96GSJRujbMkIhOn2mZDWCSUydSFh5ASD2v+sAYXPaoegU1u4SsFu0Sn74ZP+p/hgpR/L9m8o8imTgDrzoa8cOJf22yV2cnRNuv7fa5w4Tmv/Bh221CTWqWCGm/DRRY6X4Eg+ABJkcQ6aPNmAlxWjvQlUvSY6HdY1AqsIenQEUTYSArCul6LwxTu135c4XmU8cTyIPnvGbZCs2RdjIyJ9X+VObHMhZdiT6RYmeXRhjVywV9V1dP+sRAaB2Og3zg33u468yiDg4sZ1340s2vTf1AmbP1LXuN0IoUmlUwVTdfVN0nPj8FtASfO+olvhj7to+F"
+}
