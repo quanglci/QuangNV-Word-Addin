@@ -1,0 +1,22 @@
+{
+  "product": "QuangNV Word Add-in",
+  "version": "2026.11.21.4",
+  "tag": "v2026.11.21.4",
+  "filename": "ChuanHoa_VanBanDang_2026.11.21.4.dotm",
+  "file_size_bytes": 461099,
+  "sha256": "3abbf839e6acb63ce4d473450f75bee36cdb6c43c5611580ef855b4b1a4d6469",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v2026.11.21.4/ChuanHoa_VanBanDang_2026.11.21.4.dotm",
+  "signature": "Ub/HyItbcJ4DfVA//0XQvKU2k1uVgS9+0AsefOngo5IOH6C88wlhIic1xSNN7eJ1eotziQtx8uHbKsvydH9UoGlzfbFfrG4ZYy0Kzk55HKCBJIWGTkRehPCZeDI8BntvLWtFTSft7q9a8O7ag5zoM/D58LVrJik3jYul/bMLV+NJbyenQfiVKkT7KzcL/i5V5t8CLoWajyvPxqpLUkGL2JG99sn1crpO8yN7E9Oca0HsShyF/nbnET2IdfwyIoD2MEHHK22+DfoY6MSICq2pXSRKH0pxaolwm59AdySg99rfOXS1bXB4kZtYqANO9I1tmD/TxNGNAT74u/BoQPr2Ewn93IdL/Vc8/wWJ4L6DBnG8iXogWzj21EjymMn9ksVPiMtTJwQUt7TyWLyzzDGEbOecu0RK2e1eQJ5sovmycc28WJXwJ1dpE6/M9grQNIHKew6YtSGWOMM9HJcHnukmf1EdXPVjLbjRg+mDZvdJTj0jRsnW+qVo6RXofCt0zma2",
+  "signature_algorithm": "RSASSA-PKCS1-v1_5 with SHA-256",
+  "signed_message": "version\\nsha256\\nurl",
+  "source_sha256": "1d99142ea1ea6fcfe0f1c2b923e054005b7247abc6dc82735ab5f32902f59943",
+  "vba_sha256": "5377078dd77b4bc2cf05c48b583c29c9d48220e409804c098b1f926eec6f1c2f",
+  "ribbon_sha256": {
+    "customUI/customUI.xml": "dc31845555d8de5c74a0f826d3ed5eda4d1141a3b3889d7cbc6962039a7e6344",
+    "customUI/customUI14.xml": "78eb269685f967c9695fa3ba4a9c9ed2f5ef73c6188646cbc23efb002c369b76"
+  },
+  "local_hotfix_required_for_old_schedule_removal": true,
+  "release_status": "SIGNED_RELEASE_CANDIDATE",
+  "ota_enabled": "no",
+  "warning": "Only DOTM is updated. Existing installations without the one-time Windows hotfix still need local updater migration to remove their 2-hour scheduled task."
+}
