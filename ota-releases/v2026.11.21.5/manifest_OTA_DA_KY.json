@@ -1,0 +1,23 @@
+{
+  "product": "QuangNV Word Add-in",
+  "version": "2026.11.21.5",
+  "tag": "v2026.11.21.5",
+  "filename": "ChuanHoa_VanBanDang_2026.11.21.5.dotm",
+  "file_size_bytes": 1113352,
+  "sha256": "ff26e3592c2e291cb86f1100c27b3a4761792b134c252b27355bfbf1955c3bb0",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v2026.11.21.5/ChuanHoa_VanBanDang_2026.11.21.5.dotm",
+  "signature": "E2GPksplLV8FV/IctEJ6+dWn/swxI4KLf4uu3kpTY+Q5w1PmzXpkGLzmgaZ78XP3ib9Y5itP/S4kthLf6tlIGrToFlzsi3gCWU42gjlVyeCCnAMB2LorPqS7Awl3FLM5Vi8Ab1oMtlqwJoIOXoK35XVCHekgSJCMIONOY5ZUMUwX4uD7PC27M1mZzFc5KuYSSqhxfB4rx/Nc6Ah3slmc6Ely3NrAaUd7VAsBFc/5SbE4w1TY0MTNIxAIlhU6H1WM2SweL4WV7Py3AMdmZKSbFv6frQySUKGZRBMCspINYy8TH0HvzHgYn2aCTmJDj1sD2k0IN58uyUFmklqh9qLhrgD33AR0wwzbBw1itYzwxN2ul7ncLodjsu+D+cu+VXku2KPy6y5DEdsOVwRwODSwuc0pngCP0lk7I39XjkdDkX+Vq46CC/7vY6vqjVq71+n4yj/DhqWGNzumDoNtT9YsTbKGMw/iibSemEZS1bV1CfhrpOyKiv455ZtGjjsc+R0+",
+  "signature_algorithm": "RSASSA-PKCS1-v1_5 with SHA-256",
+  "source_tag": "v2026.11.21.3",
+  "source_sha256": "5be2a4188497a78d955a04257e978250e64428dcca8717593a67f8c87db6e955",
+  "source_vba_sha256": "9adeb37833bfe1abd1f5ab314d43db49420b509c2c1bf15d0f383f1453f817cb",
+  "changed_zip_entries": [
+    "docProps/core.xml",
+    "customUI/customUI.xml",
+    "customUI/customUI14.xml"
+  ],
+  "vba_unchanged": true,
+  "word_autostart_unchanged": true,
+  "notes": "Only visible version label in Word Ribbon Update group; original VBA popup unchanged.",
+  "status": "SIGNED_READY_FOR_GITHUB_RELEASE, OTA FEED DISABLED UNTIL ASSET VERIFICATION"
+}
