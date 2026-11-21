@@ -1,0 +1,59 @@
+name: QuangNV - Publish signed OTA v2026.11.21.4
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout release files
+        uses: actions/checkout@v4
+
+      - name: Validate signed Word Add-in (fail closed)
+        shell: bash
+        run: python3 tools/verify_ota_2026_11_21_4.py
+
+      - name: Prevent overwriting a published release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if gh release view v2026.11.21.4 >/dev/null 2>&1; then
+            echo "Release already exists. Refusing to overwrite a signed OTA release." >&2
+            exit 1
+          fi
+
+      - name: Publish as pre-release (feed stays disabled until separate approval)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create v2026.11.21.4 \
+            "ota-releases/v2026.11.21.4/ChuanHoa_VanBanDang_2026.11.21.4.dotm" \
+            "ota-releases/v2026.11.21.4/manifest_OTA_DA_KY.json" \
+            --title "QuangNV 2026.11.21.4 - OTA khi mo Word" \
+            --notes "Signed Word Add-in OTA. Requires one-time Windows migration for the local OTA PowerShell script and removal of the legacy 2-hour scheduled task. Enable the Google Sheets feed only after a successful test on one machine." \
+            --prerelease
+
+      - name: Check published GitHub asset digest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, subprocess, time
+          name = "ChuanHoa_VanBanDang_2026.11.21.4.dotm"
+          expected = hashlib.sha256((pathlib.Path("ota-releases/v2026.11.21.4") / name).read_bytes()).hexdigest()
+          result = subprocess.check_output(["gh", "api",
+             "repos/quanglci/QuangNV-Word-Addin/releases/tags/v2026.11.21.4"], text=True)
+          items = json.loads(result)["assets"]
+          asset = next((x for x in items if x["name"] == name), None)
+          if not asset or asset.get("digest") != "sha256:" + expected:
+              raise SystemExit("Published asset digest does not match. Do not enable OTA feed.")
+          print("Verified published asset digest:", expected)
+          PY
