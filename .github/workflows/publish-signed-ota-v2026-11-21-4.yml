@@ -1,0 +1,85 @@
+name: QuangNV signed OTA v2026.11.21.4 (publish)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - release-candidates/2026.11.21.4/START_PUBLISH.txt
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quangnv-publish-ota-v2026.11.21.4
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out signed release recipe
+        uses: actions/checkout@v4
+
+      - name: Check patch tool is available
+        run: |
+          if ! command -v zstd >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y zstd
+          fi
+
+      - name: Download verified previously released Word Add-in v2026.11.21.3
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download v2026.11.21.3 \
+            --repo quanglci/QuangNV-Word-Addin \
+            --pattern "ChuanHoa_VanBanDang_2026.11.21.3.dotm" \
+            --dir .
+
+      - name: Reconstruct exact new Word Add-in and verify signed digest
+        run: |
+          python3 tools/reconstruct_signed_ota_2026_11_21_4.py
+          python3 tools/verify_ota_2026_11_21_4.py
+
+      - name: Refuse overwriting previously published signed assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v2026.11.21.4 --repo quanglci/QuangNV-Word-Addin >/dev/null 2>&1; then
+            echo "Release v2026.11.21.4 already exists; refusing overwrite."
+            exit 1
+          fi
+
+      - name: Publish signed v2026.11.21.4 GitHub pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v2026.11.21.4 \
+            ota-releases/v2026.11.21.4/ChuanHoa_VanBanDang_2026.11.21.4.dotm \
+            ota-releases/v2026.11.21.4/manifest_OTA_DA_KY.json \
+            --repo quanglci/QuangNV-Word-Addin \
+            --title "QuangNV 2026.11.21.4 - OTA khi mo Microsoft Word" \
+            --notes "Signed update from Windows-compiled Add-in. On Word startup, checks for OTA. One-time local migration is still required on older installations to remove the old two-hour task and safely apply after Word closes. Check one machine first. Google Sheets feed stays disabled until GitHub asset verification." \
+            --prerelease
+
+      - name: Verify GitHub release asset SHA-256
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          name='ChuanHoa_VanBanDang_2026.11.21.4.dotm'
+          local=pathlib.Path('ota-releases/v2026.11.21.4')/name
+          expected=hashlib.sha256(local.read_bytes()).hexdigest()
+          rel=json.loads(subprocess.check_output([
+            'gh','api','repos/quanglci/QuangNV-Word-Addin/releases/tags/v2026.11.21.4'],text=True))
+          assets=[a for a in rel['assets'] if a['name']==name]
+          assert len(assets)==1, 'Missing or duplicate release asset'
+          a=assets[0]
+          assert a['size']==local.stat().st_size, 'Release asset size mismatch'
+          assert a.get('digest')=='sha256:'+expected, 'Release asset digest mismatch'
+          print('GITHUB RELEASE VERIFIED:',expected)
+          PY
