@@ -1,0 +1,81 @@
+name: Publish signed QuangNV OTA v2026.11.21.8
+
+on:
+  push:
+    paths:
+      - 'ota-releases/v2026.11.21.8/READY_TO_PUBLISH.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout signed release material
+        uses: actions/checkout@v4
+
+      - name: Download verified published baseline .6
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download v2026.11.21.6 --pattern 'ChuanHoa_VanBanDang_2026.11.21.6.dotm' --clobber
+
+      - name: Reconstruct exact signed OTA .8 Word Add-in
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64,hashlib
+          from pathlib import Path
+          text=Path('ota-releases/v2026.11.21.8/delta_b64.txt').read_text().strip()
+          data=base64.b64decode(text,validate=True)
+          expected='8782330eb7d69b233e91c2e94a11b4c48ea77cc057ce5e97d2cc1ce393b50d43'
+          if hashlib.sha256(data).hexdigest()!=expected:
+              raise SystemExit('Delta SHA-256 mismatch')
+          Path('v8_delta.zst').write_bytes(data)
+          PY
+          if ! command -v zstd >/dev/null 2>&1; then
+            echo 'zstd is required; stop rather than downloading unverified tooling' >&2
+            exit 1
+          fi
+          zstd --patch-from=ChuanHoa_VanBanDang_2026.11.21.6.dotm -d v8_delta.zst -o ChuanHoa_VanBanDang_2026.11.21.8.dotm -q -f
+
+      - name: Verify the Word package and RSA-SHA256 signature
+        run: python3 tools/verify_ota_2026_11_21_8.py
+
+      - name: Refuse to overwrite an existing public Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v2026.11.21.8 >/dev/null 2>&1; then
+            echo 'Release v2026.11.21.8 already exists. Refusing overwrite.' >&2
+            exit 1
+          fi
+
+      - name: Publish pre-release for controlled Word OTA testing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v2026.11.21.8 \
+            ChuanHoa_VanBanDang_2026.11.21.8.dotm \
+            ota-releases/v2026.11.21.8/manifest_OTA_DA_KY.json \
+            --title 'QuangNV 2026.11.21.8 - Test OTA from Word Ribbon v.7' \
+            --notes 'Controlled OTA test from QuangNV v2026.11.21.7. No new Word features: current version label updated to 2026.11.21.8. VBA functionality, Ribbon and Word startup behavior preserved. SHA-256 and RSA signature are verified. Test on one Windows machine first with Kaspersky enabled.' \
+            --prerelease
+
+      - name: Verify GitHub published asset SHA-256
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,subprocess,pathlib
+          name='ChuanHoa_VanBanDang_2026.11.21.8.dotm'
+          expected=hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()
+          j=json.loads(subprocess.check_output(['gh','api','repos/quanglci/QuangNV-Word-Addin/releases/tags/v2026.11.21.8'],text=True))
+          asset=next((a for a in j.get('assets',[]) if a.get('name')==name),None)
+          if not asset or asset.get('digest')!='sha256:'+expected:
+              raise SystemExit('GitHub release asset SHA256 mismatch. DO NOT ENABLE OTA FEED.')
+          print('SUCCESS: GitHub Release SHA-256 verified:',expected)
+          PY
