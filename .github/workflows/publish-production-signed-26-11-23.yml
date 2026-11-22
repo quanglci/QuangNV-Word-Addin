@@ -1,0 +1,66 @@
+name: Verify and attach production-signed QuangNV 26.11.23 OTA
+on:
+  push:
+    paths:
+      - 'ota-releases/v26.11.23/manifest_OTA_DA_KY.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-production-signature:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download exact public Word payload
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download v26.11.23 --pattern 'ChuanHoa_VanBanDang_26.11.23.dotm' --clobber
+
+      - name: Strictly verify production RSA signing key and package content
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,base64,json,importlib.util,zipfile,xml.etree.ElementTree as ET
+          p=Path('ota-releases/v26.11.23/manifest_OTA_DA_KY.json')
+          m=json.loads(p.read_text(encoding='utf-8-sig'))
+          n='ChuanHoa_VanBanDang_26.11.23.dotm'
+          sha='04963ad3d01aed1c771febc034d48c8d307d38d07b481839d1a5594193d3e1a8'
+          url='https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.23/'+n
+          assert m.get('version')=='26.11.23'
+          assert m.get('tag')=='v26.11.23'
+          assert m.get('filename')==n
+          assert m.get('sha256')==sha
+          assert m.get('url')==url
+          assert m.get('file_size_bytes')==1112923
+          assert m.get('signature_algorithm')=='RSASSA-PKCS1-v1_5 with SHA-256'
+          b=Path(n).read_bytes()
+          assert len(b)==1112923 and hashlib.sha256(b).hexdigest()==sha
+          with zipfile.ZipFile(n) as z:
+            assert len(z.namelist())==41 and z.testzip() is None
+            assert hashlib.sha256(z.read('word/vbaProject.bin')).hexdigest()=='eaf2769bc958b0c8eb6fa31acfa97bfb84dacb2b78464ccba0b9e2ffba3ffb1e'
+            for x in ('customUI/customUI.xml','customUI/customUI14.xml'):
+              node=ET.fromstring(z.read(x))
+              assert b'26.11.23' in z.read(x)
+          spec=importlib.util.spec_from_file_location('official_verifier','tools/verify_ota_2026_11_21_10.py')
+          verifier=importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(verifier)
+          signed=(m['version']+'\n'+sha+'\n'+url).encode('utf-8')
+          sig=base64.b64decode(m['signature'],validate=True)
+          assert verifier.verify_signature(signed,sig),'Production signature INVALID'
+          print('PASS: official production RSA signature; SHA-256; 41 Word parts; VBA unchanged')
+          PY
+
+      - name: Attach verified production manifest without replacing payload
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload v26.11.23 ota-releases/v26.11.23/manifest_OTA_DA_KY.json --clobber
+          gh release edit v26.11.23 --prerelease=false --latest=false \
+            --title 'QuangNV 26.11.23 - verified public OTA' \
+            --notes 'Verified SHA-256 and RSA signature from the ORIGINAL production OTA key. Word payload unchanged from previously published v26.11.23; 41 components, VBA fingerprint preserved. Update only with user consent after closing Word. Google Sheets production OTA feed must be enabled separately after verification.'
+          gh release view v26.11.23 --json assets --jq '.assets[] | select(.name=="manifest_OTA_DA_KY.json") | .name' | grep -Fx 'manifest_OTA_DA_KY.json'
