@@ -1,0 +1,3 @@
+QuangNV v26.11.23 TWO-PC PILOT
+Trigger signed prerelease build only after source and signature validation.
+Production OTA feed stays unchanged.
