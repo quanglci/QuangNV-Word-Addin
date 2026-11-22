@@ -1,0 +1,61 @@
+name: Promote QuangNV 26.11.23 release to public (signed two-PC pilot)
+
+on:
+  push:
+    paths:
+      - 'ota-test/v26.11.23/PROMOTE_PUBLIC_RELEASE.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout pinned release materials
+        uses: actions/checkout@v4
+
+      - name: Verify existing release and detached RSA pilot signature
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release download v26.11.23 --pattern 'ChuanHoa_VanBanDang_26.11.23.dotm' --clobber
+          gh release download v26.11.23 --pattern 'manifest_OTA_PILOT.json' --clobber
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,base64,json,zipfile,subprocess
+          m=json.loads(Path('manifest_OTA_PILOT.json').read_text())
+          b=Path('ChuanHoa_VanBanDang_26.11.23.dotm').read_bytes()
+          assert m['version']=='26.11.23' and m['key_scope']=='pilot-two-PC-only'
+          assert m['file_size_bytes']==len(b)==1112923
+          assert hashlib.sha256(b).hexdigest()==m['sha256']=='04963ad3d01aed1c771febc034d48c8d307d38d07b481839d1a5594193d3e1a8'
+          assert m['url']=='https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.23/ChuanHoa_VanBanDang_26.11.23.dotm'
+          with zipfile.ZipFile('ChuanHoa_VanBanDang_26.11.23.dotm') as z:
+            assert len(z.namelist())==41 and 'word/vbaProject.bin' in z.namelist()
+          Path('signed_message.txt').write_bytes((m['version']+'\n'+m['sha256']+'\n'+m['url']).encode())
+          Path('signature.bin').write_bytes(base64.b64decode(m['signature'],validate=True))
+          o=json.loads(subprocess.check_output(['gh','api','repos/quanglci/QuangNV-Word-Addin/releases/tags/v26.11.23'],text=True))
+          a=next(x for x in o['assets'] if x['name']=='ChuanHoa_VanBanDang_26.11.23.dotm')
+          assert a['digest']=='sha256:'+m['sha256'] and a['size']==len(b)
+          assert o['draft'] is False
+          print('PASS: published release asset SHA-256 and 41 Word parts')
+          PY
+          openssl dgst -sha256 -verify ota-test/v26.11.23/pilot_public.pem -signature signature.bin signed_message.txt
+
+      - name: Promote GitHub release to public stable; DO NOT activate production OTA feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release edit v26.11.23 --prerelease=false --latest=false \
+            --title 'QuangNV 26.11.23 - PUBLIC release / two-PC OTA test'
+          python3 - <<'PY'
+          import json,subprocess
+          o=json.loads(subprocess.check_output(['gh','api','repos/quanglci/QuangNV-Word-Addin/releases/tags/v26.11.23'],text=True))
+          assert o['prerelease'] is False and o['draft'] is False
+          print('PASS: GitHub Release is public and not a prerelease')
+          PY
