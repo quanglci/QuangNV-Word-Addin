@@ -1,0 +1,14 @@
+{
+  "product": "QuangNV Word Add-in",
+  "version": "26.11.23",
+  "tag": "v26.11.23",
+  "filename": "ChuanHoa_VanBanDang_26.11.23.dotm",
+  "file_size_bytes": 1112923,
+  "sha256": "04963ad3d01aed1c771febc034d48c8d307d38d07b481839d1a5594193d3e1a8",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.23/ChuanHoa_VanBanDang_26.11.23.dotm",
+  "signature_algorithm": "RSASSA-PKCS1-v1_5 with SHA-256",
+  "vba_project_sha256": "eaf2769bc958b0c8eb6fa31acfa97bfb84dacb2b78464ccba0b9e2ffba3ffb1e",
+  "notes": "Derived from tested integrated Home + Ribbon + OTA 26.11.22; preserves 39 OOXML parts including VBA verbatim; updates two Ribbon XML version labels and normalizes Word template to avoid duplicate COM Ribbon.",
+  "signature": "cc1Txi3Y/ZZHdOolD8cN5YDF3Bz2l3Kwk8kYyNLDjWkStT3TzzNRqJxYFAHswo2G04byP2amFKb5FmiTnysXx08KTEro5J8FqXsdlTjVoBefaUUW3pmsi5B+kWmCFbjXqSBzJuE2nAUQRqTlAjKgf9sQJtvsaJlWOKm7iBiPsmvT4IGTzd3TafafOzJ+dLHTvk676TMwv6ekipv+xx+k20czx2KbVKlYfgW6n+pV+y1I4cCOTUjhW97InZwGSKNx+eYNesUl6uR/+reUbtNPzjTkxfCx2osZmN5xoioSo4c8416I1xx/90efjnDRekavTDJS0m3/TIIpsdtpogM9rof1f3LldW23ha2oL3DTO83BIK9uT7NQOezo7H1Gb4PcHsi1L6NPNaD32Ejb4Bhrk2cM2ctUBjYUS/1i9aAGw7AWC+r6tYoDuqwRy38hzjiNCbym7gHwVi/sd/PBn87yehA5DeempZS21K3TSOnveEwFPTkMJ0lweoxZZcPiIXN2",
+  "status": "SIGNED_PENDING_GITHUB_ASSET_VALIDATION"
+}
