@@ -1,0 +1,3 @@
+User requested public GitHub release of QuangNV 26.11.23 on 2026-11-22.
+Strictly verify existing SHA-256 and RSA pilot signature before promotion.
+Do not enable production OTA feed: old clients require the original signer.
