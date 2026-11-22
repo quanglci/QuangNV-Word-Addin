@@ -1,0 +1,99 @@
+name: Publish QuangNV 26.11.23 two-PC OTA pilot
+on:
+  push:
+    paths:
+      - 'ota-test/v26.11.23/READY_TO_RELEASE.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact pilot release materials
+        uses: actions/checkout@v4
+
+      - name: Install zstd when needed
+        shell: bash
+        run: |
+          if ! command -v zstd >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y zstd
+          fi
+
+      - name: Download trusted published v2026.11.21.10 baseline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download v2026.11.21.10 --pattern 'ChuanHoa_VanBanDang_2026.11.21.10.dotm' --clobber
+
+      - name: Reconstruct and verify exact v26.11.23 Word package
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 -d ota-test/v26.11.23/pilot_delta.zst.b64 > pilot_delta.zst
+          echo "2aa124d14e8fee2ce916d068e72854999805fca0b9207ea49190b1ba070b0413  pilot_delta.zst" | sha256sum -c -
+          echo "f18305f7348b4578dcf83948b3b685e327c5b3e2fbd0f301363d61897ef60cdd  ChuanHoa_VanBanDang_2026.11.21.10.dotm" | sha256sum -c -
+          zstd --patch-from=ChuanHoa_VanBanDang_2026.11.21.10.dotm -q -d -f pilot_delta.zst -o ChuanHoa_VanBanDang_26.11.23.dotm
+          echo "04963ad3d01aed1c771febc034d48c8d307d38d07b481839d1a5594193d3e1a8  ChuanHoa_VanBanDang_26.11.23.dotm" | sha256sum -c -
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile,hashlib,json,base64
+          root=Path('ota-test/v26.11.23')
+          m=json.loads((root/'manifest_OTA_PILOT.json').read_text())
+          base=Path('ChuanHoa_VanBanDang_2026.11.21.10.dotm')
+          new=Path('ChuanHoa_VanBanDang_26.11.23.dotm')
+          assert m['version']=='26.11.23' and m['key_scope']=='pilot-two-PC-only'
+          assert m['file_size_bytes']==len(new.read_bytes())
+          assert m['sha256']==hashlib.sha256(new.read_bytes()).hexdigest()
+          assert m['url']=='https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.23/'+new.name
+          a=zipfile.ZipFile(base);b=zipfile.ZipFile(new)
+          assert len(a.namelist())==41 and set(a.namelist())==set(b.namelist())
+          changed=[s for s in a.namelist() if a.read(s)!=b.read(s)]
+          assert set(changed)=={'customUI/customUI.xml','customUI/customUI14.xml'},changed
+          for x in changed:
+            assert b'26.11.23' in b.read(x)
+          Path('signed_message.txt').write_bytes(f"{m['version']}\n{m['sha256']}\n{m['url']}".encode())
+          Path('signature.bin').write_bytes(base64.b64decode(m['signature'],validate=True))
+          print('PASS: exact Word SHA, 41 parts, 39 unchanged including VBA; 2 Ribbon XML updated')
+          PY
+          openssl dgst -sha256 -verify ota-test/v26.11.23/pilot_public.pem -signature signature.bin signed_message.txt
+
+      - name: Refuse overwrite of existing v26.11.23 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if gh release view v26.11.23 >/dev/null 2>&1; then
+            echo 'Release already exists. Refusing overwrite.' >&2
+            exit 1
+          fi
+
+      - name: Publish verified signed two-PC PILOT prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create v26.11.23 \
+            ChuanHoa_VanBanDang_26.11.23.dotm \
+            ota-test/v26.11.23/manifest_OTA_PILOT.json \
+            --title 'QuangNV 26.11.23 - TWO PC OTA PILOT' \
+            --notes 'Controlled two-PC pilot ONLY. Signed with isolated pilot key, not the production OTA signing key. Word payload differs from v2026.11.21.10 only in two Ribbon XML files; VBA unchanged. For testing, install the separate pilot OTA manager on the two 26.11.22 PCs first. Production Google Sheets OTA feed remains unchanged. Do not roll out broadly before Windows validation.' \
+            --prerelease
+
+      - name: Verify published GitHub asset digest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,subprocess
+          obj=json.loads(subprocess.check_output(['gh','api','repos/quanglci/QuangNV-Word-Addin/releases/tags/v26.11.23'],text=True))
+          asset=next((a for a in obj['assets'] if a['name']=='ChuanHoa_VanBanDang_26.11.23.dotm'),None)
+          assert asset and asset['size']==1112923
+          assert asset['digest']=='sha256:04963ad3d01aed1c771febc034d48c8d307d38d07b481839d1a5594193d3e1a8'
+          print('PASS: published release hash equals expected SHA-256')
+          PY
