@@ -1,0 +1,12 @@
+{
+  "product": "QuangNV Word Add-in - TWO PC PILOT",
+  "version": "26.11.23",
+  "tag": "v26.11.23",
+  "filename": "ChuanHoa_VanBanDang_26.11.23.dotm",
+  "file_size_bytes": 1112923,
+  "sha256": "04963ad3d01aed1c771febc034d48c8d307d38d07b481839d1a5594193d3e1a8",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.23/ChuanHoa_VanBanDang_26.11.23.dotm",
+  "signature_algorithm": "RSASSA-PKCS1-v1_5 with SHA-256",
+  "key_scope": "pilot-two-PC-only",
+  "signature": "W/wydJd26AY5M7K91SV3ey5k9wKtv4roj0qiamjwO1f6AI7qfFdQxN/6c7fsdw+G9TsktaUKcef9ukWFQZsC+kogO44WqZ9uS0uK+yj4Q0A025fUrxOZqnU0GrPTjGrjbmF13CCzR7tFeHoA/aLP0AKEUptHFz3U9abI8czMRtIAeTstA0drdhm9D/oayn5HjdAyFc007uU8wunpe/hdJnybFhTWAm1IYaOpHjyDLXOPsWB3ECNGXFJ+twgVq4I2sMjNnVidipWpa0+ubEMYFT3H+Fn7SSeJUDTw/WLfzqNVgY4gIhJjEBXQdnR+gzNIHQtGHvmul3yc6SD5tH9yPw=="
+}
