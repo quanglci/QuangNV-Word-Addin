@@ -1,0 +1,6 @@
+QuangNV official OTA 26.11.23.1
+Exact owner-supplied Fix V7 Word DOTM staged at 451609 bytes.
+SHA-256: b0ea41f12d5f4abb705f436a9aae9312d4df2a24a6635a439856b245edc6d84b
+Production RSA signature in manifest_OTA_DA_KY.json
+No new AI configuration helper or PowerShell embedded.
+Publish only if signed GitHub Action checks all pass.
