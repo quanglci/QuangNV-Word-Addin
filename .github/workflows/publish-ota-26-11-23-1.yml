@@ -1,4 +1,4 @@
-name: Publish verified official QuangNV 26.11.23.1 Word OTA
+name: Publish verified official QuangNV 26.11.23.1 V7-only Word OTA
 
 on:
   push:
@@ -64,7 +64,7 @@ jobs:
             assert new.testzip() is None
             assert old.read('word/vbaProject.bin') != new.read('word/vbaProject.bin'), 'No VBA fix found'
             vba=new.read('word/vbaProject.bin')
-            for x in (b'RibbonCauHinhAI',b'QNV_231_EnsureAIConfig',b'TT_QNV_V7_RepositionAgencyLine',b'TT_QNV_V6_ExpandAgencyLeft'):
+            for x in (b'RibbonCauHinhAI',b'TT_QNV_V7_RepositionAgencyLine',b'TT_QNV_V6_ExpandAgencyLeft'):
               assert x in vba, 'Missing expected VBA marker: '+str(x)
             for x in b:
               if x.startswith('customUI/images/') or x.startswith('word/theme/'):
@@ -73,7 +73,8 @@ jobs:
               b=new.read(x)
               assert b.count(b'26.11.23.1')==1 and b'grpQuangNV_Update' in b
               ET.fromstring(b)
-          print('PASS: official RSA key, SHA256, 41 Word parts, preserved media, V7 and opt-in AI self repair')
+          assert b'QNV_231_EnsureAIConfig' not in vba, 'Unexpected AI self-extraction / bootstrap payload'
+          print('PASS: official RSA key, SHA256, 41 Word parts, preserved media, Fix V7, no embedded AI helper')
           PY
 
       - name: Refuse to overwrite an existing version
@@ -92,8 +93,8 @@ jobs:
           gh release create v26.11.23.1 \
             ChuanHoa_VanBanDang_26.11.23.1.dotm \
             ota-releases/v26.11.23.1/manifest_OTA_DA_KY.json \
-            --title 'QuangNV 26.11.23.1 - signed V7 formatting + AI config repair' \
-            --notes 'Signed Word OTA from confirmed V7. Preserves agency 14pt, no line wrap, agency and title underline shapes, Home / Ribbon / AI / OTA. AI configuration helper recovered on button click with consent if missing. Pilot on one Windows machine before rollout. No production feed activation by this workflow.'
+            --title 'QuangNV 26.11.23.1 - signed V7 formatting ONLY' \
+            --notes 'Signed Word OTA based on confirmed V7. Preserves 14pt agency font, column expansion, all underline shapes and existing AI / Ribbon / OTA. No embedded AI script or VBA self-extraction. Standalone AI config app is distributed separately. Validate on one Windows PC before rollout. No production feed activation by this workflow.'
 
       - name: Verify downloaded GitHub asset digest
         env:
