@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "enabled": false,
+  "version": "26.11.23.5",
+  "url": "",
+  "sha256": "",
+  "signature": "",
+  "notes": "Chưa phát hành OTA Universal mới. Chỉ bật khi có bộ cài đầy đủ được ký RSA."
+}
