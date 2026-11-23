@@ -1,31 +1,32 @@
-# QuangNV 26.11.23.4 — OTA chuyển tiếp 23/23.1 → 26.11.23.5
+# QuangNV 26.11.23.4 — Signed bridge PILOT R4
 
-**STATUS: BUILT / UNSIGNED / NOT TESTED ON WINDOWS / NOT PUBLISHED / PRODUCTION FEED INACTIVE**
+**Status: RSA-SIGNED FILE VERIFIED / PILOT PACKAGE BUILT / NOT RELEASED / PRODUCTION OTA UNCHANGED**
 
-A working, source-included builder and an unsigned pilot kit were generated **23 November 2026**. The one ZIP is stored privately in the owner's Google Drive folder `QuangNV_PhatHanh_ChinhThuc/Cho_Phat_Hanh_26.11.23.5/OTA_ChuyenTiep_26.11.23.4`.
+On 24 November 2026, the owner supplied the signed bridge DOTM, signed manifest, SHA256SUMS, single-machine pilot EXE and rollback scripts.
 
-## Components
+## Cryptographic verification
+- `ChuanHoa_VanBanDang_26.11.23.4.dotm`: SHA256 `7cce9b9d8e1e3bb495695db288b769a6df3e5b1cbe27b86630a152565a0c2692`, size **454422 bytes**.
+- Signed manifest `version=26.11.23.4`, `release_scope=pilot`, `tag=v26.11.23.4` and fixed URL to the exact release asset.
+- **RSA PKCS#1 v1.5 with SHA-256 signature VALID** against the official 3072-bit production public key already used by QuangNV.
+- DOTM ZIP has exactly **41 components** and validates without errors. Ribbon `customUI.xml` and `customUI14.xml` add only `btnQNV_Bridge235` and update version text to `26.11.23.4` (besides normal Word-save metadata and VBA binary changes).
+- VBA binary contains `QNV_Bridge_Run`, matching Ribbon callback; compiled macro behavior remains subject to Windows/Word pilot testing.
 
-- Original V7 DOTM 26.11.23.1, verified SHA256 `b0ea41f12d5f4abb705f436a9aae9312d4df2a24a6635a439856b245edc6d84b`
-- Owner-PC Windows PowerShell authoring script; adds a new VBA Ribbon callback `QNV_Bridge_Run` by Word COM, only to a **copy** of that DOTM, and adds a visible **Hoàn tất nâng cấp 26.11.23.5** button.
-- RSA signer/verifier Windows EXE; accepts only the same production public key as the existing 23.1 manager, private key remains on the owner's PC.
-- 32-bit Windows GUI executable `QuangNV_OTA_Bridge_26.11.23.4.exe` (works on 32/64-bit Windows), SHA256 `4b4282a62c672d283de00e0ae28b34663a226af04f26483d4f61a871183dcc62`.
-- Full Setup `QuangNV_Setup_26.11.23.5_Universal.exe` SHA256 `65b7401f3b57e7ed8fcb21ba2f31c736af5555fbf892e91fe2924882168bd7f5`.
-- RSA-aware one-machine pilot installer and rollback PowerShell script.
+## Single-machine pilot R4
+- Original R3 pilot utility had a Windows overwrite issue: `os.Rename(tmp, dest)` cannot replace a pre-existing DOTM.
+- Pilot **R4** uses Win32 `MoveFileExW(REPLACE_EXISTING | WRITE_THROUGH)`, refuses unknown baseline hashes, backs up DOTM and OTA state, verifies signed manifest, and pre-stages the **unchanged, SHA-pinned** bridge EXE and Full Setup EXE in the local cache.
+- This supports offline / one-machine pilot **without publishing** any GitHub release or enabling the shared Google Sheets feed.
+- Only pilot tool was rebuilt; **the RSA-signed DOTM, signed manifest, bridge and Full Setup binaries were not modified**.
 
-## OTA sequence
+Pilot R4 package SHA-256:
+`8915ac99feea6781321aa09220a3aca7f67187ef1973c3e5f7fb5f6d29a08045`
 
-1. Existing signed-DOTM OTA manager installs **signed** `ChuanHoa_VanBanDang_26.11.23.4.dotm` from `v26.11.23.4` GitHub Release, triggered by user acceptance and closed Word.
-2. User restarts Word and clicks **Hoàn tất nâng cấp 26.11.23.5**. The added VBA macro downloads the exact GitHub Release bridge EXE; SHA256 is pinned and verified by Windows certutil, with explicit user consent.
-3. The bridge downloads the exact full installer from `v26.11.23.5`, verifies SHA256 and MZ, waits for Word to close **without killing the process**, then starts Full Setup.
-4. Full Setup updates DOTM/COM/AI/OTA Universal and its version state; existing Word 23+ functions are intended to remain intact. This step requires actual Windows verification.
+Owner's Google Drive private staging folder:
+`QuangNV_PhatHanh_ChinhThuc/Cho_Phat_Hanh_26.11.23.5/OTA_ChuyenTiep_26.11.23.4`.
 
-## Missing gates (MANDATORY)
+## Mandatory remaining gates
+1. Pilot on one Windows machine with QuangNV **26.11.23 or 26.11.23.1**, Word closed, antivirus enabled.
+2. In Word click the new `Hoàn tất nâng cấp 26.11.23.5`; verify Full Setup, Ribbon, all AI modes (including progress dialogs), version label, OTA and rollback.
+3. Do not run the pilot on the stable source computer. Signed content integrity does not replace application compatibility testing.
+4. After pilot success, publish both GitHub release assets, inspect remote SHA256, then activate the signed bridge feed entry. **Never enable the production feed before this gate**.
 
-- Generate the DOTM using Word on the owner's machine (VBOM trust is needed on authoring machine **only**); static Linux tools cannot insert a VBA module into the OOXML binary `vbaProject.bin`.
-- Sign with the **original production RSA private key held locally**; it must never be uploaded or shared.
-- Publish 26.11.23.4 and 26.11.23.5 assets as GitHub prereleases. Both release tags were absent when inspected.
-- Pilot end-to-end on a test machine **without disabling antivirus**. The old feed is common to all machines: do **not** set enabled=yes to test.
-- Only after successful pilot and rollback verification, activate a new, accurately signed row `26.11.23.4` in the `OTA_AnToan` Google Sheet feed. Keep `26.11.23.1` untouched until then.
-
-**No changes have been made to the production Google Sheets OTA feed.** This is a prepared bridge project, not a released update.
+No GitHub releases or production feed changes were made during this verification. No private RSA key was accessed or uploaded.
