@@ -17,12 +17,6 @@ jobs:
       - name: Checkout verified staged material
         uses: actions/checkout@v4
 
-      - name: Install zstd if required
-        run: |
-          if ! command -v zstd >/dev/null 2>&1; then
-            sudo apt-get update -qq && sudo apt-get install -y zstd
-          fi
-
       - name: Download original public 26.11.23 release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -30,14 +24,14 @@ jobs:
           gh release download v26.11.23 --pattern 'ChuanHoa_VanBanDang_26.11.23.dotm' --clobber
           echo "04963ad3d01aed1c771febc034d48c8d307d38d07b481839d1a5594193d3e1a8  ChuanHoa_VanBanDang_26.11.23.dotm" | sha256sum -c -
 
-      - name: Reconstruct 26.11.23.1 from approved signed binary delta
+      - name: Copy exact signed V7 package supplied by owner; verify SHA256
         shell: bash
         run: |
           set -euo pipefail
-          base64 -d ota-releases/v26.11.23.1/delta_b64.txt > payload_delta.zst
-          zstd --patch-from=ChuanHoa_VanBanDang_26.11.23.dotm -q -d -f payload_delta.zst -o ChuanHoa_VanBanDang_26.11.23.1.dotm
+          cp ota-releases/v26.11.23.1/ChuanHoa_VanBanDang_26.11.23.1.dotm ChuanHoa_VanBanDang_26.11.23.1.dotm
+          echo "b0ea41f12d5f4abb705f436a9aae9312d4df2a24a6635a439856b245edc6d84b  ChuanHoa_VanBanDang_26.11.23.1.dotm" | sha256sum -c -
 
-      - name: Verify official RSA signature, Word VBA, Ribbon, and original AI helper
+      - name: Verify official RSA signature, Fix V7 VBA, Ribbon, and absence of AI bootstrap
         shell: bash
         run: |
           python3 - <<'PY'
