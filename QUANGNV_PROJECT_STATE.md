@@ -236,3 +236,9 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 - ZIP `QuangNV_26.11.24.5_R5_ThreeColors_MaNguon.zip`, SHA-256 `5bc4ec698410238a6ec113971921e5908821f7329bf7df218b1d03859addfe00`, Drive https://drive.google.com/file/d/19-R2LiL25m-O96qshPHwCWjfjvXvKUX3/view .
 - EXE `QuangNV_Setup_26.11.24.5_R5_ThreeColors_Universal_Pilot.exe`, SHA-256 `33221b1d0c78ac7ba78895ec83b28e5e2d731da6bc13c597fa876552c1fd7337`, Drive https://drive.google.com/file/d/1myIRd46st7uyyPhsCJcP7H7FogveIyKw/view . Đã upload; chưa đối chiếu lại bytes Drive.
 - Tiếp theo: quét bộ cài, cài máy chủ dự án, thử No/Yes/Sửa/Chuyên sâu trên bản sao sạch của hai mẫu và mẫu mới, đối chiếu ba màu, kết quả và định dạng; kiểm thử tài liệu có màu sẵn, bảng, tên riêng, Unicode, văn bản dài, Office 32/64-bit. Giữ nguồn 24.4 phục hồi, tiếp tục lấy từ điển có giấy phép và cải tiến ngữ cảnh cục bộ, chưa bật OTA hoặc công bố chính thức.
+
+## 23. Kiểm thử 26.11.24.5 R5 Three Colors — chế độ No — 24/11/2026
+
+- Chủ dự án gửi ảnh Word ở chế độ No trên mẫu 20 lỗi ban đầu. Đối chiếu trực quan: đủ 20 vị trí được đánh dấu, gồm 11 vàng và 9 xanh dương nhạt; không thấy báo nhầm hoặc sửa chữ. Không có bảng kết quả trong ảnh, chưa xác minh số đếm UI hay lưu lượng mạng. Theo thiết kế No không gọi API.
+- Phân loại hai màu đã hiển thị đúng trên máy thử. Một số lỗi rõ ràng như thông ti, tài chín vẫn xanh dương nhạt do cơ chế thận trọng; không coi 20/20 trên mẫu có quy tắc đã biết là độ bao phủ tổng quát. Cần kiểm tra mẫu thứ hai có 20 lỗi mới (24.4 No chỉ 2/20), mẫu sạch và từ đúng có màu sẵn.
+- Giữ 24.5 làm bản thử; tiếp tục thử Yes, Sửa lỗi, Soát chuyên sâu và cửa sổ KẾT QUẢ ba nhóm. Chưa xác nhận màu xanh lá, số đếm, bảo toàn định dạng khi sửa, kiểm thử OTA/rollback hoặc mọi kiến trúc. Không đổi mã, đóng gói hay bật OTA tại mốc này.
