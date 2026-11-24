@@ -283,3 +283,8 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 
 - Chủ dự án gửi ảnh Word chế độ No trên mẫu 20 lỗi ban đầu sau khi nhận bộ cài 24.6. Đối chiếu trực quan: 11 vị trí vàng, 9 xanh dương nhạt, đủ 20 vị trí lỗi chuẩn, chưa thấy tô nhầm từ đúng hoặc thay chữ. Kết quả giống 24.5 trên mẫu này; không có bằng chứng cải thiện độ bao phủ trên mẫu đã chứa quy tắc. Ảnh không có bảng kết quả, thời gian xử lý hay thông tin tải từ điển; chưa xác minh độc lập lưu lượng mạng.
 - Tiếp theo ưu tiên No trên mẫu thứ hai 20 lỗi (24.4 No chỉ 2/20), dùng bản sao gốc chưa tô màu; đối chiếu số lỗi thật, bỏ sót và báo nhầm riêng từng màu. Kiểm tra mẫu sạch và thuật ngữ, sau đó Yes/Sửa/Chuyên sâu và log từng lượt nếu có lỗi. Giữ 24.6, chưa đổi mã, đóng gói thêm hoặc bật OTA.
+
+## 30. Kiểm thử 26.11.24.6 R5 Multi-Dictionary — Yes Soát lỗi, mẫu đầu tiên — 24/11/2026
+
+- Chủ dự án gửi ảnh Word sau khi chọn Yes Soát lỗi trên mẫu 20 lỗi ban đầu. Đối chiếu trực quan: 19 vị trí vàng, 1 xanh dương nhạt (trùng lấp), đủ 20 vị trí lỗi chuẩn; chưa thấy từ đúng bị tô nhầm hoặc chữ bị sửa. Kết quả phân loại giống 24.5 Yes trên mẫu này; so với No 24.6 (11 vàng, 9 xanh dương), thêm 8 vị trí được xác định. Không suy rộng chất lượng tổng quát. Ảnh không có bảng KẾT QUẢ, thời gian hoặc log từng lượt; chưa xác nhận số lượt AI hoàn tất, hiệu quả parser mới hay số đếm của UI.
+- Tiếp theo thử Yes Sửa lỗi trên bản sao gốc chưa tô màu để xác minh parser, màu xanh lá, lỗi còn lại và định dạng; nếu chưa hoàn tất gửi bảng KẾT QUẢ và nhật ký AI_Profile_operation.txt (metadata, không gửi API key hoặc nội dung nhạy cảm). Ưu tiên thêm No trên mẫu thứ hai 20 lỗi, mẫu sạch độc lập, rồi Soát chuyên sâu. Giữ nguyên 24.6, chưa sửa mã, đóng gói thêm hay bật OTA.
