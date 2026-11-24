@@ -1,0 +1,120 @@
+# QUANGNV — HỒ SƠ BÀN GIAO DỰ ÁN
+
+**Cập nhật:** 24/11/2026 (giờ Việt Nam)  
+**Dự án:** QuangNV Add-in Word — Thể thức văn bản  
+**Mục đích:** Tiếp tục phát triển qua các cuộc trò chuyện ChatGPT mà không mất chức năng, không quay về bản cũ và không lặp lại lỗi đã xử lý.
+
+## 1. Điểm tiếp tục chính xác
+
+- **Bản nền đã cài thành công trên máy thử nghiệm:** QuangNV 26.11.23.5 Full Setup R3 (FixTuKhoaDOTM). Chủ dự án xác nhận R3 quét Kaspersky không có cảnh báo và cài đặt thành công. Không coi đó là bằng chứng mọi chức năng, mọi kiến trúc Office hoặc hoàn nguyên đều đã được kiểm thử.
+- **OTA chuyển tiếp đang bật:** R6, định danh phát hành `2026.11.23.4`, dẫn tới Full Setup 26.11.23.5 R3. Giữ nguyên bộ cài này và các tài sản đã ký; không ghi đè.
+- **Nhánh phát triển mới nhất:** Full Setup 26.11.23.5 R5, tích hợp OTA Center R2. Đây là bản tích lũy thử nghiệm, chưa phát hành chính thức. 19/20 thành phần nhúng giữ nguyên so với R3; chỉ OTA Universal được thay bằng Center R2. Đã biên dịch và kiểm tra tĩnh, chưa xác nhận cài R5 trên Windows hoặc quét Kaspersky R5.
+- **Thiết kế OTA:** chủ dự án đã duyệt bố cục Preview và yêu cầu hoàn thiện trạng thái hiển thị chuyên nghiệp. Center R1 đã chạy thực tế và hiện thông báo chưa có bản mới; Center R2 đã được tạo để sửa trạng thái này. Chưa có xác nhận duyệt Center R2 trên Windows.
+- **Việc tiếp theo:** thử Center R2 độc lập, thử Full Setup R5 trên máy phụ, kiểm tra hồi quy toàn bộ chức năng, nối nút Kiểm tra cập nhật trong Word tới Center mới một cách tương thích, sau đó thử OTA Universal toàn trình. Chưa bật feed Universal và chưa công bố R5 là bản chính thức.
+
+## 2. Quy chuẩn bắt buộc cho mọi phiên bản sau
+
+1. Phát hành tích lũy: mỗi bản mới chứa mọi bản vá đã xác nhận và chức năng đã hoàn thành. Không bắt người dùng cài lần lượt nhiều bản Fix. Không tự động đưa bản thử chưa đạt vào bản chính thức.
+2. Một Full Setup Universal duy nhất cho Windows 32/64-bit; nhận diện đúng kiến trúc Word/Office, không suy ra Office từ kiến trúc Windows. Hỗ trợ máy mới và nâng cấp máy đang dùng.
+3. Giữ nguyên mọi chức năng không liên quan tới yêu cầu sửa; so sánh manifest và SHA-256 từng payload với bản nền, ghi rõ thay đổi. Không xây dựng lại toàn bộ từ đầu nếu chỉ sửa một lỗi nhỏ.
+4. Giao diện nhất quán với bộ cài QuangNV đã duyệt, rõ ràng, chuyên nghiệp; không thêm xác nhận cài đặt thừa ở lần mở đầu. Có nút Cài đặt/Cập nhật, Khôi phục và Hủy/Đóng; thông báo kết quả tại giao diện chính, có chi tiết lỗi khi cần.
+5. OTA phải có sự đồng ý của người dùng, thông báo bản mới tùy chọn, kiểm tra phiên bản, chữ ký và SHA-256, sao lưu, chờ người dùng lưu và đóng Word, không cưỡng bức đóng tài liệu. Cập nhật lỗi phải hoàn nguyên và báo đúng kết quả; kiểm thử khả năng hoàn nguyên thật.
+6. Không tắt antivirus, không yêu cầu thêm ngoại lệ, không phục hồi tệp bị cách ly để chạy thử, không giảm xác thực. Không nhúng API key, token GitHub hoặc khóa RSA riêng vào gói cài, mã nguồn công khai hay hồ sơ bàn giao. Khóa riêng do chủ dự án quản lý và ký cục bộ.
+7. Tài sản phát hành phải bất biến. Tăng phiên bản/định danh hợp lệ khi thay đổi nội dung; đồng bộ đúng URL, hash, chữ ký, phiên bản hiển thị và hồ sơ cài đặt. Không bật feed sản xuất hoặc thay tài sản đã ký khi chưa có yêu cầu và kiểm thử phù hợp.
+8. Sau mỗi mốc phát triển, cập nhật hồ sơ này, lưu nguồn và bộ cài thực tế vào kho bền vững. Phân biệt rõ: đã thiết kế, đã biên dịch, đã quét, đã thử Windows, đã phát hành, đã bật OTA.
+
+## 3. Chức năng và bản vá cần bảo toàn
+
+| Nhóm | Yêu cầu đã thống nhất |
+|---|---|
+| Thể thức văn bản | Giữ Fix V7: tên cơ quan trên một dòng, không giảm cỡ chữ 14pt; nới cột trái khi cần, đường kẻ trích yếu đúng vị trí, không nhảy dòng/đường kẻ. |
+| Word Home / Ribbon | Giữ tab Home và Thể thức Văn bản, chức năng COM/Ribbon; chữ Loại văn bản rõ, biểu tượng có màu; tên nút `Chỉ dấu mức độ VB`, `Thêm số trang`. |
+| AI | Cấu hình AI; Soát lỗi, Soát chuyên sâu, Sửa lỗi; giữ các tùy chọn, tiến độ và kết quả. Không làm mất Cấu hình AI khi cập nhật DOTM. |
+| Giao diện AI V5.3.5 | Tiến độ có thời gian đã chạy/dự kiến còn lại; câu `Đang sửa lỗi chính tả bằng AI`; bảng kết quả nền xanh nhạt, tiêu đề `KẾT QUẢ`, chữ cảnh báo đỏ căn giữa ô. |
+| Hồ sơ và dữ liệu | Giữ cấu hình hiện có, dữ liệu người dùng; không xóa tài liệu, Word hay add-in khác. Nhãn Ribbon và hồ sơ OTA thống nhất. |
+| Cài đặt R3 | Sửa tự khóa DOTM do giao diện đọc SHA trong lúc cài; kiểm tra khả năng thay tệp trước khi thay đổi; hoàn nguyên những tệp thực sự đã đổi. |
+| Bảng tiến độ AI | Bảo đảm tạo thư mục `AI_DoublePass_Pilot_231/progress` khi cài; giữ các DLL/EXE tiến độ và kết quả. |
+
+## 4. Trung tâm cập nhật — thiết kế đã duyệt
+
+Cửa sổ riêng theo phong cách bộ cài: thanh bên xanh đậm, nội dung nền sáng, thông tin phiên bản rõ, sáu công đoạn và thanh tiến độ tải thật. Cửa sổ duy trì hiển thị trong lúc cập nhật; không chỉ dùng thông báo rời. Giữ kết quả cuối cho đến khi người dùng đóng.
+
+Sáu công đoạn: Kiểm tra phiên bản → Tải bản cập nhật → Xác minh chữ ký và SHA-256 → Chờ đóng Microsoft Word → Cài đặt và sao lưu → Kiểm tra kết quả.
+
+- Không có bản mới và feed khớp bản cài: hiện `PHIÊN BẢN MỚI NHẤT (OTA)` cùng số phiên bản, thông báo `Bạn đang sử dụng phiên bản mới nhất`, các bước không chạy ghi `Không cần thực hiện`.
+- Feed chưa mở bản khác: thông báo chưa phát hành; lỗi mạng/xác thực phải báo không thể kiểm tra, không giả định đã mới nhất.
+- Có bản mới: hiện phiên bản đích, tiến độ theo số byte tải thực tế; phân biệt đang xử lý, đã xong, lỗi. Không dùng phần trăm giả.
+- Chỉ báo `CẬP NHẬT THÀNH CÔNG` khi cài xong và xác minh hồ sơ phiên bản cùng SHA-256 DOTM. Nếu lỗi, báo nguyên nhân và trạng thái hoàn nguyên trung thực.
+
+## 5. Hạ tầng OTA và trạng thái phát hành
+
+**GitHub:** https://github.com/quanglci/QuangNV-Word-Addin  
+**Releases:** https://github.com/quanglci/QuangNV-Word-Addin/releases  
+**Google Drive:** thư mục riêng `QuangNV_PhatHanh_ChinhThuc/Cho_Phat_Hanh_26.11.23.5` (tìm theo đúng tên tệp ở mục 6; không thay đổi quyền chia sẻ).  
+**Google Sheets quản trị:** `QuangNV_ThongTin_PhatHanh`, tab `OTA_AnToan`. Đối chiếu trạng thái live trước mọi lần phát hành, không mặc định trạng thái cũ còn đúng.
+
+| Phiên bản / kênh | Trạng thái đọc lại ngày 24/11/2026 |
+|---|---|
+| 26.11.23 | `enabled=yes` |
+| 26.11.23.1 + Fix V7 | `enabled=yes`; nền OTA cũ |
+| 26.11.23.4 (Bridge R5 → Setup R2) | `enabled=no`; đã dừng vì lỗi thay DOTM |
+| 2026.11.23.4 (Bridge R6 → Setup R3) | `enabled=yes`; tài sản prerelease đã ký, đối chiếu hash |
+| OTA Universal `ota-universal/latest.json` | schema 1, `enabled=false`, version `26.11.23.5`; URL/hash/chữ ký để trống |
+| Full Setup R5 / OTA Center R2 | Chưa phát hành OTA |
+
+**Luồng hiện tại:** Máy 23/23.1 → nút Kiểm tra cập nhật (OTA DOTM cũ, Google Sheets) → bản chuyển tiếp R6 → mở lại Word → Hoàn tất nâng cấp 26.11.23.5 → tải/kiểm tra Setup R3 → đóng Word → cài. Giai đoạn 23.1 → 23.4 R5 và tải/calling installer đã thực hiện thành công, nhưng Setup R2 thất bại; R3 đã cài trực tiếp thành công. R6 đã bật nhưng chưa có xác nhận đầy đủ bằng chứng thử toàn trình trên nhiều máy. Không nói đã hoàn thành toàn trình khi chưa có kết quả.
+
+**Lưu ý kỹ thuật:** Legacy OTA nhận DOTM đã ký RSA, không nhận EXE trực tiếp. Chuẩn hóa phiên bản năm 26/2026: `2026.11.23.4` và `26.11.23.4` được coi là ngang nhau theo phép so sánh đã thử trong R6; máy đã lên Bridge R5 cũ cần xử lý riêng, không coi chắc chắn nhận R6. Không dùng năm bốn chữ số để ép nâng cấp bản cao hơn. Nút Word hiện vẫn gọi trình OTA cũ, Center mới dùng feed Universal riêng; không nhầm hai kênh. Ký bằng khóa RSA gốc ở máy chủ dự án; chỉ chia sẻ DOTM/manifest đã ký.
+
+## 6. Tệp chuẩn để tiếp tục
+
+Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên và kiểm tra metadata sau upload. Tên file và hash dùng để tìm lại, không dựa vào đường dẫn tải tạm của chat. ZIP chứa mã bộ cài, nguồn các thành phần có sẵn và payload; không mặc định là toàn bộ mã nguồn VBA/AI gốc dạng chỉnh sửa được.
+
+| Mục đích | Tên file chính xác |
+|---|---|
+| Nguồn nền R3 | `QuangNV_26.11.23.5_FullOTA_R3_MaNguon.zip` |
+| Nguồn OTA đang bật R6 | `QuangNV_OTA_R6_DongBo_FullSetup_R3.zip` |
+| Nguồn phát triển tiếp theo (ưu tiên) | `QuangNV_26.11.23.5_R5_OTACenter_R2_MaNguon.zip` |
+| Bộ cài tích lũy thử nghiệm | `QuangNV_Setup_26.11.23.5_R5_OTACenter_Universal_Pilot.exe` |
+| Center R2 chạy độc lập | `QuangNV_OTA_Center_R2_Universal.exe` |
+
+- [Bản R3 đã cài thành công — GitHub Release 26.11.23.5](https://github.com/quanglci/QuangNV-Word-Addin/releases/tag/v26.11.23.5), asset `QuangNV_Setup_26.11.23.5_FullOTA_R3_FixTuKhoaDOTM_Universal.exe`. Không lấy nhầm R2 trong cùng release.
+- [OTA chuyển tiếp R6 — GitHub Release 2026.11.23.4](https://github.com/quanglci/QuangNV-Word-Addin/releases/tag/v2026.11.23.4), gồm DOTM, manifest và EXE Bridge R6.
+
+**SHA-256 đối chiếu:**
+
+| Tệp | SHA-256 |
+|---|---|
+| Full Setup R3 EXE | `8823467abb0cd2bce1f94f556b70a862c7c0c9aec37d3f488cdcfca3b0a808b8` |
+| DOTM R6 đã ký | `131eb00d8918c11c1a5d250f918893adc42c4996257fd0c50fe5d3daff91c7ea` |
+| Bridge R6 EXE | `62c684ebd3b071c2e4dc8cf81d619fdb5b9096cbed4be08267da5331080478e5` |
+| Full Setup R5 EXE | `aacb0ab2cc70daa007e8552b37393b8b949e70b29872edd152cc5ae1dd0de210` |
+| Center R2 EXE | `8c09777743b0a82c635003603be004ea2f08f004274aa41d40a888e480f63bc7` |
+| Nguồn R5 ZIP | `0dc0436436e733f6b6a33fd01c30fcaed3aefc396c9a7af4623ccab7b3d14fbf` |
+| Nguồn R3 ZIP | `13f414d480f2b93d061e76cbf9d6d86ee6693efb57ed2934c4b1fc75e7575b87` |
+| Nguồn R6 ZIP | `3c2783a06bbac5685fdf7db59a257d09a440dab6bf0b4d63951ede8e67bb29b4` |
+
+## 7. Các lỗi cần tránh lặp lại
+
+- VBOM access denied: không sửa VBA trên máy khách theo cách cần bật quyền truy cập dự án VBA. Việc tạo DOTM ký phát hành diễn ra trên máy quản trị được kiểm soát.
+- Word/DOTM hoặc OTA Manager bị khóa: lưu, đóng Word; kiểm tra khả năng ghi/thay thế trước, tránh tự đọc SHA đồng thời khi ghi. Không ép tắt tài liệu hay tiến trình bảo mật.
+- Rollback lỗi khi khôi phục cả tệp chưa đổi: chỉ khôi phục phần đã thay đổi, giữ bản sao lưu và ghi rõ lỗi còn lại.
+- PowerShell UTF-8 thiếu BOM và xử lý stderr của `gh release view`: dùng script đã sửa; phân biệt release chưa tồn tại với lỗi quyền, không ghi đè tài sản.
+- Bản Online Pilot R5 bị Kaspersky phát hiện `VHO:HackTool.Win64.EDRSilencer.gen`: ngừng sử dụng. Không đóng gói lại nhằm né nhận diện; tiếp tục bằng trình OTA chính thức. Việc quét sạch không chứng minh mọi mã đều an toàn.
+- DOTM do Word lưu lại có thể thay đổi SHA: kiểm tra hồ sơ cài đặt và cơ chế xác thực trên Windows, không tự ý chấp nhận hash khác hoặc bỏ xác thực.
+
+## 8. Checklist trước khi phát hành phiên bản mới
+
+- [ ] Center R2 được người dùng duyệt trên Windows, Kaspersky không cảnh báo.
+- [ ] Full Setup R5 được quét và cài thử trên máy phụ; đối chiếu 20 payload và hồ sơ OTA.
+- [ ] Kiểm thử Office 32/64-bit thực tế, cài mới và nâng cấp; Home, Thể thức văn bản, Fix V7, Cấu hình AI, ba chế độ AI, tiến độ và kết quả.
+- [ ] Tích hợp nút Kiểm tra cập nhật trong Word vào Center mới mà không phá kênh cũ; tùy chọn thông báo vẫn hoạt động.
+- [ ] Kiểm tra lỗi mạng, chữ ký/hash sai, tệp bị khóa, đóng Word an toàn, hoàn nguyên; không giảm bảo mật.
+- [ ] Thử OTA Universal thật với một phiên bản đích tăng hợp lệ đã ký, xác minh sau cài; chỉ bật feed khi đủ điều kiện và được chủ dự án đồng ý.
+- [ ] Cập nhật hồ sơ, lưu nguồn, bộ cài, manifest và hash; giữ bản nền R3 để phục hồi nếu cần.
+
+## 9. Câu lệnh mở cuộc trò chuyện tiếp theo
+
+> Tiếp tục dự án QuangNV Add-in Word. Đọc QUANGNV_PROJECT_STATE.md trong GitHub `quanglci/QuangNV-Word-Addin` hoặc bản sao trong Google Drive. Kiểm tra trạng thái OTA live và tải đúng bộ mã nguồn mới nhất ghi trong hồ sơ. Tiếp tục từ nhánh phát triển hiện tại, bảo toàn bản nền đã xác nhận, tích hợp tích lũy các Fix và chức năng. Không xây dựng lại từ đầu, không tự ý thay giao diện đã duyệt hoặc kích hoạt OTA. Chỉ phát hành một Full Setup Universal 32/64-bit, có OTA an toàn, sao lưu, hoàn nguyên và thông báo kết quả rõ ràng. Sau mỗi mốc, cập nhật hồ sơ bàn giao này.
+
+**Nguyên tắc khi chuyển chat:** Link cuộc trò chuyện cũ chỉ là tham chiếu. Hồ sơ này + nguồn thật + trạng thái live + xác nhận người dùng mới là căn cứ tiếp tục. Nếu thiếu file nguồn, tìm đúng file đã lưu hoặc yêu cầu cung cấp, không dựng lại từ suy đoán.
