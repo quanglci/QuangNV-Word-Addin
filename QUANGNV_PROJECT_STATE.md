@@ -1,10 +1,10 @@
 # QUANGNV — HỒ SƠ BÀN GIAO DỰ ÁN
 
-**Cập nhật:** 24/11/2026 (giờ Việt Nam)  
+**Cập nhật:** 24/11/2026 — mốc đối chiếu 26.11.24.2 R4 (giờ Việt Nam)  
 **Dự án:** QuangNV Add-in Word — Thể thức văn bản  
 **Mục đích:** Tiếp tục phát triển qua các cuộc trò chuyện ChatGPT mà không mất chức năng, không quay về bản cũ và không lặp lại lỗi đã xử lý.
 
-## 1. Điểm tiếp tục chính xác
+## 1. Điểm tiếp tục chính xác (lịch sử 26.11.23.5; xem mục 10 cập nhật mới nhất)
 
 - **Bản nền đã cài thành công trên máy thử nghiệm:** QuangNV 26.11.23.5 Full Setup R3 (FixTuKhoaDOTM). Chủ dự án xác nhận R3 quét Kaspersky không có cảnh báo và cài đặt thành công. Không coi đó là bằng chứng mọi chức năng, mọi kiến trúc Office hoặc hoàn nguyên đều đã được kiểm thử.
 - **OTA chuyển tiếp đang bật:** R6, định danh phát hành `2026.11.23.4`, dẫn tới Full Setup 26.11.23.5 R3. Giữ nguyên bộ cài này và các tài sản đã ký; không ghi đè.
@@ -119,3 +119,32 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 > Tiếp tục dự án QuangNV Add-in Word. Đọc QUANGNV_PROJECT_STATE.md trong GitHub `quanglci/QuangNV-Word-Addin` hoặc bản sao trong Google Drive. Kiểm tra trạng thái OTA live và tải đúng bộ mã nguồn mới nhất ghi trong hồ sơ. Tiếp tục từ nhánh phát triển hiện tại, bảo toàn bản nền đã xác nhận, tích hợp tích lũy các Fix và chức năng. Không xây dựng lại từ đầu, không tự ý thay giao diện đã duyệt hoặc kích hoạt OTA. Mọi bản vá và cập nhật chính thức bắt buộc phát hành qua OTA an toàn; có thể xuất thêm một Full Setup Universal 32/64-bit đồng nhất với OTA, đóng gói chuyên nghiệp đúng phương án đã duyệt, có sao lưu, hoàn nguyên và thông báo kết quả rõ ràng. Sau mỗi mốc, cập nhật hồ sơ bàn giao này.
 
 **Nguyên tắc khi chuyển chat:** Link cuộc trò chuyện cũ chỉ là tham chiếu. Hồ sơ này + nguồn thật + trạng thái live + xác nhận người dùng mới là căn cứ tiếp tục. Nếu thiếu file nguồn, tìm đúng file đã lưu hoặc yêu cầu cung cấp, không dựng lại từ suy đoán.
+
+
+## 10. Mốc tiếp tục mới nhất — 24/11/2026, 26.11.24.2 R4
+
+**Mục này cập nhật điểm tiếp tục ở mục 1; các quy chuẩn bắt buộc và lịch sử phát hành bên trên vẫn giữ nguyên.**
+
+- 26.11.24.1: chủ dự án đã báo cài/nâng cấp và kiểm tra OTA Center thành công trong cuộc trao đổi trước; chưa coi là kiểm thử OTA Universal toàn trình hoặc mọi kiến trúc Office. Giữ làm nền đối chiếu mới hơn, đồng thời bảo toàn R3 cũ đã xác nhận.
+- 26.11.24.2 R4 AI Center: bản Pilot dành cho máy chủ dự án; đã khôi phục ZIP và EXE thật từ thư viện tệp. Kiểm tra CRC ZIP, SHA-256 từng tệp theo manifest: 22/22 khớp; so với 24.1, 21/22 giống hệt, chỉ đổi `local/AI_Config/QuangNV_AI_Config_2_1.exe`. DOTM nguồn vẫn 24.1; 11 khối VBA được chuẩn bị để staging trên máy chủ dự án. R4 sửa đối chiếu readback Module1/QNV_AIConfig trước và sau lưu. Đã chạy lại Go unit tests AI Center và FullSetup trên Linux; đạt (để chạy test AI Center Linux, đổi tên tệp resource Windows trong bản giải nén kiểm tra, không sửa ZIP gốc). EXE Pilot là PE32 GUI; không suy ra đã chạy trên mọi phiên bản Windows/Office.
+- Phản hồi gần nhất của chủ dự án: đã thử R4, thêm được cấu hình Gemini 4 Hydrogen; Neon trả HTTP 429/hạn mức. Đây là phản hồi thử API, chưa xác nhận cả ba chức năng xử lý văn bản. Mã AI Center có xử lý HTTP 429 riêng; không tự động đổi mô hình hay tăng hạn mức. Không ghi khóa API hoặc dữ liệu văn bản vào hồ sơ.
+- **Việc tiếp theo:** dùng cấu hình Hydrogen đã kiểm tra được, cấp độ Cao, thử Soát lỗi/Sửa lỗi/Soát chuyên sâu trên bản sao văn bản kiểm thử không nhạy cảm; ghi nhận lỗi phát hiện, sửa sai, định dạng, tiến độ, thời gian, HTTP status và độ ổn định. Chỉ vá lỗi thực tế, giữ cấu hình và giao diện đã duyệt. Không đóng gói lại R5 cũ hoặc coi R4 Pilot là bản chính thức. Sau kiểm thử, tạo DOTM hoàn chỉnh trên máy quản trị, đóng gói tĩnh (máy khách không cần quyền VBOM), ký và thử OTA Universal/hoàn nguyên; không giảm bảo mật.
+
+### Tệp nguồn mới nhất đã lưu trên Google Drive (thư mục Cho_Phat_Hanh_26.11.23.5)
+
+| Tệp | SHA-256 đối chiếu từ bytes thư viện |
+|---|---|
+| `QuangNV_26.11.24.1_BoPhatHanh_KemMaNguon.zip` | `f73aa717d0aa6bd0282c67b275e1f4579bd008c08dfbc08c61f0ac273e0aa782` |
+| `QuangNV_26.11.24.2_R4_AI_Center_MaNguon.zip` | `1f5eb6c230a39afb8a785a09b27d000910960bf7a133ee505672d33b9323bbba` |
+| `QuangNV_Setup_26.11.24.2_R4_AI_Center_Universal_Pilot.exe` | `8e8686ad387bb52631a95e5fa1eb649b091fdaa2f30e59c2c1686690883ebdd2` |
+
+- ZIP 24.1: https://drive.google.com/file/d/1Q9S_jc7iskNfywg7qOfxNIDQdTNyzvS1/view
+- ZIP R4: https://drive.google.com/file/d/1PWybsUg6EsHvaMGJ2jWh3QkAyR9DTTIT/view
+- EXE R4: https://drive.google.com/file/d/1Agf3R37ScAVs37n094rMChqbdMB41DnK/view
+- Nguồn R5 23.5 có trên Drive; tải raw qua Library trả 403, nhưng bản lưu thư viện đọc được và SHA-256 trùng hồ sơ. Không coi metadata upload Drive là kiểm chứng lại bytes trên Drive.
+
+### OTA kiểm tra live tại mốc này
+
+- Google Sheets OTA_AnToan: 26.11.23 và 26.11.23.1 bật; 26.11.23.4 R5 tắt; 2026.11.23.4 R6 bật; không có hàng 24.1/24.2 trong dữ liệu đọc được A1:I20. GitHub Releases: digest metadata của DOTM R6, EXE Bridge R6 và Setup R3 trùng hồ sơ.
+- Feed `ota-universal/latest.json`: schema 1, enabled=false, version=26.11.23.5; URL/hash/chữ ký trống. Không thay đổi feed hoặc hàng quản trị, không công bố phát hành mới.
+- Mốc hiện tại là khôi phục, đối chiếu nguồn và lưu bền vững; không có chỉnh sửa mã phát hành hoặc bộ cài mới. Không xác nhận chạy Word/Windows, Kaspersky, API thật hay OTA toàn trình trong phiên kiểm tra này.
