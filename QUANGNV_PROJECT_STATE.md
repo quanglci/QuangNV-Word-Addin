@@ -196,3 +196,8 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 
 - Chủ dự án gửi ảnh Word khi chọn Yes (Offline + AI Online) sau bản vá Boundary: bảng kết quả 20 vị trí nghi ngờ tô vàng, 0 tự sửa, 1 phần, 2695/2695 ký tự, 2/2 lượt AI hoàn tất, 0 phần bỏ qua. Đối chiếu trực quan đủ 20 lỗi chuẩn, không còn 4 vị trí báo nhầm trước đây (chất lượng hai vị trí, thông tin, địa phương). Đạt tiêu chí soát kết hợp trên mẫu này, không suy rộng độ chính xác toàn bộ văn bản hoặc đóng góp riêng từng engine.
 - Chưa xác nhận No trên 24.4, Sửa lỗi, Soát chuyên sâu, bảo toàn định dạng khi sửa, mẫu độc lập hoặc OTA/rollback. Giữ nguyên 24.4 làm nền kiểm thử, không đóng gói mới chỉ vì kết quả này. Tiếp theo thử No và Sửa lỗi trên bản sao gốc riêng, đối chiếu 20 lỗi và không sửa nhầm; thử thêm văn bản mới ngoài mẫu đã biết. Chưa kích hoạt OTA hoặc thay mã.
+
+## 17. Kiểm thử 26.11.24.4 R5 Boundary — chế độ No — 24/11/2026
+
+- Chủ dự án gửi ảnh toàn trang Word ở chế độ No (Offline). Đối chiếu trực quan với mẫu 20 lỗi: đủ 20 vị trí lỗi được đánh dấu, không thấy 4 báo nhầm trước đây (chất lượng hai vị trí, thông tin, địa phương); chữ sai vẫn giữ nguyên. Không có bảng thống kê Offline trong ảnh; không xác minh độc lập lưu lượng mạng. Theo thiết kế No không gọi API.
+- Cả No và Yes đã đạt tiêu chí đánh dấu trên mẫu này; quy tắc đã chứa lỗi mẫu, không suy rộng chất lượng tổng quát. Giữ nguyên 26.11.24.4 làm nền thử nghiệm. Tiếp theo thử Sửa lỗi và Soát chuyên sâu trên bản sao gốc, kiểm tra từ đúng, định dạng; kiểm thử mẫu mới độc lập và văn bản sạch. Chưa xác nhận khả năng sửa tự động, rollback, mọi kiến trúc hoặc OTA chính thức. Không thay mã, đóng gói hay bật OTA ở mốc này.
