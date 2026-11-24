@@ -191,3 +191,8 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 - ZIP: QuangNV_26.11.24.4_R5_Boundary_MaNguon.zip, SHA-256 434216c15d3a2c6a184a771098813c3e9ea898e22638e37d26a7f348d25058fd, Drive https://drive.google.com/file/d/1q5n9SaHauR2RrbZZlbKgwHNL49Nch-hr/view .
 - EXE: QuangNV_Setup_26.11.24.4_R5_Boundary_Universal_Pilot.exe, SHA-256 1a55d88905d5d7b2bb4b9c38846511f32d10a1f036c920d024006e8d03fc4c6e, Drive https://drive.google.com/file/d/1LHgIp4tM-WvIWLGqtR7FO4TnSwXY1CXR/view .
 - Tiếp theo: thử No và Yes trên bản sao chưa tô màu, mục tiêu 20/20, 0 báo nhầm; thử Sửa lỗi AI trên bản sao riêng và kiểm tra không đổi định dạng, từ đúng. Tiếp tục kế hoạch mục 13 về từ điển và quota, UI thống kê; chỉ phát hành OTA sau khi nghiệm thu và ký.
+
+## 16. Kiểm thử 26.11.24.4 R5 Boundary — chế độ Yes — 24/11/2026
+
+- Chủ dự án gửi ảnh Word khi chọn Yes (Offline + AI Online) sau bản vá Boundary: bảng kết quả 20 vị trí nghi ngờ tô vàng, 0 tự sửa, 1 phần, 2695/2695 ký tự, 2/2 lượt AI hoàn tất, 0 phần bỏ qua. Đối chiếu trực quan đủ 20 lỗi chuẩn, không còn 4 vị trí báo nhầm trước đây (chất lượng hai vị trí, thông tin, địa phương). Đạt tiêu chí soát kết hợp trên mẫu này, không suy rộng độ chính xác toàn bộ văn bản hoặc đóng góp riêng từng engine.
+- Chưa xác nhận No trên 24.4, Sửa lỗi, Soát chuyên sâu, bảo toàn định dạng khi sửa, mẫu độc lập hoặc OTA/rollback. Giữ nguyên 24.4 làm nền kiểm thử, không đóng gói mới chỉ vì kết quả này. Tiếp theo thử No và Sửa lỗi trên bản sao gốc riêng, đối chiếu 20 lỗi và không sửa nhầm; thử thêm văn bản mới ngoài mẫu đã biết. Chưa kích hoạt OTA hoặc thay mã.
