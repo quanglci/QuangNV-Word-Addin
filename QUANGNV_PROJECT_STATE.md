@@ -532,3 +532,11 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 - Chủ dự án báo quét bộ cài tải về không có cảnh báo, nhưng sau cài Kaspersky phát hiện VHO:Backdoor.Win32.Farfli.gen tại QuangNV_AI_ChonCheDo.exe lúc 16:24. Ảnh vẫn hiện nút Giải quyết. Chưa có báo cáo hành động đã xử lý, chưa biết thời điểm thực thi, module phát hiện hoặc hash tệp trên máy. Không kết luận cảnh báo nhầm hay đã nhiễm.
 - Giữ nguyên mẫu và hồ sơ điều tra; không chạy lại, khôi phục cách ly, thêm ngoại lệ hoặc giảm bảo vệ. Đề nghị xử lý theo Kaspersky, cập nhật cơ sở dữ liệu, quét toàn bộ máy và lấy chi tiết sự kiện; gửi mẫu lưu trữ qua kênh hỗ trợ chính thức nếu được phép.
 - Nhánh 24.12 Native UI tiếp tục ở mức nguồn, chờ xác minh bảo mật và tích hợp/kiểm thử Word trên môi trường tin cậy. Chưa tạo bộ cài, chưa sửa mã hoặc feed OTA ở mốc này.
+
+
+
+## 66. Native UI 24.12 — tích hợp bản vá nguồn Revision 1 — 24/11/2026
+
+- Chủ dự án yêu cầu tiếp tục phát triển. Đã xác minh lại ZIP delta gốc theo SHA-256 mục 62, CRC đạt; tích hợp guard roughParts = 0 của mục 64 vào author/patches.json, trước bảng xác nhận Online thứ hai. Giữ nguyên 11/11 block old, 10/11 block new; block còn lại chỉ thêm 4 dòng. Helpers, declarations, hai form code, designer và UI_changes.diff giữ nguyên bytes. Mô phỏng 6 trường hợp chunk trống/có nội dung đạt; không phải chạy Word/VBA thật.
+- ZIP mới `QuangNV_26.11.24.12_R5_NativeUI_Source_Rev1.zip` (41771 byte), SHA-256 `7c01cf43d7f64d93c395896b3f1117dbd84b8cf72804db664781c496f34b2e64`, CRC đạt, 11 tệp, có diff và kết quả kiểm tra revision. Drive https://drive.google.com/file/d/14O-597eRvCb1VVxJSdMo8nZojJ5EayiW/view ; đã upload và đọc metadata đúng kích thước, private. Không ghi đè ZIP gốc.
+- Đây là revision mã nguồn, không phải bộ cài. Chưa có designer .frm/.frx thật, chưa tải lại ZIP nền 24.9 trong mốc này, chưa biên dịch Word, chưa xác minh sự cố Kaspersky. Giữ nguyên yêu cầu kiểm thử và các điều kiện phát hành mục 62–65. Không tạo EXE/DOTM, không sửa feed OTA hoặc chính sách bảo mật.
