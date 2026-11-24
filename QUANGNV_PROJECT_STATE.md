@@ -293,3 +293,9 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 
 - Chủ dự án gửi ảnh Word và xác nhận chế độ Soát lỗi chuyên sâu. Đối chiếu trực quan mẫu 20 lỗi ban đầu: đủ 20 vị trí đánh dấu, 19 vàng và 1 xanh dương nhạt (trùng lấp), chưa thấy báo nhầm hoặc sửa chữ. Kết quả tương đương Yes Soát thường trên mẫu này; chưa chứng minh ưu thế của soát chuyên sâu đối với lỗi ngữ cảnh, ngữ pháp hoặc lỗi mới. Ảnh không có bảng KẾT QUẢ, số lượt AI hoàn tất, thời gian hoặc log; chưa xác nhận mọi lượt AI thành công.
 - Tiếp theo thử Sửa lỗi Yes trên bản sao gốc chưa tô màu, gửi ảnh bảng kết quả và log metadata từng lượt nếu chưa hoàn tất; kiểm tra màu xanh lá, số vị trí thực sự sửa và định dạng. Ưu tiên No trên mẫu thứ hai 20 lỗi và thử chuyên sâu trên mẫu có lỗi ngữ cảnh/ngữ pháp độc lập, đối chiếu báo nhầm. Giữ nguyên 24.6, không sửa mã, đóng gói thêm hay kích hoạt OTA tại mốc này.
+
+## 32. Kiểm thử 26.11.24.6 R5 Multi-Dictionary — Sửa lỗi Yes, mẫu đầu tiên — 24/11/2026
+
+- Chủ dự án gửi ảnh Word sau Sửa lỗi. Đối chiếu trực quan mẫu 20 lỗi ban đầu: 19 vị trí đã sửa đúng và tô xanh lá, 1 vị trí giữ nguyên và tô xanh dương nhạt (trùng lấp, đề xuất trùng lặp), không còn vàng. Tỷ lệ sửa đúng 19/20 (95%) trên mẫu này; chưa thấy sửa nhầm hoặc thay đổi bất thường về bố cục/phông/cỡ chữ qua ảnh, chưa đối chiếu DOCX trước/sau. Không có bảng KẾT QUẢ hoặc log từng lượt nên chưa xác nhận số lượt hoàn tất hay nguyên nhân HTTP 200 ở bản 24.5 đã được khắc phục triệt để.
+- Tổng hợp mẫu đầu: No 11 vàng/9 xanh dương; Yes và chuyên sâu 19 vàng/1 xanh dương; Sửa 19 xanh lá/1 xanh dương. Đã xác nhận thực tế cơ chế sửa và giữ ứng viên chưa đủ căn cứ hoạt động trên mẫu này. Chưa suy rộng chất lượng tổng quát.
+- Tiếp theo ưu tiên No trên mẫu thứ hai 20 lỗi (24.4 chỉ 2/20), sau đó Yes/Sửa trên bản sao riêng và mẫu sạch, văn bản dài, bảng/định dạng; kiểm tra log metadata từng lượt nếu có lỗi. Giữ nguyên 24.6, không sửa mã, đóng gói thêm hoặc bật OTA ở mốc này.
