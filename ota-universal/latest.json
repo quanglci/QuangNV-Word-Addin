@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "enabled": false,
-  "version": "26.11.23.5",
-  "url": "",
-  "sha256": "",
-  "signature": "",
-  "notes": "Chưa phát hành OTA Universal mới. Chỉ bật khi có bộ cài đầy đủ được ký RSA."
+  "enabled": true,
+  "version": "26.11.25.0",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.25.0/QuangNV_Setup_26.11.25.0_Universal.exe",
+  "sha256": "80714b7bff59e3e809305e7e7b126bb63bf4675e3bc4228dd4c61ba0f9a67fe5",
+  "signature": "ctoS9bDQXfOT/jv65qNd6as4YMEnbdVb8nqkaiNYJ01f/XW+VGGsNwxpgJt/7wnIjGOkih9U9h2RbpFpR3iRGeHxgdlej4JEboFe4a2/b1J+FtNLC2tZwcksKBY2wSFRMym/YcaUsgNyHCCdqj6KwRCg8m4Yc/Bu/SKtlpuvCa/lzA8Gd3FaPzcrHAZ/LJdjTIPWbiDwZhjpTaFYHB2HjQCvayYUAni3mi/ZHihjEMtzc9Moe3gWdzw09Vd3T9B1EAyrZurnxiNxrFRB0eLxM0gh4q1deXF8DgUIfQMDYIY8W6LdhkNcorjks/Cb8IF2f6tf2JXnTVeJskOeORZ8mBcErnVNH3oJ/xiN0jx+UjtQcjQcuxX8eQVRYTmjH2qVYKwPZHt5gD856QpAXdSMq3RgziCVC7IOZfPInH6Z43uy1ePsROkgDoxBNEwvd/MSAhBhY1YdruQiAGzW7mBIcV0JB/uiCvBz6/CbSQ4HWOA8eiGme+7lkFDj8/ZbNKzG",
+  "notes": "QuangNV 26.11.25: cap nhat Universal tich luy; nguoi dung tuy chon cap nhat."
 }
