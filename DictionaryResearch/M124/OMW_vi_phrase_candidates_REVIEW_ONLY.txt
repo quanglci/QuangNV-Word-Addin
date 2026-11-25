@@ -1,0 +1,1406 @@
+# OMW Wiktionary contributors / Open Multilingual Wordnet; source https://github.com/omwn/omw-data/blob/main/wns/wikt/wn-wikt-vie.tab ; Git blob 8a659182e1ba226d8ea701e9e68637154d3edbe3
+# CC BY-SA 3.0 Unported https://creativecommons.org/licenses/by-sa/3.0/ (source also GFDL); changes: normalize NFC/lowercase, filter alphabet and 2-5 syllables, deduplicate and exclude exact matches in Viet74K blob fa6a507700cbc0eebdb8d9e94e05d298138378fb.
+# REVIEW_ONLY: no auto-repair, no suppressing warnings, no runtime use before approval. Not verified spelling.
+ai cập
+an nam
+anh chồng
+anh cát lợi
+anh vợ
+antigua và barbuda
+ba lan
+ba tư
+banh mì
+banh để liệng
+bao báp
+bao bì nilon
+bao dương vật
+bao kiếm
+bao quy đầu
+bao đựng mật
+biên kịch viên
+biên sô
+biến đổi khí hậu
+biển adriatic
+biển baltic
+biển ban tích
+biển barents
+biển caribe
+biển chết
+biển hoa đông
+biển nhật bản
+biển san hô
+biển trắng
+biển đen
+biển đông
+biển đỏ
+biển ả rập
+bom mát
+bom napan
+buenos aires
+buồng khí
+buồng tắm
+bà đỡ đẻ
+bài báo
+bài xã luận
+bài đọc
+bàn chải đánh răng
+bàn mài
+bàn đạp ở yên ngựa
+bác sĩ chữa mắt
+bác sĩ khoa nhi
+bác sĩ nhi
+bác sĩ y khoa
+bán đảo triều tiên
+bán đảo trung ấn
+bánh cửa hàng
+bánh mì pháp
+bánh pizza
+báo ghêpa
+báo săn
+báo đen
+bãi đậu xe
+bình nhưỡng
+bình phun
+bò cái
+bó hoa
+bóng chày
+bóng mềm
+bôi lên
+bôxnia hécxêgôvina
+bút mực
+băng cốc
+bơ sữa trâu lỏng
+bơ thực vật
+bạch đôi
+bạn gái
+bạn qua thư
+bạn trai
+bạo hành gia đình
+bạo lực gia đình
+bảng anh
+bảo hiểm nhân thọ
+bầu vú
+bậc anh tài
+bắc carolina
+bắc hàn
+bắc kinh
+bắc mỹ
+bắc sĩ tâm lý
+bắc triều tiên
+bắc đại dương
+bắp rang
+bể nuôi
+bệnh alzheimer
+bệnh ghẻ
+bệnh hoa liễu
+bệnh học tim
+bệnh lao
+bệnh sốt rét
+bệnh sởi
+bệnh than
+bệnh thối hoại
+bệnh trĩ
+bệnh tả
+bệnh viêm gan
+bệnh zona
+bị cầm tay
+bịnh lý học
+bọ cánh cứng
+bỏ vào bao
+bồ đào nha
+bộ gen
+bộ sưu tập
+bộ thủ
+bộ tóc giả
+bộ tổng hợp
+bộ y tế
+bột chiên xù
+bớt giá
+bờ xây
+bức ảnh
+bữa chiều
+bữa sáng
+bữa trưa
+bữa tối
+bữa ăn trưa
+ca li
+ca rốt
+ca vát nơ bướm
+cam túc
+cao miên
+chi chà là
+chi lợn
+chim bạch yến
+chim bồ câu
+chim công
+chim nhau
+chim nhạn
+chim tước
+chim điên
+chim đại bàng
+chiếc cúp
+cho tên
+chu kỳ kinh nguyệt
+chuông cửa
+chuỗi hạt
+chuột nhảy
+chuột nâu
+chánh đảng
+cháy rừng
+châu mỹ
+châu nam cực
+châu phi
+châu á
+châu âu
+châu úc
+châu đại dương
+chém đầu
+chén uống trà
+chó con
+chùi gháu
+chùi sạch
+chú sam
+chúa kitô
+chúc đài
+chăn trâu
+chũ nghĩa quân phiệt
+chư in
+chảy máu chất xám
+chất dẫn
+chất ngọt
+chất sinh sắt
+chặt đầu
+chế giểu
+chế độ độc tài
+chỉ mục
+chỉ số thông minh
+chị hầu bàn
+chị họ
+chồn gulo
+chỗ cạn
+chỗ đậu xe
+chỗ đỗ xe
+chủ nghia lê nin
+chủ nghĩa bài do thái
+chủ nghĩa bè phái
+chủ nghĩa mao
+chủ nghĩa mao trạch đông
+chủ nghĩa sô vanh
+chủ nghĩa toàn trị
+chủ nghỉa nư quyền
+chủ ngân hàng
+chức vô địch
+chứng cương đau
+chứng khó đọc
+chứng loãng xương
+chứng nghẽn mạch
+chứng nhức đầu
+chữ cyrill
+chữ ký
+chữ lớn
+chữ thập phương nam
+chữ viết tắt
+con bê
+con bọ chét
+con chai
+con chim
+con chuồn chuồn
+con cua
+con cóc
+con cú
+con cọp
+con dao
+con diệc
+con dê
+con dế
+con giun
+con gián
+con gà trống
+con gái riêng
+con gấu chó sói
+con gấu con
+con hải ly
+con hải ma
+con hổ
+con khỉ
+con la
+con lừa
+con lửng
+con moóc
+con muỗi
+con mèo
+con ngoé
+con nhái
+con nhím
+con nhện
+con ong
+con quạ
+con ruồi
+con rít
+con rận
+con sên lãi
+con sứa
+con thằn lằn
+con thỏ con
+con trai riêng
+con tằm
+con ve sầu
+con đường tơ lụa
+con ếch
+cung song ngư
+cung thiên văn
+cung điện buckingham
+cuối ván
+cuốn sách
+cuốn sách nhỏ
+cuộc phỏng vấn
+cuộc đàm thoại
+cuộc đối thoại
+cà ri
+cá heo mỏ
+cá ngừ đại dương
+cá piranha
+cá răng đao
+cách đây
+cái chuồng
+cái chảo
+cái chết
+cái cuốc
+cái cúc
+cái cưa
+cái dù
+cái ghế bành
+cái giũa
+cái giỏ
+cái gọt bút chì
+cái gối
+cái hôn
+cái kìm
+cái lò
+cái lược
+cái lồng
+cái mai
+cái neo
+cái nút bấm
+cái nấc
+cái nồi
+cái quặn
+cái rổ
+cái soong
+cái sáo
+cái thước kẻ
+cái tẩy
+cái võng
+cái xanh
+cái xú chiên
+cái ôm chặt
+cái đe
+cái đê
+cái đồng hồ
+cái đục
+cán lau nhà
+câu nói đùa
+câu thơ tứ bộ vi
+câu trả lời
+cây anh đào
+cây cam
+cây chanh
+cây chia ba
+cây chổi
+cây dưa chuột
+cây dương xỉ
+cây gie gai
+cây kim
+cây kê
+cây lan
+cây lê
+cây me
+cây mơ
+cây mận
+cây nham lê
+cây sa kê
+cây son
+cây thanh lương trà
+cây thước
+cây táo
+cây viết chì
+cây vừng
+cây xa trục thảo
+cây xương rồng
+cây đào
+có mang thai
+có tính chất tính từ
+có vẻ như
+cô bé quàng khăn đỏ
+cô gái vắt sữa
+công nghệ nano
+công ty cổ phần
+công ty hàng không
+công xéc tô
+cù cai
+cùng một
+cúc vu
+cúc đại đóa
+căm bốt
+căn bậc hai
+cơ quan việc làm
+cương cứng
+cảm thấy đau
+cấp cao nhất
+cấp so sánh
+cầm lại
+cầu sắt
+cẩm quất
+cắt bao quy đầu
+cọp cái
+cọp gấm
+cộng hòa
+cộng hòa macedonia
+cộng hòa nam phi
+cộng hòa séc
+cộng hòa trung phi
+củ nghệ
+của hoa kỳ
+của mỹ
+cừu con
+cừu non
+cừu đực
+da ua
+dai đất
+den haag
+diên vĩ
+do thái
+do thái giáo
+dành riêng
+dân mông cổ
+dân nhập cư
+dép quai hậu
+dương tử
+dược lý học
+dạo này
+dải gaza
+dấu phụ
+dậy lên
+dử lại
+dữ cách
+dựa vào
+dựng lên
+dựng xiên
+eo biển manche
+eo biển triều tiên
+franc thụy sĩ
+gan bàn tay
+gan béo
+gan ngỗng béo
+ghi xuống
+gia nã đại
+giai cấp công nhân
+giai cấp vô sản
+giao hợp hậu môn
+giành được
+giá trị kiểm tra
+giá trị tổng kiểm
+giáo đường do thái
+gió mặt trời
+giấy dán tường
+giấy phép lái xe
+giọt mưa
+giọt nhỏ
+giống nhau
+giới trí thức
+giới tuyến quân sự
+gái mại dâm
+gã đầu trọc
+gấu chó sói
+gấu con
+gấu nâu
+gấu trắng bắc cực
+gọi điện
+gọi điện thoại
+gỗ anh đào
+gởi tiếp
+gỡ xương
+gửi tiếp
+ho diep
+hoa bách hợp
+hoa chè
+hoa hướng dương
+hoa kim châm
+hoa kỳ
+hoa súng
+hoa tuyết
+hoàng hà
+hoàng hải
+hoàng sa
+hy lạp
+hà lan
+hàn quốc
+hàng bán chạy nhất
+hàng châu
+hàng hóa
+hành lý
+hãng thông tấn
+hè chí
+hình sáu góc
+hòa bình
+hòa giải
+hòn đá phù thủy
+hòn đảo nhỏ
+hóa học
+hóa sinh
+hóa đơn
+hút thuốc
+hơi thuốc
+hương cảng
+hướng bắc
+hướng nam
+hướng tây
+hướng đông
+hạch bạch huyết
+hạch lympho
+hạng bốn mươi
+hạt cải dầu
+hạt phỉ
+hạt vừng
+hấp dẫn tình dục
+hất nhựa thơm
+hắc long giang
+hằng số planck
+họ sen
+họ sóc
+họa sĩ
+học nghề
+hố đen
+hồ bơi
+hồng kông
+hổ cái
+hội hóa trang
+hội trá hình
+hội âm
+hộp đựng xà phòng
+hợp chúng quốc hoa kỳ
+i dài
+i ngắn
+jammu và kashmir
+kem chua
+kem mứt
+kem đánh răng
+khmer đỏ
+khoa bào chế
+khoa mắt
+khoa ngoại giao
+khoa tai mũi họng
+khoa tim
+khoa tiết niệu
+khoảng cách chữ
+khoảng thời gian
+khu vực đỗ xe
+khuyên tai
+khuỷu tay
+khí qun
+khí tê
+khóa của âm nhạc
+không bao giờ
+không nhớ
+không thay đổi
+khăn choàng cổ
+khăn quấn
+khăn trùm đầu
+khơme đỏ
+khẩu giao
+khối mười hai mặt
+khổng phu tử
+kim quất
+kim trướng hãn quốc
+kinh cầu nguyện
+ku klux klan
+kuala lumpur
+kèn coonê
+kèn fagôt
+kèn ôboa
+kênh đào panama
+kênh đào suez
+kêu điện thoại
+kính cửa sổ
+kính ngữ
+kíp lào
+kẹo cao su
+kẹo caramen
+kẻ cướp biển
+kẻ giả nhân giả nghĩa
+kẻ giết người
+kẻ móc túi
+kẻ xâm lược
+kẻ ám sát
+kẻ đạo đức giả
+kẻ độc tài
+kệ sách
+kỳ nghỉ
+kỷ băng hà
+la habana
+la mã
+lan châu
+lau sạch
+leo núi
+linh dương saiga
+linh sam
+liên bang nga
+liên hiệp quốc
+liên xô
+liệu lí học
+loại kem sưa
+luân đôn
+luật của tự nhiên
+làm cho lo ngại
+làm rò rỉ
+làm thất vọng
+làm tình bằng miệng
+lê nin
+lính cứu hỏa
+lò bánh mì
+lò nướng
+lò phản ứng hạt nhân
+lò thiêu
+lò thiêu xác
+lòng tự trọng
+lông chim
+lúa mạch đen
+lý lẽ
+lý lịch tư pháp
+lý thuyết trò chơi
+lưu lại
+lượng từ
+lạc dương
+lạc đà một bướu
+lạc đà ả rập
+lập gia đình
+lậu mủ
+lằn gạch
+lể cưới
+lể phép
+lễ các đẳng
+lễ mét
+lễ quá hải
+lễ thiên chúa giáng sinh
+lễ tạ ơn
+lễ vượt qua
+lối cầu khẩn
+lỗ khoá
+lời nói đùa
+lở đất
+lục huyền cầm
+lừa con
+ma cao
+ma sói
+ma tốt
+minh tinh màn bạc
+miến điện
+mua vé
+muỗng canh
+màng nhự
+màu chanh
+màu hồng
+màu vàng
+màu xanh nước biển
+màu đỏ anh đào
+màu đỏ sậm
+máy chụp hình
+máy chụp ảnh
+máy hâm nóng
+máy hình
+máy lu
+máy ly tâm
+máy nướng bánh mì
+máy quay
+máy quay phim
+máy radio
+máy truyền hình
+máy tính cầm tay
+máy xay sinh tố
+máy ảnh kĩ thuật số
+máy ảnh số
+mã bưu chính
+mãn châu
+mãng cầu dai
+mãng cầu giai
+mèo con
+mêga hertz
+mì mống
+mòng bể
+món bở
+món dưa cải bắp
+món trứng tráng
+mô liên kết
+mô men
+môn re an
+mông cổ
+mù tạc
+mùa chay
+mũ bảo hiểm
+mũi hảo vọng
+mười điều răn
+mạc tư khoa
+mạch nước phun
+mạch vi xử lý
+mạn họa
+mảng sao
+mầu đỏ
+mắt cá chân
+mặc vào
+mễ tây cơ
+mổi ngày
+mộc cầm
+một phần mười hai
+một phần nghìn giây
+một thứ
+mỹ hóa
+mỹ latinh
+mỹ lợi gia
+mỹ nhân ngư
+mỹ quốc
+na uy
+nai anxet
+nai sừng tấm
+nam kinh
+nam mỹ
+nam phi
+nam thập
+nam thập tự
+nam tư
+nam xương
+new york
+new zealand
+nghề đóng tàu
+nghệ giả
+nguyên cách
+nguyên thủ quốc gia
+nguyên tố hóa học
+ngày kỷ niệm
+ngày nghỉ
+ngôn ngữ ký hiệu
+ngũ đại hồ
+ngư âm học
+người ai cập
+người anh
+người bán hoa
+người bán rau cải
+người bán sữa
+người bán vé
+người bạn
+người bắt đầu
+người chiến thắng
+người châu âu
+người chăn cừu
+người chơi quần vợt
+người câm
+người có cổ phần
+người có tội
+người da trắng
+người da đen
+người do thái
+người dã man
+người giữ kho
+người giữ trẻ
+người góa vợ
+người hiền
+người hoa kỳ
+người hàng thịt
+người hầu bàn
+người hồi
+người hồi giáo
+người khiêu vũ
+người khủng bố
+người ly dị chồng
+người ly dị vợ
+người làm vườn
+người lào
+người lái
+người lính
+người lấy vé
+người mông cổ
+người múa
+người mị dân
+người mới học
+người mỹ
+người nga
+người ngoại quốc
+người nhảy
+người nhật
+người nô lệ
+người nước ngoài
+người phưng tây
+người phạm tội
+người phụ trách máy
+người phục vụ hành khác
+người quản lý
+người slav
+người sáng tạo
+người sói
+người theo đạo cơ đốc
+người thái
+người thái lan
+người thông dịch
+người tiêu dùng
+người tiêu thụ
+người trung quốc
+người truyền giáo
+người tráng
+người trắng
+người tuyết
+người tàu
+người tầm thường
+người viết kịch bản
+người việt
+người việt nam
+người vô loại
+người vợ
+người xuất bản
+người á châu
+người áo
+người úc
+người úc châu
+người ý
+người đi du lịch
+người đưa thư
+người đức
+người ấn độ
+ngưởi bán cá
+ngưởi bán hàng rong
+ngọc lam
+ngồi xuống
+ngự môn
+ngựa con
+nhiếp hộ tuyến
+nhiểm sắc thể
+nhiệt động lực học
+nhà biên kịch
+nhà bảo tàng
+nhà du hành vũ trụ
+nhà dân chủ
+nhà ga hành khách
+nhà giả kim
+nhà kỹ thuật
+nhà ngoại giao
+nhà nhiếp ảnh
+nhà soạn nhạc
+nhà thiên văn học
+nhà thiết kế
+nhà thờ hồi giáo
+nhà triệu phú
+nhà trắng
+nhà tâm lý học
+nhà tắm nắng
+nhà tỉ phú
+nhà điêu khắc
+nhà để ô tô
+nhân viên bán hàng
+nhân viên giao hàng
+nhân viên tính tiền
+nhân văn chủ nghỉa
+nhạc cổ điển
+nhạc rock
+nhảy mui
+nhận làm con nuôi
+nhật bản
+nhật hoàng
+nhật ký web
+những lời
+nhựa thuốc
+niềm đam mê trái cây
+noan quản
+nói được
+núi băng trôi
+núi olympus
+nơi chôn
+nơi hoả táng
+nơi sinh
+nơi đây
+nước anh
+nước campuchia
+nước cơvat
+nước cường toan
+nước lào
+nước myanma
+nước mỹ
+nước na uy
+nước nga
+nước nhầy
+nước pháp
+nước sôcôla
+nước thái lan
+nước thơm
+nước táo
+nước tương
+nước xốt cà chua
+nước áo
+nước úc
+nước ý
+nước đức
+nướu răng
+nạn lụt
+nạp xuống
+nấc cục
+nắm chặt
+nếm thử
+nền kinh tế thị trường
+nền quân chủ
+nịnh dân
+nọc nọc
+nốt láy
+nội mông
+nữ nga hoàng
+nữ sa hoàng
+oc xyt
+papua new guinea
+phan lệ chi
+phi châu
+phiến cách chữ
+phnôm pênh
+phong cùi
+phân biệt giới tính
+phân trộn
+phép hoán dụ
+phía bắc
+phía nam
+phía tây
+phía tây bắc
+phía tây nam
+phía đông
+phía đông bắc
+phía đông nam
+phòng bưu điện
+phòng khám bệnh
+phòng thí nghiệm vi
+phòng vệ sinh
+phòng đọc
+phô ma
+phô mai
+phản vật chất
+phản ứng hóa học
+phần lan
+phần mềm gián điệp
+phần nhịp điệu
+phần tử phát xít
+phụ danh
+port moresby
+pê đê
+quyển sách
+quyển từ
+quyển vở
+quà tặng
+quý vị
+quả anh đào
+quả chanh
+quả chuối
+quả cầu lông
+quả lê
+quả lựu
+quả măng cụt
+quả mơ
+quả mận
+quả sa kê
+quả sầu riêng
+quả táo
+quả xoài
+quả đầu
+quấy rối tình dục
+quần áo bơi
+quần đảo anh
+quần đảo faroe
+quầng đỏ
+quầy đổi tiền
+quẹt bơ
+quốc gia hoá
+quỷ khổng lồ
+quỹ tiền tệ quốc tế
+rau bina
+răng gun
+rượu gin
+rượu rum
+rượu sữa ngựa
+rượu uytky
+rượu vodka
+rượu vàng
+rượu vôtca
+rạp chiếu phim
+rạp phim
+rạp xi nê
+rất nhiều
+sa hoàng
+sa lê
+sa mạc gobi
+sao lùn trắng
+sao xung
+sinh cách
+sinh vật nhân chuẩn
+sinh vật đơn bào
+siêu dữ liệu
+siêu họ người
+siêu mẫu
+soái hạm
+sri lanka
+suối nước
+sàn giao dịch chứng khoán
+sách diễm ca
+sách sáng thế
+sáng thế ký
+sáu tháng
+sô vanh chủ nghĩa
+sông amur
+sông congo
+sông cửu long
+sông hằng
+sông lớn
+sông mê kông
+sôvanh chủ nghĩa
+súng cao su
+sơn tra
+sư tử cái
+số de
+số nguyên tử
+số điện thoại
+sốc văn hoá
+sống lâu
+sốt aptơ
+sở bưu điện
+sở ghextapô
+sửa móng chân
+sửa móng tay
+sự bớt
+sự chết
+sự cô đơn
+sự dinh dưỡng
+sự dùng
+sự dốt nát
+sự giảm
+sự hổ thẹn
+sự khiếp đảm
+sự khâm phục
+sự lao dốc
+sự lao xuống
+sự liên kết
+sự loạn đường
+sự nghi ngờ
+sự ngượng
+sự phát sinh tự nhiên
+sự phơi
+sự phơi bày
+sự rút ngắn
+sự rảy ra
+sự sợ hãi
+sự sửa đổi
+sự thiếu hiểu biết
+sự thông dịch
+sự thường xuyên
+sự thẹn
+sự trừ
+sự tuyệt vọng
+sự tồn tại
+sự xấu hổ
+tamil nadu
+tha âm vị
+thang cuốn
+thay thế mẹ
+thiên tân
+thiết phúc
+thu được
+thuyết có thần
+thuật giả kim
+thuật lại
+thuốc bôi mi mắt
+thuốc tẩy uế
+thuộc nhật
+thuộc não
+thuộc tảo
+thuộc về sử học
+thành cát tư hãn
+thành lập gia đình
+thành phố new york
+thành thị hoá
+thành vatican
+thác nước
+thái bình dương
+thái lan
+thính học
+thông cáo báo chí
+thú có túi
+thơ bốn câu
+thương hiệu
+thương mại điện tử
+thượng hải
+thần chiến tranh
+thần hôn nhân
+thần jupiter
+thần vệ nữ
+thần ái tình
+thầy thuốc chữa răng
+thầy thuốc thú y
+thằng ngốc
+thẻ tín dụng
+thế giới bên kia
+thế giới mới
+thịt bò
+thỏ con
+thống sử
+thổ hoàng
+thổ ngư
+thổ ngư học
+thổ nhĩ kỳ
+thời phục hưng
+thời quá khứ
+thợ cắt tóc nữ
+thợ nhiếp ảnh
+thợ sữa ống nước
+thợ thiếc
+thợ đóng giày
+thụy sĩ
+thụy điển
+thứ bảy mươi
+thứ chín
+thứ chín mươi
+thứ hai mươi
+thứ hai mươi ba
+thứ mười
+thứ nhì
+thứ nhất
+thứ năm mươi
+thứ sáu mươi
+thứ sáu tuần thánh
+thứ tám mươi
+thức ăn nhanh
+thực giá noãn
+thực quả mâm xôi
+tia chớp
+tinh bài ngoại
+tiếng afrikaans
+tiếng ai cập
+tiếng anh
+tiếng ba tư
+tiếng bengali
+tiếng do thái
+tiếng hoa
+tiếng huýt
+tiếng hy lạp cổ đại
+tiếng hy lạp hiện đại
+tiếng hà lan
+tiếng hà lan ở kếp
+tiếng hàn quốc
+tiếng hán
+tiếng hót
+tiếng khách gia
+tiếng kurd
+tiếng latinh
+tiếng lào
+tiếng miến điện
+tiếng myanma
+tiếng mông cổ
+tiếng na uy
+tiếng nga
+tiếng ngô
+tiếng nhật
+tiếng pháp
+tiếng phạn
+tiếng phổ thông trung quốc
+tiếng quan thoại
+tiếng quảng đông
+tiếng quốc tế ngữ
+tiếng romania
+tiếng séc
+tiếng tamil
+tiếng thụy điển
+tiếng triều tiên
+tiếng trung quốc
+tiếng tàu
+tiếng tây ban nha
+tiếng urdu
+tiếng việt
+tiếng việt nam
+tiếng yiddish
+tiếng ý
+tiếng đức
+tiểu hành tinh
+tiểu thuyết gia
+tiểu á
+tiệm ăn
+tiệp khắc
+toà nhà
+toàn cầu hóa
+trang chính
+trang nhà
+trang phục bơi
+trang web
+trang đầu
+trinidad và tobago
+triều tiên
+triệu tấn
+trung hoa
+trung hoa dân quốc
+trung quốc
+trung tâm mua sắm
+truyền hình cáp
+trà nghệ
+trà xanh
+trà đen
+trà đạo
+trái chuối
+trái chà là
+trái dương đào
+trái ki wi
+trái lê
+trái mận
+trái ngấy
+trái sa kê
+trái táo
+trái xoài
+trái ổi
+trâm gài đầu
+trèo núi
+trình duyệt
+trò kéo quân
+trôi dạt lục địa
+trùm tư bản
+trường đua ngựa
+trường đại học
+trượt băng nghệ thuật
+trạm không gian
+trạm phát điện
+trạm xăng
+trận đánh
+trẻ sinh đôi
+trẻ sơ sinh
+trứng chấy
+trứng phục sinh
+trứng rận
+tuyển thủ bơi lội
+tài phúc
+tàu bay chưa nhận biết
+tàu phá băng
+tân cử
+tân tây lan
+tây ban nha
+tây bengal
+tây bá lợi á
+tây tạng
+tên gọi theo tên cha
+tên thời con gái
+tình dục hậu môn
+tình dục đường miệng
+tình trạng vô chính phủ
+tính giản dị
+tính thường xuyên
+tính tình dục đồng giới
+tòa lãnh sự
+tòa thành
+tòa thánh
+tòa đại sứ
+tóc xoắn
+túi cao su
+túi xách tay
+tăm xỉa răng
+tư tế
+tường lửa
+tại đây
+tạo nên
+tải xuống
+tảng băng
+tảo biển
+tảo bẹ
+tấm hình
+tấm thảm
+tầng nhiệt
+tẩu pháp
+tẩy sạch
+tẩy trống
+tập tin
+tế bào thần kinh
+tỏa sáng
+tội ác chiến tranh
+tủ búp phê
+tủ đựng chén
+tủ ướp lạnh
+từ du nhập
+từ vay mượn
+từ viết tắt
+tự do ngôn luận
+tự do tín ngưỡng
+tự do tôn giáo
+tỷ giá hối đoái
+ulan bator
+ung thư da
+ung thư phổi
+ung thư vú
+uây khyếm mẹ
+uất kim cương
+uất kim hương
+va chạm điện
+viêm phổi
+viên thuốc con nhộng
+viêng chăn
+viết cẩu thả
+viết nguệch ngoạc
+viết ra
+viễn nạp
+việc quan trọng
+việt nam
+voi ma mút
+vua tư bản
+vàng kim loại
+ví tiền
+vòng đu quay
+vùng phi quân sự
+văn hóa
+vũ hán
+vương quốc anh
+vạn lý trường thành
+vải kaki
+vải khaki
+vải lụa
+vật chất tối
+vật học
+vật lý học
+vết bỏng
+vết sẹo
+vịnh ba tư
+vịnh mexico
+vịnh phần lan
+vịt donald
+vỏ cây
+vở ballet
+vỡ tim
+vợ vua
+vụ cháy
+vụ giết người
+vụ ám sát
+xe chở tiền của
+xe mô tô
+xe tắc xi
+xe xích lô
+xuất tinh sớm
+xách lại
+xã hội đen
+xít ta lin
+xương hàm
+xảy đến
+xắc xô
+ái nhĩ lan
+ánh sáng mặt trời
+ánh trăng
+áo gi lê
+áo len chui đầu
+áo len có nón
+áo môn
+áo vét tông
+áo đuôi tôm
+áo đầm
+át bích
+át chuồn
+át cơ
+át nhép
+át rô
+âm nhạc cổ điển
+óc chó
+ôm chặt
+ông già noel
+ông già nô en
+ông già santa
+úc châu
+úc đại lợi
+ý kiến công chúng
+ý đại lợi
+ăn cơm
+ăn thịt đồng loại
+đa phương tiện
+đan mạch
+đem lại
+đeo vào
+đi mua hàng
+đi ngủ
+đi xe đạp
+điếu thuốc lá
+điều khiển được
+điều răn
+điều sai quấy
+điểm cận nhật
+điểm ghi bằng phấn
+điểm phân
+điểm viễn nhật
+điểm viễn địa
+điện giật
+điện thoại cầm tay
+điệu múa
+điệu nhảy
+đài bắc
+đài loan
+đài trung
+đàn luýt
+đàn viôlôngxen
+đá bazan
+đá da trời
+đá mácma
+đá tạo vàng
+đánh quay
+đã lấy vợ
+đêm ngủ
+đô la canada
+đô la úc
+đông dương
+đông hải
+đông kinh đô
+đông nam á
+đông timor
+đăng tin vịt
+đưa lại
+đường lao
+đường lớn
+đường sơn
+đại anh
+đại hàn dân quốc
+đại hội liên hoan
+đại luân đôn
+đại lục á âu
+đại lục âu á
+đại số tuyến tính
+đại tây dương
+đại động mạch
+đạo đức giả
+đạt tới
+đạt được
+đảng viên đảng quốc xã
+đảo anh
+đảo britain
+đảo hokkaido
+đầy tớ gái
+đậu bắp
+đế quốc la mã
+địa lý học
+đồ bơi
+đồ chuốt viết chì
+đồ gia vị
+đồ lót
+đồ lưu niệm
+đồ thêu
+đồ tắm
+đồng hồ reo
+đồng mỹ
+đồng pagôt
+đồng rúp
+độ sâu
+động cơ tuabin cánh quạt
+động vật bò sát
+động vật không răng
+động vật thân mềm
+đứa trẻ
+đứa trẻ mồ côi
+đức quốc xã
+ả rập saudi
+ả rập xê út
+ấm pha trà
+ấm đun nước
+ấn chương
+ấn độ
+ấn độ dương
+ốc vít
+ống chích
+ớt cay
+ớt xanh
+ở đây
