@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "enabled": true,
+  "enabled": false,
   "version": "26.11.25.0",
   "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.25.0/QuangNV_Setup_26.11.25.0_Universal.exe",
   "sha256": "80714b7bff59e3e809305e7e7b126bb63bf4675e3bc4228dd4c61ba0f9a67fe5",
