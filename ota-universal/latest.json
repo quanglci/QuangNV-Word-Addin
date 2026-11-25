@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "enabled": false,
-  "version": "26.11.25.0",
-  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.25.0/QuangNV_Setup_26.11.25.0_Universal.exe",
-  "sha256": "80714b7bff59e3e809305e7e7b126bb63bf4675e3bc4228dd4c61ba0f9a67fe5",
-  "signature": "ctoS9bDQXfOT/jv65qNd6as4YMEnbdVb8nqkaiNYJ01f/XW+VGGsNwxpgJt/7wnIjGOkih9U9h2RbpFpR3iRGeHxgdlej4JEboFe4a2/b1J+FtNLC2tZwcksKBY2wSFRMym/YcaUsgNyHCCdqj6KwRCg8m4Yc/Bu/SKtlpuvCa/lzA8Gd3FaPzcrHAZ/LJdjTIPWbiDwZhjpTaFYHB2HjQCvayYUAni3mi/ZHihjEMtzc9Moe3gWdzw09Vd3T9B1EAyrZurnxiNxrFRB0eLxM0gh4q1deXF8DgUIfQMDYIY8W6LdhkNcorjks/Cb8IF2f6tf2JXnTVeJskOeORZ8mBcErnVNH3oJ/xiN0jx+UjtQcjQcuxX8eQVRYTmjH2qVYKwPZHt5gD856QpAXdSMq3RgziCVC7IOZfPInH6Z43uy1ePsROkgDoxBNEwvd/MSAhBhY1YdruQiAGzW7mBIcV0JB/uiCvBz6/CbSQ4HWOA8eiGme+7lkFDj8/ZbNKzG",
-  "notes": "QuangNV 26.11.25: cap nhat Universal tich luy; nguoi dung tuy chon cap nhat."
+  "enabled": true,
+  "version": "26.11.25.2",
+  "url": "https://github.com/quanglci/QuangNV-Word-Addin/releases/download/v26.11.25.2/QuangNV_Setup_26.11.25.2_Universal.exe",
+  "sha256": "7972ae101b6408c9a12e275a1eaf2bd7663d50c9bc3991b9e70fe92bdc1a6eed",
+  "signature": "lyZCf8GWGZj0W6wouu1+N8RSQyUsb/0wIoxueTFngYpy4mAtTuxUEkdmQZiC/QvXCLTTJyNlT8etmtrDbk8l6oNnFHNNW7KaPI9NTkcOIzUOev87FGm2zZ4k9IFbeplYycmtbwcRk+lcL7jaIpr7sDimeC2lGnCH9kHgyD4wqaQc2RaE/2NrKUisWVVY3V5lYH4JO2atEFHBeaLUA+gJKUnMn1xBnMrnDQMvpYBo6RboSVmwTDwSupraQQ9p6BWA6eOWTUi2eVPQZFrrLVhLkhR4vYEmwNYMtj+RTcgNBt0149Q8G+W1DCnfmUnWQYGwN4HrwURn2HVMPhDv70Huj7zFXRPHqXUuob5PdN6qjGYzTcA/7sHcp/ieGwplh8jmtnI7PzXSDH7blCM7jOIyydOnLZA2ds1TFPKdNzGOVDeJTPmY82ydn8eptHQL5tfeuteuNUeuttQzRF1I8r8euruUHp7ZeMPz3q/jY8ZoK/qmPjZVSWzqI0oSLFyqN0CN",
+  "notes": "QuangNV 26.11.25.2 - Offline Data Universal: ban trai nghiem OTA, nguoi dung tuy chon cap nhat."
 }
