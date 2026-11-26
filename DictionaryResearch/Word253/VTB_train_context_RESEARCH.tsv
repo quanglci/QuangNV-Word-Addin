@@ -1,0 +1,918 @@
+# Source: UniversalDependencies/UD_Vietnamese-VTB, VLSP Vietnamese Treebank
+# https://github.com/UniversalDependencies/UD_Vietnamese-VTB/blob/master/vi_vtb-ud-train.conllu
+# Source blob b9770becafcda80e7dd432151c19e65ed4fff852; CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+# Attribution: Nguyen Phuong Thai et al. (2009), Building a Large Syntactically-Annotated Corpus of Vietnamese; UD Vietnamese-VTB contributors. Modified by QuangNV: extracted, filtered and counted distinct training sentences.
+# Research only; NOT a whitelist or production runtime. Counts are distinct train sentences, not general Vietnamese frequencies.
+# phrase<TAB>sentence_support
+thám tử	54
+chúng tôi	42
+gia đình	35
+điện thoại	33
+công ty	29
+cơ quan	27
+có thể	23
+không có	20
+bà con	19
+cũng không	18
+tiếp tục	18
+không thể	16
+quyết định	16
+điều tra	16
+đã được	16
+của mình	15
+khai thác	15
+đã có	15
+đầu tư	15
+con trai	13
+các thám	13
+các thám tử	13
+cán bộ	13
+của bà	13
+làm việc	13
+những người	13
+theo dõi	13
+trách nhiệm	13
+tổ chức	13
+xây dựng	13
+chiến tranh	12
+cho biết	12
+chủ trương	12
+câu chuyện	12
+giám đốc	12
+một số	12
+phát hiện	12
+tiêu cực	12
+trở về	12
+đây là	12
+đầu tiên	12
+đối với	12
+bảo vệ	11
+chính sách	11
+công nhân	11
+của công	11
+giao thông	11
+là người	11
+quan hệ	11
+tất cả	11
+xảy ra	11
+đường ống	11
+chỉ có	10
+con gái	10
+cũng có	10
+cơ sở	10
+dưới vành	10
+dưới vành mũ	10
+dưới vành mũ thám	10
+dưới vành mũ thám tử	10
+hành chính	10
+không phải	10
+mũ thám	10
+mũ thám tử	10
+người dân	10
+nhà nước	10
+phương án	10
+thông báo	10
+trả lời	10
+và không	10
+vành mũ	10
+vành mũ thám	10
+vành mũ thám tử	10
+vấn đề	10
+về nhà	10
+điều kiện	10
+đó là	10
+đứa con	10
+bị cáo	9
+có mặt	9
+công an	9
+của công ty	9
+di động	9
+duy nhất	9
+hậu quả	9
+máy fax	9
+nước ngoài	9
+nạn nhân	9
+số điện	9
+thực hiện	9
+vụ án	9
+đề nghị	9
+địa chỉ	9
+bảo hiểm	8
+bất ngờ	8
+chương trình	8
+cuộc chiến	8
+cô gái	8
+cũng phải	8
+cửa hàng	8
+da cam	8
+hợp đồng	8
+không được	8
+khẳng định	8
+kinh doanh	8
+lao động	8
+liên quan	8
+mà không	8
+ngôi nhà	8
+tôi đã	8
+tập thể	8
+tố cáo	8
+ung thư	8
+vợ chồng	8
+xác nhận	8
+xử lý	8
+đi làm	8
+được đưa	8
+đại học	8
+ở đây	8
+anh em	7
+bây giờ	7
+bên trong	7
+chiếc xe	7
+chấp nhận	7
+chất độc	7
+chất độc da	7
+chất độc da cam	7
+công trình	7
+cảnh sát	7
+dư luận	7
+dự án	7
+hộ chiếu	7
+khai thác cát	7
+khu vực	7
+không biết	7
+là con	7
+mọi người	7
+nghị quyết	7
+nguyên nhân	7
+người bạn	7
+người khác	7
+nhân dân	7
+nhân viên	7
+như thế	7
+những ngày	7
+này có	7
+sạt lở	7
+số điện thoại	7
+thanh niên	7
+thác cát	7
+thông tin	7
+tiếp cận	7
+tôi không	7
+xác định	7
+đang ở	7
+đàn ông	7
+độc da	7
+độc da cam	7
+an toàn	6
+bên ngoài	6
+bình thường	6
+cho bà	6
+cho phép	6
+chuyện này	6
+chính là	6
+chúng ta	6
+chắc chắn	6
+chỉ là	6
+con mình	6
+con người	6
+cuộc sống	6
+các anh	6
+cách mạng	6
+còn lại	6
+có tiền	6
+cù lao	6
+cùng ngày	6
+cũng được	6
+cơ quan điều	6
+cơ quan điều tra	6
+của bà con	6
+của con	6
+của các	6
+của những	6
+doanh nghiệp	6
+dịch vụ	6
+giấy tờ	6
+hoạt động	6
+hôm nay	6
+hệ với	6
+không ai	6
+không thấy	6
+kinh tế	6
+kiểm tra	6
+kéo dài	6
+liên tục	6
+là ai	6
+làm ăn	6
+lá đơn	6
+lập tức	6
+nhiệm vụ	6
+phong trào	6
+pháp luật	6
+phải là	6
+quan điều	6
+quan điều tra	6
+qui định	6
+quản lý	6
+ra ngoài	6
+rất nhiều	6
+sau khi	6
+sau đó	6
+sà lan	6
+sử dụng	6
+thoại di	6
+thoại di động	6
+thế nào	6
+trong những	6
+tuyệt đối	6
+tài sản	6
+tội phạm	6
+vi phạm	6
+vẫn còn	6
+với nhau	6
+vụ việc	6
+ông bà	6
+điện thoại di	6
+điện thoại di động	6
+đã bị	6
+đưa ra	6
+đấu tranh	6
+đồng nghiệp	6
+ở nhà	6
+ở nước	6
+ở nước ngoài	6
+bác sĩ	5
+báo cáo	5
+bệnh viện	5
+bị sạt	5
+bị sạt lở	5
+bị ung	5
+bị ung thư	5
+cho con	5
+chính quyền	5
+chấm dứt	5
+chồng anh	5
+chủ tịch	5
+chứng kiến	5
+cuối cùng	5
+cuộc chiến tranh	5
+có chủ	5
+có chủ trương	5
+có người	5
+có trách	5
+có trách nhiệm	5
+công tác	5
+căn nhà	5
+cơ hội	5
+của anh	5
+của chúng	5
+của người	5
+cực ở	5
+giao lưu	5
+giải quyết	5
+giờ sáng	5
+gọi điện	5
+hoàn cảnh	5
+họ đã	5
+hồ sơ	5
+không dám	5
+không phải là	5
+kiềng ống	5
+kết quả	5
+là ông	5
+lãnh tụ	5
+lãnh đạo	5
+lên tiếng	5
+lấy chồng	5
+lần này	5
+mua dâm	5
+một cách	5
+ngày mai	5
+người có	5
+người đi	5
+nhà và	5
+như không	5
+nhất là	5
+những con	5
+nào cũng	5
+này là	5
+nỗi đau	5
+phát triển	5
+phải có	5
+sẽ được	5
+tham gia	5
+thay đổi	5
+thành công	5
+thái độ	5
+thời điểm	5
+thứ trưởng	5
+tiêu cực ở	5
+tiền và	5
+trung tâm	5
+trở lại	5
+tạo điều	5
+tạo điều kiện	5
+việc làm	5
+vào nhà	5
+vào đại	5
+vào đại học	5
+vì không	5
+văn phòng	5
+vận động	5
+với các	5
+vợ chồng anh	5
+xuất hiện	5
+yêu cầu	5
+đi học	5
+được giao	5
+đại diện	5
+để lại	5
+đồng ý	5
+ủng hộ	5
+anh trai	4
+biên bản	4
+biết anh	4
+bán lại	4
+bí mật	4
+bạn bè	4
+bắt đầu	4
+bố mẹ	4
+bộ trưởng	4
+chia sẻ	4
+chia tay	4
+cho anh	4
+cho họ	4
+chuyện của	4
+chăm sóc	4
+chồng chị	4
+các cơ	4
+các cơ quan	4
+các nạn	4
+các nạn nhân	4
+cáo tiêu	4
+cáo tiêu cực	4
+có cảm	4
+công khai	4
+công văn	4
+cũng đã	4
+cầu thang	4
+của chị	4
+của lãnh	4
+của lãnh tụ	4
+của ông	4
+dòng nước	4
+dự thảo	4
+gia đình bà	4
+giúp việc	4
+gom lúa	4
+hoàn thành	4
+hành động	4
+hãng bảo	4
+hãng bảo hiểm	4
+hệ thống	4
+họ sẽ	4
+khi đó	4
+khó khăn	4
+không có tiền	4
+không muốn	4
+khắc phục	4
+liên hệ	4
+là đúng	4
+làm cách	4
+lại với	4
+lại được	4
+lựa chọn	4
+lực lượng	4
+mua nhà	4
+mô hình	4
+môi trường	4
+mẹ con	4
+mềm máy	4
+mềm máy fax	4
+mọi chuyện	4
+mới có	4
+nghi vấn	4
+người đều	4
+nhà bà	4
+nhà nghỉ	4
+nhân chứng	4
+nhìn thấy	4
+nhóm công	4
+nhóm công nhân	4
+như vậy	4
+nhận tội	4
+nhật ký	4
+những gì	4
+năm nay	4
+nước mắt	4
+nước đã	4
+phi nghĩa	4
+phân tích	4
+phút sau	4
+phải tự	4
+phần mềm	4
+phần mềm máy	4
+phần mềm máy fax	4
+phụ trách	4
+quan hệ với	4
+quan trọng	4
+quay lại	4
+ra và	4
+rủ nhau	4
+so với	4
+sản xuất	4
+số máy	4
+theo sát	4
+thoại của	4
+thành niên	4
+thì bị	4
+thì chỉ	4
+thì phải	4
+thông cảm	4
+thư của	4
+thể là	4
+thợ lặn	4
+thủ tục	4
+tiền bạc	4
+toàn diện	4
+trong cuộc	4
+trong tay	4
+trong việc	4
+trong đó	4
+trên đường	4
+trên đất	4
+trình bày	4
+trước đây	4
+trường hợp	4
+trả thù	4
+trả tiền	4
+tâm sự	4
+tình trạng	4
+tín dụng	4
+tôi có	4
+tấn công	4
+tố cáo tiêu	4
+tố cáo tiêu cực	4
+tờ giấy	4
+từng ngày	4
+tử tế	4
+tự nguyện	4
+vay vốn	4
+và có	4
+và đang	4
+vì không có	4
+vòi rồng	4
+vẫn tiếp	4
+với người	4
+với những	4
+xã hội	4
+xưởng vẽ	4
+ông chủ	4
+đang đứng	4
+đi lại	4
+đi vào	4
+điều đó	4
+điện thoại của	4
+đoạn kiềng	4
+đoạn kiềng ống	4
+đã tìm	4
+đã xác	4
+đình bà	4
+đơn vị	4
+được nhà	4
+đảm bảo	4
+đầu dây	4
+đến khi	4
+đến những	4
+đổi mới	4
+động của	4
+ưu đãi	4
+ở cửa	4
+ở đường	4
+ai cũng	3
+anh có	3
+anh em tôi	3
+anh lại	3
+anh ta	3
+anh đã	3
+ba gác	3
+ban đầu	3
+bao giờ	3
+biết bà	3
+biết sẽ	3
+biện pháp	3
+buồng tắm	3
+bà già	3
+bà mẹ	3
+bày tỏ	3
+bên trong không	3
+bình yên	3
+băng ghi	3
+bản fax	3
+bảng thông	3
+bảng thông báo	3
+bấm điện	3
+bấm điện thoại	3
+bỏ vợ	3
+bộ máy	3
+bộ đội	3
+cao su	3
+chiến sĩ	3
+chiến tranh phi	3
+chiến tranh phi nghĩa	3
+cho bà con	3
+cho vay	3
+chuyển đến	3
+chuyện đó	3
+cháu họ	3
+chính thức	3
+chính đáng	3
+chú trọng	3
+chúng tôi có	3
+chúng tôi đã	3
+chưa có	3
+chưa thành	3
+chưa thành niên	3
+chạy xe	3
+chấp nhận cho	3
+chống lại	3
+chống phát	3
+chống tiêu	3
+chống tiêu cực	3
+chứng minh	3
+con cái	3
+con đường	3
+cuộc chiến tranh phi	3
+cuộc chiến tranh phi nghĩa	3
+cuộc đời	3
+cà phê	3
+các phương	3
+cáo tiêu cực ở	3
+cáo tiêu cực ở đường	3
+cân nhắc	3
+câu chuyện này	3
+câu hỏi	3
+có cơ	3
+có giấy	3
+có người nhà	3
+có những	3
+có thể là	3
+có vốn	3
+cô ta	3
+cô ấy	3
+công lý	3
+công ty thám	3
+công ty thám tử	3
+cũng chỉ	3
+cũng không thể	3
+cũng là	3
+cũng rất	3
+cả những	3
+cả những gì	3
+cảm tình	3
+cảnh giác	3
+cần cẩu	3
+cần thiết	3
+cầu đường	3
+cố định	3
+cộng đồng	3
+cụ thể	3
+của bộ	3
+của chúng tôi	3
+của những người	3
+của tôi	3
+của vụ	3
+của vụ án	3
+cửa nhà	3
+cực ở đường	3
+diễn ra	3
+du học	3
+dâm người	3
+dừng ở	3
+dừng ở đó	3
+em tôi	3
+ghi âm	3
+ghé vào	3
+giao cho	3
+giá cao	3
+giải pháp	3
+giải tỏa	3
+gom lúa của	3
+gõ cửa	3
+gặp lại	3
+gọi là	3
+gợi ý	3
+hay không	3
+heo con	3
+hiện nay	3
+hiệu quả	3
+hoàn toàn	3
+hoàn tất	3
+hàng điện	3
+hình thức	3
+hướng dẫn	3
+hưởng đến	3
+hạn chế	3
+hạnh phúc	3
+hết sức	3
+học tiếng	3
+hồ hởi	3
+hội nghị	3
+hội đồng	3
+hợp tác	3
+im lặng	3
+khoanh vùng	3
+khách hàng	3
+không bị	3
+không còn	3
+không đặt	3
+kinh phí	3
+kiều bào	3
+ký xác	3
+ký xác nhận	3
+kể về	3
+kịch bản	3
+liên quan đến	3
+là chủ	3
+là con gái	3
+là có	3
+là do	3
+là những	3
+là phải	3
+là sẽ	3
+làm cho	3
+làm cách mạng	3
+làm thay	3
+làm việc ở	3
+lá thư	3
+lúa của	3
+lý nhà	3
+lý nhà nước	3
+lý và	3
+lại cho	3
+lại các	3
+lại từ	3
+mua xe	3
+muốn làm	3
+máy móc	3
+máy này	3
+mãi lộ	3
+mại dâm	3
+mạnh mẽ	3
+mọi việc	3
+mối quan	3
+mối quan hệ	3
+mới nổi	3
+mới nổi bật	3
+mở rộng	3
+nghiêm túc	3
+nghiệp ở	3
+nghị định	3
+ngoại tình	3
+ngày thứ	3
+ngân sách	3
+người con	3
+người mới	3
+người nhà	3
+người phụ	3
+người trong	3
+người đã	3
+người đó	3
+nhanh chóng	3
+nhau đi	3
+nhiệm của	3
+nhu cầu	3
+nhà có	3
+nhà của	3
+nhà hàng	3
+nhà đầu	3
+nhà đầu tư	3
+nhà ở	3
+nhân của	3
+như thế nào	3
+nhận cho	3
+nhận thấy	3
+nhờ bác	3
+những chính	3
+những chính sách	3
+những con người	3
+những công	3
+nào khi	3
+nào đó	3
+này không	3
+này và	3
+nên không	3
+nên đã	3
+nói chuyện	3
+nói thế	3
+nước với	3
+nặc danh	3
+nổi bật	3
+phát xít	3
+phí tạm	3
+phải cho	3
+phải gánh	3
+phải làm	3
+phải đi	3
+phổ biến	3
+qua đời	3
+quan đến	3
+quay về	3
+quyết tâm	3
+quán nước	3
+quản lý nhà	3
+quản lý nhà nước	3
+quốc lộ	3
+ra đời	3
+sai phạm	3
+sao không	3
+siết chặt	3
+suy nghĩ	3
+sáng cùng	3
+sáng cùng ngày	3
+sâu vào	3
+sôi nổi	3
+sẽ có	3
+sẽ không	3
+sẽ là	3
+sẽ làm	3
+số di	3
+số di động	3
+số lượng	3
+số phận	3
+số tiền	3
+số điện thoại của	3
+sống trong	3
+sụt giảm	3
+ta chỉ	3
+thay đổi thiết	3
+thay đổi thiết kế	3
+thi công	3
+thi hành	3
+thiết kế	3
+thoại này	3
+thoại và	3
+thu phí	3
+thu phí tạm	3
+thuê thám	3
+thuê thám tử	3
+thuốc lá	3
+thành lập	3
+thành phố	3
+tháo gỡ	3
+thì anh	3
+thì có	3
+thư ký	3
+thương binh	3
+thường trực	3
+thẳng vào	3
+thể hiện	3
+thể lấy	3
+thỏa thuận	3
+thời gian	3
+thủ phạm	3
+thừa nhận	3
+thực tế	3
+tiêu cực ở đường	3
+tiến hành	3
+toàn bộ	3
+tra đã	3
+tranh phi	3
+tranh phi nghĩa	3
+triển khai	3
+trong gia	3
+trong gia đình	3
+trong không	3
+trong ngày	3
+trong nhà	3
+trong vụ	3
+trung ương	3
+trách nhiệm của	3
+trí thức	3
+trước cửa	3
+trạm thu	3
+trạm thu phí	3
+trạm thu phí tạm	3
+trả về	3
+trở thành	3
+trực tiếp	3
+ty thám	3
+ty thám tử	3
+tìm cách	3
+tìm hiểu	3
+tìm ra	3
+tìm đến	3
+tình cảm	3
+tình hình	3
+tình với	3
+tình yêu	3
+tích cực	3
+tôi bị	3
+tôi có thể	3
+tôi cũng	3
+tôi sẽ	3
+tôi vẫn	3
+tươi cười	3
+tương lai	3
+tất cả những	3
+tất cả những gì	3
+tắc giao	3
+tắc giao thông	3
+tỏ vẻ	3
+tố cáo tiêu cực ở	3
+từ đâu	3
+từ đầu	3
+từng bước	3
+việc ở	3
+vui mừng	3
+và các	3
+và cũng	3
+và những	3
+và phát	3
+và sự	3
+và đã	3
+và đưa	3
+vào bệnh	3
+vào bệnh viện	3
+vào máy	3
+vì công	3
+vì công lý	3
+vất vả	3
+vẫn tiếp tục	3
+về phía	3
+với chúng	3
+với chúng tôi	3
+với chủ	3
+với gia	3
+với gia đình	3
+vụ của	3
+xe ba	3
+xe ba gác	3
+xe lửa	3
+xe tải	3
+xúc động	3
+yên tâm	3
+ách tắc	3
+ông con	3
+ông ta	3
+ý kiến	3
+ăn sáng	3
+ăn sâu	3
+ăn sâu vào	3
+đi bộ	3
+đi cùng	3
+đi làm cách	3
+đi làm cách mạng	3
+đi ra	3
+điểm bể	3
+điện thoại này	3
+điện thoại và	3
+điện tử	3
+đáp ứng	3
+đã có mặt	3
+đã làm	3
+đã để	3
+đó cũng	3
+đó là ai	3
+đó thì	3
+đó và	3
+đăng ký	3
+đường dây	3
+đường tạm	3
+được bà	3
+được gì	3
+được mở	3
+được thì	3
+được tạo	3
+được tạo điều	3
+được tạo điều kiện	3
+được điều	3
+được đưa ra	3
+đảng bộ	3
+đất nước	3
+đầy đủ	3
+đặc biệt	3
+đến các	3
+đến mức	3
+đến ngày	3
+đến đưa	3
+đề cập	3
+đều phải	3
+để chống	3
+để tiếp	3
+định của	3
+định rõ	3
+đối tượng	3
+đối với các	3
+đồng với	3
+đổi hộ	3
+đổi hộ chiếu	3
+đổi thiết	3
+đổi thiết kế	3
+đứa con trai	3
+ảnh hưởng	3
+ảnh hưởng đến	3
+ở cơ	3
+ở cơ quan	3
+ở lại	3
+ở đâu	3
+ở đó	3
