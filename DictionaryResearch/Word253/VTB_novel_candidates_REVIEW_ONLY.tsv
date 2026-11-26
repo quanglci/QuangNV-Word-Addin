@@ -1,0 +1,20 @@
+# Source: UniversalDependencies/UD_Vietnamese-VTB, VLSP Vietnamese Treebank
+# https://github.com/UniversalDependencies/UD_Vietnamese-VTB/blob/master/vi_vtb-ud-train.conllu
+# Source blob b9770becafcda80e7dd432151c19e65ed4fff852; CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+# Attribution: Nguyen Phuong Thai et al. (2009), Building a Large Syntactically-Annotated Corpus of Vietnamese; UD Vietnamese-VTB contributors. Modified by QuangNV: extracted, filtered and counted distinct training sentences.
+# Research only; NOT a whitelist or production runtime. Counts are distinct train sentences, not general Vietnamese frequencies.
+# candidate<TAB>sentence_support; absent from normalized Viet74K; REVIEW ONLY
+máy fax	8
+nhà nghỉ	4
+giải tỏa	3
+sụt giảm	3
+anh ta	2
+bà cụ	2
+chìa khóa	2
+cứ thế	2
+hoạn thư	2
+khắc tinh	2
+lớn khôn	2
+nhà đầu tư	2
+vô cảm	2
+ông ta	2
