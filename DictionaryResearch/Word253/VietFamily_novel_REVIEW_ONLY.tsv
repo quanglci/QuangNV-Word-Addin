@@ -1,0 +1,641 @@
+# Source: Ho Ngoc Duc Vietnamese word lists, mirror https://github.com/duyet/vietnamese-wordlist
+# License: GNU GPL v2 per upstream LICENSE (see LICENSE-VietFamily-GPL-2.txt).
+# Source blobs: {"Viet11K.txt":"bbc42befebd3dbf2a41f845e0992d49b070d04c9","Viet22K.txt":"a7bbe0bfd8a878cf51598e3cb651e1f3a0ad92f5","Viet39K.txt":"c120b68e1af5577325ac23de6ea04563eb376b24"}
+# Baseline Viet74K blob fa6a507700cbc0eebdb8d9e94e05d298138378fb
+# Changes by QuangNV: NFC, lowercase, whitespace normalization, deduplicate, remove baseline entries and filter to 2–5 lowercase known syllables. REVIEW ONLY; not proof of spelling, not automatic correction or production whitelist.
+# phrase<TAB>source_file(s)
+an ba ni	Viet11K.txt
+ba tư	Viet11K.txt
+ba đờ xuy	Viet22K.txt
+ban giám khảo	Viet11K.txt
+ban phước	Viet11K.txt
+bao giấy	Viet11K.txt
+bay lên	Viet11K.txt
+biệt ly	Viet11K.txt
+buồng hoa	Viet11K.txt
+bà chằng	Viet11K.txt
+bà cụ	Viet11K.txt
+bà la môn	Viet22K.txt
+bài báo	Viet11K.txt,Viet22K.txt
+bài bình luận	Viet22K.txt
+bài diễn văn	Viet11K.txt
+bài luận	Viet11K.txt
+bành voi	Viet11K.txt
+bá âm	Viet11K.txt
+bái đáp	Viet11K.txt
+bám riết	Viet11K.txt
+bán nam bán nữ	Viet11K.txt
+báo trước	Viet11K.txt
+bãi sa mạc	Viet11K.txt
+bè mọn	Viet22K.txt
+bét nhé	Viet22K.txt
+bình thủy	Viet22K.txt
+bình tươi	Viet22K.txt
+bích chương	Viet11K.txt
+bím tóc	Viet11K.txt
+bính bong	Viet22K.txt
+bòm bõm	Viet22K.txt
+bó lúa	Viet11K.txt
+bóc vảy	Viet11K.txt
+bôi bẩn	Viet11K.txt
+bõ cơn giận	Viet11K.txt
+bút ký	Viet11K.txt
+băng dương	Viet11K.txt
+băng keo	Viet11K.txt
+bơi xuồng	Viet11K.txt
+bạ ai	Viet11K.txt
+bại tẩu	Viet11K.txt
+bạn cũ	Viet11K.txt,Viet22K.txt
+bạt đãi	Viet11K.txt
+bản cáo trạng	Viet11K.txt
+bản hát	Viet11K.txt
+bản kịch	Viet11K.txt
+bản lãnh	Viet11K.txt
+bản tóm tắt	Viet11K.txt
+bản đồ lưu thông	Viet11K.txt,Viet22K.txt
+bấm chuông	Viet11K.txt
+bất cố liêm sĩ	Viet22K.txt
+bất hợp lý	Viet11K.txt
+bần cố	Viet22K.txt
+bầu rượu	Viet11K.txt
+bầu tâm sự	Viet11K.txt
+bẩn chật	Viet11K.txt,Viet22K.txt
+bằm vằm	Viet11K.txt
+bẻ mặt	Viet22K.txt
+bẻ vụn	Viet11K.txt
+bỉ vận	Viet11K.txt
+bị lừa	Viet11K.txt
+bịnh chứng	Viet11K.txt
+bịnh căn	Viet11K.txt
+bịnh dịch	Viet11K.txt
+bịnh học	Viet11K.txt
+bịnh nhân	Viet11K.txt
+bịnh viện	Viet11K.txt
+bịnh xá	Viet11K.txt
+bỏ xứ	Viet11K.txt
+bỏ đói	Viet11K.txt
+bốc khói	Viet11K.txt
+bốc lôi	Viet22K.txt
+bồn hoa	Viet11K.txt
+bộ học	Viet22K.txt
+bộ sách	Viet11K.txt
+bộ điều	Viet22K.txt
+bới tác	Viet11K.txt
+bờ sông	Viet11K.txt
+bục mình	Viet22K.txt
+bụm miệng	Viet11K.txt
+bức thư	Viet11K.txt
+bức tranh	Viet11K.txt
+bữa cổ	Viet22K.txt
+ca bô	Viet11K.txt
+ca ra	Viet22K.txt
+ca rốt	Viet11K.txt
+cai thần	Viet11K.txt
+cai thợ	Viet11K.txt
+can ke	Viet22K.txt
+canh tuần	Viet11K.txt
+cao ly	Viet11K.txt
+cha sở	Viet11K.txt
+choáng óc	Viet11K.txt
+chung thủy	Viet11K.txt,Viet22K.txt
+chuyến bay	Viet11K.txt
+chuyến trước	Viet11K.txt
+chuyện tình	Viet11K.txt
+chuông cáo phó	Viet11K.txt
+chuỗi ngày	Viet11K.txt
+chánh phạm	Viet11K.txt
+chát tai	Viet11K.txt
+chén cơm	Viet11K.txt
+chìa khóa	Viet11K.txt,Viet22K.txt
+chí lý	Viet11K.txt
+chí yếu	Viet11K.txt
+chích ngừa	Viet11K.txt
+chín mối	Viet11K.txt
+chít khăn	Viet11K.txt
+chóp chóp	Viet11K.txt
+chùm hoa	Viet11K.txt
+chăng màn	Viet11K.txt
+chơi đĩ	Viet11K.txt
+chưa bao giờ	Viet11K.txt
+chưởng lý	Viet11K.txt
+chạy mất	Viet11K.txt
+chải đầu	Viet11K.txt
+chảy rửa	Viet11K.txt
+chấn áp	Viet11K.txt
+chất kích thích	Viet11K.txt
+chẩn bịnh	Viet11K.txt
+chẩn y viện	Viet11K.txt
+chận đứng	Viet11K.txt,Viet22K.txt
+chếch choáng	Viet11K.txt
+chỉ rõ	Viet11K.txt
+chị bộ	Viet11K.txt
+chịu nhục	Viet11K.txt
+chịu đầu hàng	Viet11K.txt
+chọc giận	Viet11K.txt
+chột mắt	Viet11K.txt
+chớ kể	Viet22K.txt
+chờ chết	Viet11K.txt
+chờ xem	Viet11K.txt
+chở khách	Viet11K.txt
+chợt nhớ	Viet11K.txt
+chụp lấy	Viet11K.txt
+chứng bịnh	Viet11K.txt
+chữ ký	Viet11K.txt
+chữ trinh	Viet11K.txt
+chữ tắt	Viet11K.txt
+chữa bịnh	Viet11K.txt
+chực sẵn	Viet11K.txt
+con bịnh	Viet11K.txt
+con thú	Viet11K.txt
+cài cửa	Viet11K.txt
+cành la	Viet22K.txt
+cành nanh	Viet11K.txt
+cá biển	Viet11K.txt
+cá con	Viet11K.txt
+cá muối	Viet11K.txt
+cá tươi	Viet11K.txt
+cá ươn	Viet11K.txt
+cách cấu tạo	Viet11K.txt
+cách mạng xã hội	Viet11K.txt
+cách thủy	Viet22K.txt
+cái thế anh hùng	Viet11K.txt
+cán chổi	Viet11K.txt
+cán viết	Viet11K.txt
+cánh mũi	Viet11K.txt
+cánh quạt gió	Viet11K.txt
+cáo bịnh	Viet11K.txt
+cáo mật	Viet11K.txt
+cáo tội	Viet11K.txt
+cáu bẩn	Viet22K.txt
+cây còi	Viet11K.txt
+cây dù	Viet11K.txt
+còn trinh	Viet11K.txt
+công lực	Viet11K.txt
+công xuất	Viet11K.txt
+cõi trên	Viet11K.txt
+cơn mưa	Viet11K.txt
+cười ngạo	Viet11K.txt
+cạnh khóe	Viet11K.txt,Viet22K.txt
+cạp chiếu	Viet11K.txt
+cạy cửa	Viet11K.txt
+cả ngày	Viet11K.txt
+cải trắng	Viet22K.txt
+cấm dán giấy	Viet11K.txt
+cấm kỵ	Viet11K.txt
+cấm lịnh	Viet11K.txt
+cấm vào	Viet11K.txt
+cấn thai	Viet11K.txt
+cấp bằng	Viet11K.txt
+cất hàng	Viet11K.txt
+cất nhà	Viet11K.txt
+cất đi	Viet11K.txt
+cầm giữ	Viet11K.txt
+cầu chứng	Viet11K.txt
+cầu vòng	Viet22K.txt
+cật một	Viet11K.txt
+cắng đắng	Viet11K.txt
+cắt cứ	Viet11K.txt
+cắt lần	Viet22K.txt
+cắt may	Viet11K.txt
+cặp vợ chồng	Viet11K.txt
+cọc cằn	Viet11K.txt
+cọt xê	Viet11K.txt
+cỏ cú	Viet22K.txt
+cỏ voi	Viet22K.txt
+cồn cát	Viet11K.txt
+cỗ quan tài	Viet11K.txt,Viet22K.txt
+cục tẩy	Viet11K.txt
+của hối lộ	Viet11K.txt
+cứt xu	Viet11K.txt
+cựu kháng chiến	Viet11K.txt
+da bọc qui đầu	Viet11K.txt
+da che mắt ngựa	Viet11K.txt
+da người	Viet11K.txt
+danh phẩm	Viet11K.txt
+diêm đài	Viet11K.txt
+diệt khuẩn	Viet11K.txt
+do thái	Viet11K.txt
+dun rủi	Viet11K.txt
+duy nhứt	Viet11K.txt
+dành giật	Viet11K.txt
+dành riêng	Viet11K.txt
+dân tị nạn	Viet11K.txt
+dâu cao su	Viet11K.txt,Viet22K.txt
+dây tây	Viet11K.txt
+dã nhân	Viet11K.txt
+dì phước	Viet11K.txt
+dòm chừng	Viet11K.txt
+dòng nước	Viet11K.txt
+dĩa bay	Viet11K.txt
+dư giả	Viet11K.txt,Viet22K.txt
+dưỡng bịnh	Viet11K.txt
+dạm bán	Viet11K.txt
+dạm vợ	Viet11K.txt
+dạo ấy	Viet11K.txt
+dải đất	Viet11K.txt
+dấu chân	Viet11K.txt
+dấu ngoặc	Viet11K.txt
+dấu tay	Viet11K.txt,Viet22K.txt
+dấu thánh	Viet22K.txt
+dầu thực vật	Viet11K.txt
+dẫn dầu	Viet11K.txt
+dẫn đô	Viet11K.txt,Viet22K.txt
+dậy men	Viet11K.txt
+dẹp tan	Viet11K.txt
+dẻo sức	Viet11K.txt
+dễ bể	Viet11K.txt
+dễ ngươi	Viet22K.txt
+dệt gấm	Viet11K.txt
+dị chất	Viet11K.txt
+dị kỳ	Viet11K.txt
+dỗ ngọt	Viet11K.txt
+dở ra	Viet11K.txt
+dụi tắt	Viet11K.txt
+dừng lại	Viet11K.txt
+dựa trên	Viet11K.txt
+ghen tỵ	Viet11K.txt
+ghi nhập	Viet11K.txt
+già giận	Viet22K.txt
+già láo	Viet22K.txt
+giá bán buôn	Viet22K.txt
+giá bán lẻ	Viet22K.txt
+giá chợ đen	Viet11K.txt
+giá vé	Viet22K.txt
+giám má	Viet22K.txt
+giã độc	Viet11K.txt
+giò vàng	Viet22K.txt
+gió bảo	Viet11K.txt,Viet22K.txt
+giăng lưới	Viet11K.txt
+giương buồm	Viet11K.txt
+giương mắt	Viet11K.txt
+giả bửa	Viet22K.txt
+giải tỏ	Viet22K.txt
+giải tỏa	Viet11K.txt,Viet22K.txt
+giản xương	Viet22K.txt
+giản đơn hoá	Viet22K.txt
+giấy biên lai	Viet11K.txt
+giấy khai sanh	Viet11K.txt
+giấy khai tử	Viet11K.txt
+giọt mưa	Viet11K.txt
+giọt nước	Viet11K.txt
+giống loài	Viet11K.txt
+giống người	Viet11K.txt
+giờ làm thêm	Viet11K.txt
+giờ rãnh	Viet11K.txt
+giụi mắt	Viet11K.txt
+giữ chỗ	Viet11K.txt
+giữ kín	Viet11K.txt
+giữ sức khỏe	Viet11K.txt
+giữ trật tự	Viet11K.txt
+giữa trưa	Viet11K.txt
+giựt mình	Viet11K.txt
+gài cửa	Viet11K.txt
+gàu ròng	Viet11K.txt
+gác dan	Viet11K.txt
+gáy sách	Viet11K.txt
+gây nợ	Viet11K.txt
+gây thù	Viet11K.txt
+gãy đổ	Viet11K.txt
+góc tư	Viet22K.txt
+gót tiền	Viet22K.txt
+gù lưng	Viet11K.txt
+gượng dậy	Viet11K.txt
+gạch ống	Viet11K.txt
+gạn cặn	Viet11K.txt
+gảy đàn	Viet11K.txt
+gặp nhau	Viet11K.txt
+gặp nạn	Viet11K.txt
+gọi điện thoại	Viet11K.txt
+gọn ghé	Viet22K.txt
+gộp vào	Viet11K.txt,Viet22K.txt
+gửi rễ	Viet22K.txt
+hai vợ chồng	Viet11K.txt
+hay lây	Viet11K.txt
+heo nái	Viet11K.txt
+heo quay	Viet11K.txt
+hiến pháp hoá	Viet22K.txt
+hiếu kỳ	Viet11K.txt
+hoa kỳ	Viet11K.txt
+hoa tím	Viet22K.txt
+hoài báo	Viet22K.txt
+hoàn mỹ	Viet11K.txt
+hoán chuyển	Viet11K.txt
+hoãn nợ	Viet22K.txt
+hung tin	Viet11K.txt
+hung tán	Viet22K.txt
+hà má	Viet22K.txt
+hàng lậu	Viet11K.txt
+hàng tháng	Viet11K.txt
+hàng tuần	Viet11K.txt
+hành chánh	Viet11K.txt,Viet22K.txt
+hành lý	Viet11K.txt
+hé môi	Viet11K.txt
+hình thức hoá	Viet22K.txt
+hơ hở	Viet22K.txt
+hơi dâu	Viet22K.txt
+hạ lịnh	Viet11K.txt
+hạ thủy	Viet11K.txt
+hạng mục công trình	Viet22K.txt
+hạng người	Viet11K.txt
+hạt lệ	Viet11K.txt
+hẹp lượng	Viet11K.txt
+hếch mồm	Viet11K.txt
+hỉ nọ	Viet11K.txt
+hỏi tiền	Viet11K.txt
+hồ tắm	Viet11K.txt
+hổ tương	Viet22K.txt
+hợp bào	Viet22K.txt
+khom khòm	Viet22K.txt
+khoáng hoá	Viet22K.txt
+khu giải phóng	Viet11K.txt
+khá tốt	Viet11K.txt
+khí tính học	Viet22K.txt
+khóa học	Viet11K.txt
+khô kháo	Viet22K.txt
+khô khóc	Viet22K.txt
+khô mực	Viet11K.txt
+không bao giờ	Viet11K.txt,Viet22K.txt
+không nhận	Viet11K.txt
+không đối đất	Viet22K.txt
+khẩn vái	Viet22K.txt
+kim bằng	Viet11K.txt,Viet22K.txt
+kinh tế tài chính	Viet22K.txt
+kiếp trước	Viet11K.txt
+kiềm hoả	Viet22K.txt
+kéo cầy	Viet22K.txt
+kéo lưới	Viet11K.txt
+kín hơi	Viet11K.txt
+kíp nổ	Viet11K.txt
+ký ninh	Viet11K.txt
+ký túc xá	Viet11K.txt
+kẻ nứt	Viet22K.txt
+kẽm gai	Viet11K.txt
+kịch hoá	Viet22K.txt
+kỳ diệu	Viet11K.txt
+kỳ giông	Viet11K.txt
+kỳ thi	Viet11K.txt,Viet22K.txt
+kỹ viện	Viet11K.txt
+la đơn	Viet11K.txt,Viet22K.txt
+liên hiệp quốc	Viet11K.txt,Viet22K.txt
+liền bên	Viet11K.txt
+loã xõa	Viet22K.txt
+luyện thi	Viet11K.txt
+luật lao động	Viet11K.txt
+luồng tư tưởng	Viet11K.txt,Viet22K.txt
+luồng điện	Viet11K.txt
+ly bôi	Viet11K.txt
+ly hương	Viet11K.txt
+lát nữa	Viet11K.txt
+lòng heo	Viet11K.txt
+lòng nhân	Viet11K.txt,Viet22K.txt
+lòng tốt	Viet11K.txt
+lõa xõa	Viet11K.txt
+lúa thóc	Viet11K.txt
+lũy giảm	Viet22K.txt
+lưu trữ viên	Viet22K.txt
+lưu đày	Viet11K.txt
+lưới nhện	Viet11K.txt
+lưới tình	Viet11K.txt
+lưỡi gươm	Viet11K.txt
+lưỡng tự	Viet22K.txt
+lưỡng viện chế độ	Viet22K.txt
+lược thảo	Viet22K.txt
+lượng cá	Viet22K.txt
+lạ kỳ	Viet11K.txt
+lạc quyền	Viet22K.txt
+lảy cò	Viet11K.txt,Viet22K.txt
+lấy xuống	Viet11K.txt
+lẩn vào	Viet11K.txt
+lập kỷ lục	Viet11K.txt
+lắm tiền	Viet11K.txt,Viet22K.txt
+lẽ sống	Viet11K.txt
+lẽ thường tình	Viet11K.txt,Viet22K.txt
+lỗ rún	Viet11K.txt
+lữ đoàn trưởng	Viet22K.txt
+men sứ	Viet11K.txt
+men tình	Viet11K.txt
+mí mắt	Viet11K.txt
+móc sắt	Viet11K.txt
+mô tơ	Viet11K.txt
+múa võ	Viet11K.txt
+măng đô	Viet11K.txt
+mạ bạc	Viet11K.txt
+mạ vàng	Viet11K.txt
+mạng bạc	Viet11K.txt
+mật khu	Viet11K.txt
+mật mía	Viet11K.txt
+mặt tiền	Viet11K.txt
+mỏ vàng	Viet11K.txt
+mộ bia	Viet11K.txt
+mục đông	Viet22K.txt
+ngay khi	Viet11K.txt
+nghe lén	Viet11K.txt
+nghinh ngang	Viet11K.txt
+nghĩa dụng	Viet22K.txt
+nghểnh ngãng	Viet22K.txt
+ngoài đường	Viet11K.txt
+ngoắt ngoẹo	Viet22K.txt
+nguyệt cầm	Viet11K.txt
+ngà ngà say	Viet11K.txt,Viet22K.txt
+ngâu ngấu	Viet22K.txt
+người điên	Viet11K.txt,Viet22K.txt
+ngạt hơi	Viet11K.txt
+ngảnh cổ	Viet11K.txt
+ngẫu nhỉ	Viet22K.txt
+ngồi ì	Viet11K.txt
+ngổ nghịch	Viet22K.txt
+ngổ ngược	Viet22K.txt
+ngựa cái	Viet11K.txt
+nhiều tiền	Viet11K.txt
+nhiễm bịnh	Viet11K.txt
+nhà lãnh đạo	Viet11K.txt
+nhũ dịch	Viet11K.txt
+nhắm hướng	Viet11K.txt
+nhị trùng âm	Viet11K.txt,Viet22K.txt
+nhồi bột	Viet11K.txt
+nhổ cỏ	Viet11K.txt,Viet22K.txt
+nhổ răng	Viet11K.txt
+nhục thể	Viet11K.txt
+niêu thiếu	Viet11K.txt
+nuôi tầm	Viet11K.txt
+nách lá	Viet11K.txt
+nén giận	Viet11K.txt
+nín khóc	Viet11K.txt
+nói láy	Viet22K.txt
+nước uống	Viet11K.txt
+nạp thuế	Viet11K.txt
+nảy ra	Viet11K.txt
+nắm xương	Viet11K.txt,Viet22K.txt
+nồi chó	Viet22K.txt
+nổi dóa	Viet22K.txt
+nội giàn	Viet22K.txt
+nỡ to	Viet11K.txt
+nứt ra	Viet11K.txt
+nửa tá	Viet11K.txt
+nữ hoá	Viet22K.txt
+oi nồng	Viet11K.txt
+ong ọc	Viet22K.txt
+oán than	Viet11K.txt,Viet22K.txt
+oằn tù tì	Viet22K.txt
+phao tin	Viet11K.txt
+phiên thần	Viet22K.txt
+phiếm thần	Viet11K.txt
+phiếu xuất	Viet11K.txt
+pho tượng	Viet11K.txt
+pháp lịnh	Viet11K.txt
+phân học	Viet22K.txt
+phân loài	Viet22K.txt
+phép lạ	Viet11K.txt
+phía trước	Viet11K.txt
+phích nước	Viet11K.txt
+phó bản	Viet11K.txt
+phù rễ	Viet11K.txt,Viet22K.txt
+phút đầu	Viet22K.txt
+phấn nộ	Viet11K.txt,Viet22K.txt
+phấn trần	Viet22K.txt
+phụ dịch	Viet11K.txt
+phụ lái	Viet11K.txt
+qua lân	Viet22K.txt
+qua lửa than	Viet22K.txt
+quà tặng	Viet11K.txt,Viet22K.txt
+quàng quàng	Viet22K.txt
+quẩn bách	Viet22K.txt
+quẩn trí	Viet22K.txt
+quết trần	Viet11K.txt
+quệt trầu	Viet22K.txt
+ra lịnh	Viet11K.txt
+ra đi an	Viet22K.txt
+rau lê	Viet22K.txt
+roi da	Viet11K.txt
+rùng núi	Viet22K.txt
+rút lại là	Viet22K.txt
+rước khách	Viet11K.txt
+rượt theo	Viet11K.txt
+rầu rỉ	Viet22K.txt
+rền rỉ	Viet22K.txt
+rửa nhục	Viet11K.txt
+sa đề	Viet11K.txt
+song tuyền	Viet22K.txt
+su sẽ	Viet22K.txt
+suy rộng ra	Viet11K.txt,Viet22K.txt
+suy suyễn	Viet22K.txt
+sùng thần	Viet22K.txt
+sùng ái	Viet22K.txt
+súng cao su	Viet11K.txt
+sút kém to	Viet11K.txt
+sẩy vẩy	Viet22K.txt
+than xỉ	Viet11K.txt
+thanh kiếm	Viet11K.txt
+thuần phong mỹ tục	Viet11K.txt,Viet22K.txt
+thuần phát	Viet11K.txt
+thâm kín	Viet11K.txt,Viet22K.txt
+thâm thùng	Viet11K.txt,Viet22K.txt
+thúc dục	Viet11K.txt
+thần sạ	Viet11K.txt,Viet22K.txt
+thế ước	Viet11K.txt
+thủy động lực học	Viet11K.txt
+tiểu trừ	Viet11K.txt,Viet22K.txt
+tiệm ăn	Viet11K.txt,Viet22K.txt
+trù chân	Viet11K.txt,Viet22K.txt
+trùng lập	Viet11K.txt,Viet22K.txt
+trưởng khoa	Viet11K.txt
+trả hàng	Viet11K.txt,Viet22K.txt
+trắc bá diệp	Viet11K.txt,Viet22K.txt
+trẹo hàm	Viet11K.txt
+tung tóe	Viet11K.txt,Viet22K.txt
+tì mẩn	Viet11K.txt,Viet22K.txt
+tòa nhà	Viet11K.txt
+tạo giao	Viet11K.txt
+tạp kỹ	Viet11K.txt
+tạp lục	Viet11K.txt
+tảo ngộ	Viet11K.txt,Viet22K.txt
+tận hiểu	Viet11K.txt,Viet22K.txt
+tắc xi	Viet11K.txt
+u ran	Viet11K.txt
+va ni	Viet11K.txt
+vi ta min	Viet11K.txt
+vi ô lông	Viet11K.txt
+viện cớ	Viet11K.txt
+viện lý	Viet11K.txt
+vườn cây	Viet11K.txt
+vật lý học	Viet11K.txt
+vị kỷ	Viet11K.txt
+xe cam nhông	Viet11K.txt
+xe tắc xi	Viet11K.txt
+xuôi vần	Viet11K.txt
+xà nhà	Viet11K.txt
+xây mặt	Viet11K.txt
+xót dạ	Viet11K.txt
+xếp thứ tự	Viet11K.txt
+á rập	Viet11K.txt
+ác phụ	Viet11K.txt
+ái nhĩ lan	Viet11K.txt
+án tử hình	Viet11K.txt
+ánh nắng	Viet11K.txt
+ánh đèn	Viet11K.txt
+áo ngủ	Viet11K.txt
+âm giải	Viet11K.txt
+âm hành	Viet11K.txt
+âm thần	Viet11K.txt
+âu châu	Viet11K.txt
+ít lâu nay	Viet11K.txt,Viet22K.txt
+ít nhứt	Viet11K.txt
+óc châm biếm	Viet11K.txt
+ói máu	Viet11K.txt
+ô chữ	Viet11K.txt
+ông vãi	Viet11K.txt,Viet22K.txt
+ú oà	Viet22K.txt
+ăn cơm	Viet11K.txt
+ăn cơm tháng	Viet11K.txt
+ăn hoa hồng	Viet11K.txt
+ăn thử	Viet11K.txt
+ăn xén	Viet11K.txt
+đa dục	Viet11K.txt
+đa hôn	Viet11K.txt
+đa hộc	Viet22K.txt
+đem lại	Viet11K.txt
+đi ngủ	Viet11K.txt
+đi trốn	Viet11K.txt
+đoạt chức	Viet11K.txt
+đài kỷ niệm	Viet11K.txt
+đá lat	Viet22K.txt
+đái nhắt	Viet22K.txt
+đáo lý	Viet11K.txt
+đã lâu	Viet11K.txt
+đãi nghĩa	Viet22K.txt
+đêm nay	Viet11K.txt
+đòi tiền	Viet11K.txt
+đóng thuế	Viet11K.txt
+đăng ten	Viet11K.txt
+đường cấm	Viet11K.txt
+đường thắng	Viet22K.txt
+đường về	Viet11K.txt
+được quyền	Viet11K.txt
+đạt lai lạt ma	Viet22K.txt
+đẩy ngã	Viet11K.txt
+đắp đập	Viet11K.txt
+đằng trương	Viet22K.txt
+đặt tiền	Viet22K.txt
+để mặt	Viet22K.txt
+đệ đơn	Viet11K.txt
+địa chấn ký	Viet22K.txt
+địa lý học	Viet11K.txt
+địa ốc ngân hàng	Viet22K.txt
+định mạng	Viet11K.txt
+đỏ tươi	Viet11K.txt
+độ ví	Viet22K.txt
+đụt mưa	Viet11K.txt
+đứt tay	Viet11K.txt
+ả giang hồ	Viet11K.txt
+ảnh lửa	Viet11K.txt
+ấm chén	Viet11K.txt
+ấn chỉ	Viet11K.txt
+ẩn sỉ	Viet11K.txt
+ắc qui	Viet11K.txt
+ẳng ẳng	Viet11K.txt
+ế chồng	Viet11K.txt
+ống lòng	Viet22K.txt
+ống trời	Viet11K.txt
+ổ kiến	Viet11K.txt
+ổ mối	Viet11K.txt,Viet22K.txt
+ứ huyết	Viet11K.txt
