@@ -1733,3 +1733,8 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 ## TT-02. Giảm Weight đường kẻ ngang — REQUIREMENT_INTAKE (27/11/2026)
 
 - Chủ dự án yêu cầu giảm Weight từ 0,75 pt xuống 0,5 pt cho ba đường kẻ thể thức: dưới tên cơ quan ban hành, dưới tiêu ngữ và dưới trích yếu. Giữ màu đen, chiều dài, vị trí, căn chỉnh, khoảng cách, cỡ chữ 14pt và Fix V7; không áp dụng thay đổi đại trà cho đường kẻ khác trong tài liệu. Kết hợp TT-01 để không mất hoặc nhân đôi đường kẻ khi chuẩn hóa nhiều lần. Giá trị 0,75 pt là hiện trạng theo chủ dự án; kiểm tra mã nguồn và mẫu khi triển khai. Chỉ ghi nhận yêu cầu, chờ chủ dự án thông báo đã tổng hợp xong; chưa chỉnh mã, chưa chạy hoặc đóng gói, không sửa OTA; M191C SECURITY HOLD, M192T giữ nguyên.
+
+
+## TT-03. Chiều dài và căn giữa ba đường kẻ thể thức — REQUIREMENT_INTAKE (27/11/2026)
+
+- Chủ dự án yêu cầu: đường dưới tên cơ quan ban hành dài đúng 1/3 chiều rộng chữ tên cơ quan ban hành, căn giữa theo tên cơ quan đó; đường dưới tiêu ngữ dài đúng chiều rộng dòng tiêu ngữ và căn giữa theo dòng đó; đường dưới trích yếu nội dung dài đúng chiều rộng tên loại văn bản (ví dụ KẾ HOẠCH, BÁO CÁO), nằm dưới trích yếu và căn giữa theo trích yếu. Hiểu theo chiều rộng chữ hiển thị thực tế trong Word, không theo số ký tự hoặc số cm cố định; với tên loại văn bản dài hơn hai từ, dùng toàn bộ tên loại văn bản. TT-03 cập nhật yêu cầu giữ chiều dài ở TT-02, các yêu cầu khác giữ nguyên: Weight 0,5 pt, màu đen, giữ Fix V7 và cỡ chữ đã duyệt, không làm mất/nhân đôi đường kẻ khi chuẩn hóa lặp, không ảnh hưởng đường kẻ khác. Chưa kiểm thử cách đo trên Word (kể cả trường hợp tên dài/nhiều dòng); chỉ ghi nhận yêu cầu, chờ chủ dự án tổng hợp xong. Không sửa mã, không đóng gói, không thay OTA; M192T và SECURITY HOLD M191C giữ nguyên.
