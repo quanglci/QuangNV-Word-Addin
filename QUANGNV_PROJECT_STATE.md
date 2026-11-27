@@ -1695,3 +1695,30 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 
 - 21 kịch bản NOT_RUN, gồm Windows/Office x86/x64, direct OTA từ 25.2, legacy R8 theo điều kiện thực tế, chữ ký/hash, khóa tệp, hủy, rollback, Fix V7, Ribbon/AI, văn bản phức tạp. Template phát hành null/NOT_RUN; chỉ một bộ cài Universal đồng nhất OTA sau khi đủ gate. Không chạy/đóng gói/phát hành mới, Pro PAUSED.
 - Gói chung QuangNV_M192H_M192N_PreIntegration_Research.zip 43588 byte, SHA256 4d3aea1af150111c38f82d198d636839e459c8bf96e023b8ac882450e6f79d78, 42/42 mục manifest ngoài và CRC đạt, manifest riêng H–N; tải lại từ Drive byte-equal. Drive https://drive.google.com/file/d/1SmP4gNlg4G4AD3di4y2Pn8vWeHCYsaGD/view . Không chứa chương trình thực thi/model/launcher/macro; chỉ dữ liệu/tài liệu. Không thay nguồn hay bản cũ. OTA đọc lại 26.11.25.2 enabled=true blob 5a8c72029afdcd66431e71277b68986bb303ab2e, chưa xác minh chữ ký, không sửa feed/Sheets. M193–M195 chưa thực hiện; tiếp theo thẩm định độc lập dữ liệu, nguồn/nghĩa vụ phân phối và kết luận bảo mật, khôi phục quyền nguồn bộ cài theo quy trình hợp lệ. Trạng thái M192H_N_PREINTEGRATION_RESEARCH_READY / SECURITY_LICENSE_SOURCE_ACCESS_INDEPENDENT_REVIEW_RUNTIME_PENDING.
+
+
+## 192O. Rà soát và đối chiếu kho từ điển — DATA_AUDIT (27/11/2026)
+
+- Chủ dự án duyệt triển khai liên tục M192O–M192T, lưu hồ sơ theo từng mốc. Đọc lại GitHub tới M192N (blob c46d9a4b963c431915d2df400fcfa2f082136505); SHA256/CRC M192E/F/H–N và M191C khớp hồ sơ, manifest ngoài 20+8+42 mục khớp. Chỉ đọc tĩnh gói M191C, không chạy/import mã, model, launcher, không tải lại M154 hoặc nguồn 25.2 bị chặn.
+- Đối chiếu 10 danh sách TXT/TSV lịch sử M191C (8 danh sách chuyên biệt/đã xử lý, Viet74K.original và corpus176_full), chỉ mục C10 và M192I: 158692 lượt mục từ, 78315 khóa NFC/casefold/gộp khoảng trắng, 80377 lượt trùng, 71040 nhóm có nhiều bản ghi. 1471 bản ghi ứng viên tạo 1447 khóa, 837 khóa trùng ít nhất một danh sách lịch sử. Lưu thống kê từng nguồn, hash và chỉ mục ứng viên truy vết; không xuất toàn bộ corpus, không xóa dữ liệu gốc, không gộp dạng gần âm, không whitelist/auto_apply. Đây không phải thẩm định từ đúng, không bao phủ mọi archive hay dữ liệu runtime trên máy. Tất cả overlay disabled; quyền phân phối còn mở.
+
+## 192P. Rà soát đáp án dự thảo — DATA_AUDIT (27/11/2026)
+
+- Kiểm lại toàn bộ 42 cặp E_DEV/J (khôi phục control 42/42), 36 span tài liệu dài tổng hợp K: 78/78 vị trí original/UTF16 khớp, 78/78 hash câu sạch E_C9/K khớp. Rà nội dung cặp ngắn; chuyển J-020 (chơn/trơn, biến thể vùng), E-DEV-06 (chang/trang, bảo thủ chờ duyệt), E-DEV-18 (chuyệnn/truyện, lỗi chính tả và chọn từ) sang review-only. Còn 33 strict_candidate, 9 review_only; overlay ghi lý do và hash, không ghi đè gold. J-003 lưu ghi chú thu hẹp phạm vi cần rà, chưa thay tọa độ gold. Dữ liệu dài lặp không tính là gold độc lập. Giữ overlay C4 trước, không mở GOLD holdout M192B. Chưa có chuyên gia độc lập; không đo recall/precision.
+
+## 192Q. Rà soát thuật toán và điều kiện không ghi sai — DESIGN_ONLY (27/11/2026)
+
+- Định vị 15 hàm trên 7 tệp document188/document186/hybrid184/hybrid186/batch172/patch191c/model166 bằng AST tĩnh, ghi hash và khoảng dòng. Lập phương án phân loại bỏ sót theo candidate/evidence/guard/map/màu, tách shadow, không nâng vàng từ tần suất đơn lẻ; giữ A/B parity, C/D chỉ sau duyệt. 23/23 mock boolean tự viết đạt trên các ca đã chọn, gồm hold, stale, partial, thiếu range, protected, overlap, ambiguous mark, offline apply, consent, readback và format. Không phải mã runtime hay bằng chứng thuật toán/model an toàn; chưa bao phủ mọi tổ hợp, chưa kiểm Word, rollback_required không phải hoàn nguyên thành công. Không sửa engine, ngưỡng, launcher hay bảo mật.
+
+## 192R. Đối chiếu yêu cầu tương thích và hồi quy — DESIGN_ONLY (27/11/2026)
+
+- Lập crosswalk 12 nhóm yêu cầu với 21 kịch bản M192N, xác minh ID tồn tại; bổ sung 6 kịch bản chi tiết R06–R11 về Fix V7 14pt, KẾT QUẢ/tiến độ, đối chiếu payload, hủy/đóng tài liệu bẩn, readback cài đặt, rollback 2 kiến trúc. Tất cả 27 kịch bản NOT_RUN; không suy ra tương thích thực tế. Giữ Ribbon/Home, Cấu hình AI, 3 chế độ x 3 chức năng, 3 màu, lưu cấu hình, cài/OTA Universal và mọi bản vá đã duyệt. Không truy xuất lại nguồn bộ cài bị 403; chưa kiểm byte parity payload.
+
+## 192S. Hồ sơ bằng chứng bảo mật, giấy phép và provenance — STATIC_AUDIT (27/11/2026)
+
+- Kế thừa 9 nhóm thành phần M192H và 8 gate SEC-01/02, PROV-01, LIC-01, SRC-01, QA-01, WIN-01, OTA-01. Bổ sung register bằng chứng cụ thể cho từng gate; 8 OPEN, 0 approved. Chưa có phản hồi Kaspersky mới được cung cấp, chưa có SBOM runtime hoặc xác nhận quyền phân phối model/phụ thuộc, nguồn 25.2/M154 vẫn bị chặn. Không khẳng định false positive, không thay launcher/đóng gói né phát hiện, không giảm bảo mật, không khôi phục file bị cách ly. M191C SECURITY HOLD; Pro PAUSED.
+
+## 192T. Tổng hợp hồ sơ tiền nghiệm thu — DESIGN_ONLY (27/11/2026)
+
+- Gói QuangNV_M192O_M192T_PreAcceptance.zip 31915 byte, SHA256 cc359605f78ee119596e56cb4fe4074eef18703051235dc3552c91cc082d51b2, 22/22 mục manifest ngoài và CRC đạt; manifest riêng từng mốc O–T, tải lại Drive byte-equal. Drive https://drive.google.com/file/d/1A2wSWrYu2Pymm3gTad-z06mUgTPWNUYs/view . Chỉ dữ liệu kiểm toán và thiết kế; không chứa mã thực thi, model, installer, macro. Giữ nguồn cũ và notice tương ứng; chưa xác minh quyền phân phối.
+- OTA đọc lại 26.11.25.2 enabled=true blob 5a8c72029afdcd66431e71277b68986bb303ab2e; không sửa feed/Sheets, chưa xác minh chữ ký/legacy Sheets trong lượt này. Không thay Word/Ribbon/DOTM/Fix V7/Cấu hình AI/engine/model/corpus runtime/installer. M193 BLOCKED (security, license, provenance, source access, duyệt dữ liệu), M194/M195 NOT_RUN; không phát hành OTA mới. Khi đủ gate mới đánh giá A/B/C/D thực tế, nghiệm thu Word x86/x64 và một bộ cài Universal. Mục tiêu 98% recall, 99% precision, giảm 20% thời gian, 15% RAM chưa được đo mới. Trạng thái M192O_T_PREACCEPTANCE_REVIEW_READY / SECURITY_LICENSE_SOURCE_ACCESS_INDEPENDENT_REVIEW_RUNTIME_PENDING.
