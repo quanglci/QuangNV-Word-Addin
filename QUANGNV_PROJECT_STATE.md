@@ -1728,3 +1728,8 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 
 - Chủ dự án báo lỗi sau khi Chuẩn hóa thể thức. Đối chiếu hai DOCX trước/sau do chủ dự án cung cấp: `word/document.xml` có 3 đối tượng VML `v:line` trước và 2 sau. Đường `LineCoQuanBanHanh` và `LineTieuNguQuocHieu` vẫn còn, đường VML không mang tên chức năng (`_x0000_s2055`, neo tại đoạn quốc hiệu, dài 90,65 pt) không còn. Render kiểm tra bằng LibreOffice xác nhận đường dưới trích yếu mất, không phải chỉ bị ẩn. Chưa truy nguyên câu lệnh VBA gây lỗi, chưa kiểm trên Word. Không đưa tài liệu người dùng lên kho.
 - Yêu cầu sửa: bảo toàn/khôi phục đúng đường kẻ trích yếu, không tạo trùng khi chuẩn hóa lặp, không nhảy vị trí, giữ cỡ chữ đã duyệt 14pt ở phần Fix V7, không ảnh hưởng đường kẻ cơ quan/tiêu ngữ hoặc nội dung và định dạng khác. Chờ chủ dự án tổng hợp xong danh sách lỗi trước khi sửa đồng loạt trên nhánh thể thức tách biệt. M192T/SECURITY HOLD M191C giữ nguyên; chưa sửa mã, chưa đóng gói, chưa đổi OTA.
+
+
+## TT-02. Giảm Weight đường kẻ ngang — REQUIREMENT_INTAKE (27/11/2026)
+
+- Chủ dự án yêu cầu giảm Weight từ 0,75 pt xuống 0,5 pt cho ba đường kẻ thể thức: dưới tên cơ quan ban hành, dưới tiêu ngữ và dưới trích yếu. Giữ màu đen, chiều dài, vị trí, căn chỉnh, khoảng cách, cỡ chữ 14pt và Fix V7; không áp dụng thay đổi đại trà cho đường kẻ khác trong tài liệu. Kết hợp TT-01 để không mất hoặc nhân đôi đường kẻ khi chuẩn hóa nhiều lần. Giá trị 0,75 pt là hiện trạng theo chủ dự án; kiểm tra mã nguồn và mẫu khi triển khai. Chỉ ghi nhận yêu cầu, chờ chủ dự án thông báo đã tổng hợp xong; chưa chỉnh mã, chưa chạy hoặc đóng gói, không sửa OTA; M191C SECURITY HOLD, M192T giữ nguyên.
