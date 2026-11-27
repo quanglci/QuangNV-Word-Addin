@@ -2019,3 +2019,8 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 ## LEGACY-CLEANUP-01 — OWNER REMOVAL RESULT (27/11/2026)
 
 - Ảnh trước gỡ: 43 tệp nhận diện, 14 mục Registry, 2 mục giữ lại, 0 mục cần kiểm tra. Ảnh sau gỡ: công cụ báo đã gỡ các thành phần cũ đã xác minh, dữ liệu ngoài danh mục giữ nguyên, đã lưu backup và báo cáo. Đây là kết quả giao diện do chủ dự án cung cấp, chưa đọc báo cáo chi tiết hoặc kiểm tra độc lập Word/registry sau gỡ. Cần khởi động lại, xác minh Word không còn Ribbon cũ và chạy kiểm tra lại không xác nhận xóa nếu phát hiện bất thường; giữ backup. Chưa xác nhận toàn bộ phiên bản lịch sử hoặc môi trường x86/x64; chưa ký/phát hành, chưa thay đổi OTA. SECURITY HOLD giữ nguyên.
+
+
+## LEGACY-CLEANUP-01 — WORD UI POST-REMOVAL CHECK (27/11/2026)
+
+- Chủ dự án gửi ảnh Word mở Document1 sau hướng dẫn khởi động lại: các tab chuẩn hiển thị, không thấy tab Thể thức Văn bản, phần Home trong ảnh không thấy nhóm QuangNV. Chưa xác minh độc lập việc reboot, toàn bộ Ribbon Home ngoài vùng ảnh, COM/registry/files hay scan sau gỡ. Yêu cầu kiểm tra lại bằng công cụ ở chế độ rà soát, không xác nhận gỡ thêm; giữ backup. Chưa nghiệm thu mọi phiên bản cũ hoặc Office x86/x64, chưa phát hành. Bộ cài 1.0.0 vẫn cần kiểm thử Windows cô lập, AV, OTA và ký; giữ SECURITY HOLD và feed hiện tại.
