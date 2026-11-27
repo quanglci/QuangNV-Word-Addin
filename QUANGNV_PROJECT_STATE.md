@@ -2014,3 +2014,8 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 ## LEGACY-CLEANUP-01 — OWNER KASPERSKY SCAN (27/11/2026)
 
 - Ảnh Kaspersky Plus của chủ dự án: chọn QuangNV_Cleanup_Legacy_Universal.exe, 3 đối tượng được quét, thời lượng hiển thị 0 giây, không phát hiện mối đe dọa. Không có hash hoặc báo cáo chi tiết đối tượng. Cả EXE cleanup và setup 1.0.0 đã có ảnh quét không phát hiện mối đe dọa; chưa ký số, chưa nghiệm thu trên Windows. Cần thử gỡ trên Windows cô lập có snapshot và bản cài 25.2, bảo mật bật, không bỏ qua cảnh báo, kiểm tra dữ liệu/Word/registry trước và sau, rồi thử cài 1.0.0. Không gỡ trên máy làm việc chính trước nghiệm thu, không đổi feed OTA. SECURITY HOLD M154/M191C giữ nguyên. Trạng thái LEGACY_CLEANUP_OWNER_AV_SCAN_REPORTED / WINDOWS_VALIDATION_PENDING.
+
+
+## LEGACY-CLEANUP-01 — OWNER REMOVAL RESULT (27/11/2026)
+
+- Ảnh trước gỡ: 43 tệp nhận diện, 14 mục Registry, 2 mục giữ lại, 0 mục cần kiểm tra. Ảnh sau gỡ: công cụ báo đã gỡ các thành phần cũ đã xác minh, dữ liệu ngoài danh mục giữ nguyên, đã lưu backup và báo cáo. Đây là kết quả giao diện do chủ dự án cung cấp, chưa đọc báo cáo chi tiết hoặc kiểm tra độc lập Word/registry sau gỡ. Cần khởi động lại, xác minh Word không còn Ribbon cũ và chạy kiểm tra lại không xác nhận xóa nếu phát hiện bất thường; giữ backup. Chưa xác nhận toàn bộ phiên bản lịch sử hoặc môi trường x86/x64; chưa ký/phát hành, chưa thay đổi OTA. SECURITY HOLD giữ nguyên.
