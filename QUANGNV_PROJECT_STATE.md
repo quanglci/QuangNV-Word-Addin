@@ -2355,3 +2355,9 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 
 - Chủ dự án cung cấp ảnh email mang tên Hỗ trợ Kaspersky, chữ ký Support Team NTS Security, yêu cầu gửi link download phần mềm để kiểm tra. Đây là phản hồi yêu cầu mẫu, chưa phải kết luận kỹ thuật hoặc xác minh độc lập người gửi. Đề xuất xác minh địa chỉ người gửi qua kênh hỗ trợ chính thức, cấp quyền truy cập riêng cho bộ phận hỗ trợ được xác minh nếu được phép, kiểm tra không chứa dữ liệu nhạy cảm; mẫu đúng sự kiện là QuangNV_M191C_Word_Source_Preservation_Pilot.zip SHA256 0b6283e8315ce11785bc490778b4dc15c009bc932663b342c05169651f19a055, đối tượng word191c.ps1 MD5 2ABADFD8899CE96B7960743832E18BBC. Đã soạn nội dung trả lời đề nghị phân tích nguyên nhân, kết luận nhận diện và hướng khắc phục. Chưa gửi email, chưa cấp quyền chia sẻ hoặc xác nhận hãng đã nhận mẫu.
 - Giữ SECURITY HOLD M191C/M154, không chạy lại hoặc tích hợp runtime đang bị hold, không thay OTA, TT-UI-05 giữ nguyên. Trạng thái M192V_VENDOR_REQUESTED_SAMPLE / VERIFIED_SUBMISSION_AND_VENDOR_VERDICT_PENDING.
+
+
+## M192W — M191C ON-DEMAND FILE SCAN RESULT (28/11/2026)
+
+- Chủ dự án gửi ảnh Kaspersky Plus Quét tập tin ngay trên thư mục QuangNV_M191C: 178 đối tượng được quét, không có mối đe dọa được phát hiện, thời lượng hiển thị 0 giây. Đây là bằng chứng kết quả quét tệp do người dùng cung cấp, chưa đối chiếu hash từng tệp trên máy, chưa có báo cáo chi tiết hoặc thử nghiệm hành vi. Không coi là kết luận cảnh báo PDM:Trojan.Win32.Generic ngày 27/11/2026 là false positive. Đề nghị gửi ảnh và báo cáo chi tiết cho bộ phận hỗ trợ đã xác minh cùng mẫu M191C đúng hash; chưa gửi thay người dùng.
+- Giữ SECURITY HOLD M191C/M154, chờ kết luận kỹ thuật và thẩm định provenance/license/runtime; không chạy lại, không hạ bảo mật hoặc đưa vào bộ cài. TT-UI-05 và OTA giữ nguyên. Trạng thái M192W_ON_DEMAND_SCAN_NO_THREATS_USER_REPORTED / BEHAVIORAL_VERDICT_PENDING.
