@@ -2349,3 +2349,9 @@ Các nguồn dưới đây đã được lưu trong thư mục Drive nêu trên 
 
 - Chủ dự án xác nhận “đã ok” sau khi nhận TT-UI-05. Ghi nhận phản hồi chấp thuận bản giao diện, không suy rộng thành nghiệm thu toàn bộ 38 mẫu, AV, Office x86/x64 hoặc OTA. Chốt TT-UI-05 làm nền phát triển tích lũy tiếp theo; giữ nguyên UI và các chức năng đã duyệt. EXE SHA256 143f6a7ec767c6d86069cf01aad87f6a126d95b4fd8a4652fd6fc6230a5a5938; ZIP nguồn SHA256 5ea85d12460f561900befd16469b544133f8ccc78b3f643dfaf07d7fc4e3227c.
 - Tiếp tục nghiên cứu AI Offline từ M192U, đối chiếu lại điểm nối trên nền TT-UI-05 (VBA nguyên byte so với TT-UI-04); không tự ý đổi giao diện, không tích hợp thành phần đang SECURITY HOLD M154/M191C, chưa đổi OTA hay phát hành chính thức. Trạng thái TT_UI_05_OWNER_UI_ACCEPTED / OFFLINE_RESEARCH_GATES_OPEN.
+
+
+## M192V — KASPERSKY SUPPORT REQUESTS SAMPLE LINK (28/11/2026)
+
+- Chủ dự án cung cấp ảnh email mang tên Hỗ trợ Kaspersky, chữ ký Support Team NTS Security, yêu cầu gửi link download phần mềm để kiểm tra. Đây là phản hồi yêu cầu mẫu, chưa phải kết luận kỹ thuật hoặc xác minh độc lập người gửi. Đề xuất xác minh địa chỉ người gửi qua kênh hỗ trợ chính thức, cấp quyền truy cập riêng cho bộ phận hỗ trợ được xác minh nếu được phép, kiểm tra không chứa dữ liệu nhạy cảm; mẫu đúng sự kiện là QuangNV_M191C_Word_Source_Preservation_Pilot.zip SHA256 0b6283e8315ce11785bc490778b4dc15c009bc932663b342c05169651f19a055, đối tượng word191c.ps1 MD5 2ABADFD8899CE96B7960743832E18BBC. Đã soạn nội dung trả lời đề nghị phân tích nguyên nhân, kết luận nhận diện và hướng khắc phục. Chưa gửi email, chưa cấp quyền chia sẻ hoặc xác nhận hãng đã nhận mẫu.
+- Giữ SECURITY HOLD M191C/M154, không chạy lại hoặc tích hợp runtime đang bị hold, không thay OTA, TT-UI-05 giữ nguyên. Trạng thái M192V_VENDOR_REQUESTED_SAMPLE / VERIFIED_SUBMISSION_AND_VENDOR_VERDICT_PENDING.
